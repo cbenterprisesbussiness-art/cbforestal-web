@@ -1,0 +1,679 @@
+export const company = {
+  name: 'CB Forestal',
+  phone: '+34 936 94 21 74',
+  phoneHref: 'tel:+34936942174',
+  email: 'info@cbforestal.es',
+  emailHref: 'mailto:info@cbforestal.es',
+  website: 'https://cbforestal.cat',
+  hasPublicPhone: true,
+  hasWhatsapp: false,
+  socialLinks: [],
+  serviceAreas: [
+    'Barcelona',
+    'Girona',
+    'Tarragona',
+    'Lleida',
+    'Costa Brava',
+    'Costa Daurada',
+    'Pirineus',
+    "Terres de l'Ebre",
+  ],
+};
+
+export const pageMeta = {
+  '/': {
+    title: {
+      ca: 'CB FORESTAL — Jardineria i Tancaments a Catalunya',
+      es: 'CB FORESTAL — Jardinería y Cerramientos en Cataluña',
+    },
+    description: {
+      ca: 'CB Forestal ofereix jardineria professional, manteniment, sistemes de reg i tancaments a tota Catalunya.',
+      es: 'CB Forestal ofrece jardinería profesional, mantenimiento, sistemas de riego y cerramientos en toda Cataluña.',
+    },
+  },
+  '/nosotros': {
+    title: {
+      ca: 'CB FORESTAL — Qui som',
+      es: 'CB FORESTAL — Nosotros',
+    },
+    description: {
+      ca: 'Coneix l’equip de CB Forestal, especialistes en espais verds, manteniment i tancaments amb cobertura a Catalunya.',
+      es: 'Conoce al equipo de CB Forestal, especialistas en espacios verdes, mantenimiento y cerramientos con cobertura en Cataluña.',
+    },
+  },
+  '/servicios': {
+    title: {
+      ca: 'CB FORESTAL — Serveis',
+      es: 'CB FORESTAL — Servicios',
+    },
+    description: {
+      ca: 'Serveis de disseny de jardins, manteniment, reg, arboricultura i jardineria vertical per a particulars i empreses.',
+      es: 'Servicios de diseño de jardines, mantenimiento, riego, arboricultura y jardinería vertical para particulares y empresas.',
+    },
+  },
+  '/cerramientos': {
+    title: {
+      ca: 'CB FORESTAL — Tancaments',
+      es: 'CB FORESTAL — Cerramientos',
+    },
+    description: {
+      ca: 'Instal·lació de tancaments metàl·lics, de fusta, sintètics i de pedra amb acabat professional i garantia.',
+      es: 'Instalación de cerramientos metálicos, de madera, sintéticos y de piedra con acabado profesional y garantía.',
+    },
+  },
+  '/zonas': {
+    title: {
+      ca: 'CB FORESTAL — Zones',
+      es: 'CB FORESTAL — Zonas',
+    },
+    description: {
+      ca: 'Cobertura de CB Forestal a Barcelona, Girona, Tarragona, Lleida, Costa Brava, Pirineus i més zones de Catalunya.',
+      es: 'Cobertura de CB Forestal en Barcelona, Girona, Tarragona, Lleida, Costa Brava, Pirineos y más zonas de Cataluña.',
+    },
+  },
+  '/contacto': {
+    title: {
+      ca: 'CB FORESTAL — Contacte',
+      es: 'CB FORESTAL — Contacto',
+    },
+    description: {
+      ca: 'Contacta amb CB Forestal per demanar pressupost de jardineria, manteniment o tancaments a Catalunya.',
+      es: 'Contacta con CB Forestal para pedir presupuesto de jardinería, mantenimiento o cerramientos en Cataluña.',
+    },
+  },
+  '/privacidad': {
+    title: {
+      ca: 'CB FORESTAL — Política de privacitat',
+      es: 'CB FORESTAL — Política de privacidad',
+    },
+    description: {
+      ca: 'Informació sobre el tractament de dades personals en les consultes i sol·licituds de pressupost de CB Forestal.',
+      es: 'Información sobre el tratamiento de datos personales en las consultas y solicitudes de presupuesto de CB Forestal.',
+    },
+  },
+  '/aviso-legal': {
+    title: {
+      ca: 'CB FORESTAL — Avís legal',
+      es: 'CB FORESTAL — Aviso legal',
+    },
+    description: {
+      ca: 'Condicions generals d’ús, propietat intel·lectual i dades de contacte del lloc web de CB Forestal.',
+      es: 'Condiciones generales de uso, propiedad intelectual y datos de contacto del sitio web de CB Forestal.',
+    },
+  },
+  '/cookies': {
+    title: {
+      ca: 'CB FORESTAL — Política de cookies',
+      es: 'CB FORESTAL — Política de cookies',
+    },
+    description: {
+      ca: 'Informació sobre l’ús de cookies tècniques i de tercers al lloc web de CB Forestal.',
+      es: 'Información sobre el uso de cookies técnicas y de terceros en el sitio web de CB Forestal.',
+    },
+  },
+};
+
+export const navigation = [
+  { to: '/', label: { ca: 'Inici', es: 'Inicio' } },
+  { to: '/servicios', label: { ca: 'Serveis', es: 'Servicios' } },
+  { to: '/cerramientos', label: { ca: 'Tancaments', es: 'Cerramientos' } },
+  { to: '/zonas', label: { ca: 'Zones', es: 'Zonas' } },
+  { to: '/nosotros', label: { ca: 'Nosaltres', es: 'Nosotros' } },
+];
+
+export const hero = {
+  tag: {
+    ca: 'Serveis forestals i jardineria · Catalunya',
+    es: 'Servicios forestales y jardinería · Cataluña',
+  },
+  title: {
+    ca: 'Experts en tala, poda i treballs forestals',
+    es: 'Expertos en tala, poda y trabajos forestales',
+  },
+  emphasis: {
+    ca: 'tala, poda',
+    es: 'tala, poda',
+  },
+  description: {
+    ca: 'Tala controlada de pins i arbres, poda en altura, desbrossaments, manteniment i tancaments per a particulars, finques i empreses a tota Catalunya.',
+    es: 'Tala controlada de pinos y árboles, poda en altura, desbroces, mantenimiento y cerramientos para particulares, fincas y empresas en toda Cataluña.',
+  },
+  primaryCta: {
+    ca: 'Sol·licitar pressupost',
+    es: 'Solicitar presupuesto',
+  },
+  secondaryCta: {
+    ca: 'Veure serveis',
+    es: 'Ver servicios',
+  },
+  trustSignals: [
+    {
+      ca: "+15 anys d'experiència",
+      es: '+15 años de experiencia',
+    },
+    {
+      ca: 'Pressupost orientatiu en 48h',
+      es: 'Presupuesto orientativo en 48h',
+    },
+    {
+      ca: 'Cobertura a tota Catalunya',
+      es: 'Cobertura en toda Cataluña',
+    },
+  ],
+};
+
+export const about = {
+  label: { ca: 'Qui som', es: 'Quiénes somos' },
+  title: {
+    ca: 'Professionals forestals i de jardineria amb resposta ràpida',
+    es: 'Profesionales forestales y de jardinería con respuesta rápida',
+  },
+  paragraphs: [
+    {
+      ca: 'A CB FORESTAL treballem tant en entorns residencials com en finques rústiques, parcel·les, comunitats i espais empresarials. Intervenim en tala, poda, desbrossament, manteniment i tancaments amb equips preparats per actuar a tota Catalunya.',
+      es: 'En CB FORESTAL trabajamos tanto en entornos residenciales como en fincas rústicas, parcelas, comunidades y espacios empresariales. Intervenimos en tala, poda, desbroce, mantenimiento y cerramientos con equipos preparados para actuar en toda Cataluña.',
+    },
+    {
+      ca: 'Prioritzem seguretat, ordre i acabat professional en cada intervenció, tant si es tracta d’una poda en altura com d’un vallat perimetral o d’un manteniment periòdic.',
+      es: 'Priorizamos seguridad, orden y acabado profesional en cada intervención, tanto si se trata de una poda en altura como de un vallado perimetral o de un mantenimiento periódico.',
+    },
+  ],
+  stats: [
+    {
+      value: '+15',
+      label: {
+        ca: "Anys d'experiència en jardineria professional",
+        es: 'Años de experiencia en jardinería profesional',
+      },
+    },
+    {
+      value: '+800',
+      label: {
+        ca: 'Projectes completats arreu de Catalunya',
+        es: 'Proyectos completados en toda Cataluña',
+      },
+    },
+    {
+      value: '48h',
+      label: {
+        ca: 'Temps de resposta garantit per a pressupostos',
+        es: 'Tiempo de respuesta garantizado para presupuestos',
+      },
+    },
+    {
+      value: '100%',
+      label: {
+        ca: 'Satisfacció garantida en tots els serveis',
+        es: 'Satisfacción garantizada en todos los servicios',
+      },
+    },
+  ],
+};
+
+export const servicesIntro = {
+  label: { ca: 'Serveis forestals', es: 'Servicios forestales' },
+  title: {
+    ca: 'Tala, poda, desbrossament, manteniment i vallats',
+    es: 'Tala, poda, desbroce, mantenimiento y vallados',
+  },
+};
+
+export const services = [
+  {
+    icon: '🪵',
+    title: { ca: 'Tala de Pins i Arbres', es: 'Tala de Pinos y Árboles' },
+    description: {
+      ca: 'Retirada controlada d’arbres, pins i exemplars compromesos amb planificació segura, protecció de l’entorn i evacuació de restes.',
+      es: 'Retirada controlada de árboles, pinos y ejemplares comprometidos con planificación segura, protección del entorno y retirada de restos.',
+    },
+  },
+  {
+    icon: '✂️',
+    title: { ca: 'Poda en Altura', es: 'Poda en Altura' },
+    description: {
+      ca: 'Poda tècnica, sanejament i reducció de capçades en arbres d’altura, amb criteri de seguretat i respecte per l’estructura de l’arbre.',
+      es: 'Poda técnica, saneamiento y reducción de copas en árboles de altura, con criterio de seguridad y respeto por la estructura del árbol.',
+    },
+  },
+  {
+    icon: '🌾',
+    title: { ca: 'Desbrossaments', es: 'Desbroces' },
+    description: {
+      ca: 'Neteja de parcel·les, finques i franges de seguretat amb desbrossament mecànic i retirada de vegetació acumulada.',
+      es: 'Limpieza de parcelas, fincas y franjas de seguridad con desbroce mecánico y retirada de vegetación acumulada.',
+    },
+  },
+  {
+    icon: '🌳',
+    title: { ca: 'Manteniment Verd', es: 'Mantenimiento Verde' },
+    description: {
+      ca: 'Servei periòdic de poda, sega, repàs de vegetació i conservació general d’espais verds particulars o comunitaris.',
+      es: 'Servicio periódico de poda, siega, repaso de vegetación y conservación general de espacios verdes particulares o comunitarios.',
+    },
+  },
+  {
+    icon: '🌿',
+    title: { ca: 'Jardineria i Recuperació d’Espais', es: 'Jardinería y Recuperación de Espacios' },
+    description: {
+      ca: 'Posada a punt de jardins, reordenació vegetal, plantacions i millora d’espais exteriors després de treballs forestals o de neteja.',
+      es: 'Puesta a punto de jardines, reordenación vegetal, plantaciones y mejora de espacios exteriores después de trabajos forestales o de limpieza.',
+    },
+  },
+  {
+    icon: '🔩',
+    title: { ca: 'Vallats i Tancaments', es: 'Vallados y Cerramientos' },
+    description: {
+      ca: 'Instal·lació professional de vallats i tancaments per a finques, parcel·les, urbanitzacions i espais industrials.',
+      es: 'Instalación profesional de vallados y cerramientos para fincas, parcelas, urbanizaciones y espacios industriales.',
+    },
+  },
+];
+
+export const fences = {
+  label: { ca: 'Tancaments i Vallats', es: 'Cerramientos y Vallados' },
+  title: {
+    ca: 'Tancament complet de terrenys, parcel·les i finques',
+    es: 'Cerrado completo de terrenos, parcelas y fincas',
+  },
+  badge: {
+    ca: 'Instal·lació garantida 5 anys',
+    es: 'Instalación garantizada 5 años',
+  },
+  paragraphs: [
+    {
+      ca: "Fem el tancament complet de terrenys, parcel·les, finques rústiques i zones forestals perquè quedin ben delimitades, protegides i preparades per a un ús segur.",
+      es: 'Realizamos el cerrado completo de terrenos, parcelas, fincas rústicas y zonas forestales para que queden bien delimitadas, protegidas y preparadas para un uso seguro.',
+    },
+    {
+      ca: 'Instal·lem des de malla simple torsió i tanca cinegètica fins a panell rígid, pals reforçats i portes d’accés, adaptant el vallat al perímetre real del terreny i al tipus d’ús que necessitis.',
+      es: 'Instalamos desde malla simple torsión y vallado cinegético hasta panel rígido, postes reforzados y puertas de acceso, adaptando el vallado al perímetro real del terreno y al tipo de uso que necesites.',
+    },
+  ],
+  types: [
+    {
+      ca: 'Tancament complet de parcel·les i terrenys rústics',
+      es: 'Cerrado completo de parcelas y terrenos rústicos',
+    },
+    {
+      ca: 'Malla simple torsió i tanca cinegètica per delimitar finques',
+      es: 'Malla simple torsión y vallado cinegético para delimitar fincas',
+    },
+    {
+      ca: 'Panell rígid i electrosoldat per tancat perimetral segur',
+      es: 'Panel rígido y electrosoldado para cerrado perimetral seguro',
+    },
+    {
+      ca: 'Portes metàl·liques d’accés per a vehicles, maquinària o manteniment',
+      es: 'Puertas metálicas de acceso para vehículos, maquinaria o mantenimiento',
+    },
+    {
+      ca: 'Reforç de pals, cantonades i tensors en terrenys irregulars',
+      es: 'Refuerzo de postes, esquinas y tensores en terrenos irregulares',
+    },
+    {
+      ca: 'Tancament de seguretat per a recintes forestals o industrials',
+      es: 'Cerramiento de seguridad para recintos forestales o industriales',
+    },
+  ],
+};
+
+export const zonesIntro = {
+  label: { ca: 'Cobertura territorial', es: 'Cobertura territorial' },
+  title: {
+    ca: 'Servei a tota Catalunya',
+    es: 'Servicio en toda Cataluña',
+  },
+  description: {
+    ca: "Disposem d'equips mòbils distribuïts per tot el territori per garantir un servei ràpid i de qualitat en qualsevol punt de Catalunya.",
+    es: 'Disponemos de equipos móviles distribuidos por todo el territorio para garantizar un servicio rápido y de calidad en cualquier punto de Cataluña.',
+  },
+};
+
+export const zones = [
+  ['Barcelona', 'Barcelonès · Maresme · Vallès'],
+  ['Girona', 'Empordà · La Selva · Ripollès'],
+  ['Tarragona', 'Tarragonès · Baix Camp · Priorat'],
+  ['Lleida', 'Segrià · Noguera · Urgell'],
+  ['Costa Brava', 'Roses · Begur · Tossa de Mar'],
+  ['Costa Daurada', 'Salou · Cambrils · Calafell'],
+  ['Pirineus', 'Cerdanya · Pallars · Aran'],
+  ["Terres de l'Ebre", 'Amposta · Tortosa · Deltebre'],
+].map(([name, desc]) => ({
+  name,
+  desc,
+  contactHref: `/contacto?zona=${encodeURIComponent(name)}`,
+}));
+
+export const projects = {
+  label: { ca: 'Treballs recents', es: 'Trabajos recientes' },
+  title: {
+    ca: 'Projectes pensats per durar i facilitar el manteniment',
+    es: 'Proyectos pensados para durar y facilitar el mantenimiento',
+  },
+  description: {
+    ca: 'Mostrem tres tipus de projecte habituals per ensenyar el tipus de resultat, escala i acabat amb què treballem.',
+    es: 'Mostramos tres tipos de proyecto habituales para enseñar el tipo de resultado, escala y acabado con el que trabajamos.',
+  },
+  items: [
+    {
+      image: '/projects-residential.svg',
+      title: { ca: 'Jardí residencial mediterrani', es: 'Jardín residencial mediterráneo' },
+      summary: {
+        ca: 'Redistribució de gespa, reg per sectors i plantació de baix consum hídric.',
+        es: 'Redistribución de césped, riego por sectores y plantación de bajo consumo hídrico.',
+      },
+      meta: { ca: 'Barcelona · Particular', es: 'Barcelona · Particular' },
+    },
+    {
+      image: '/projects-fencing.svg',
+      title: { ca: 'Tancament per finca rural', es: 'Cerramiento para finca rural' },
+      summary: {
+        ca: 'Tanca metàl·lica reforçada amb accés ampli per manteniment i maquinària.',
+        es: 'Valla metálica reforzada con acceso amplio para mantenimiento y maquinaria.',
+      },
+      meta: { ca: 'Girona · Finca rural', es: 'Girona · Finca rural' },
+    },
+    {
+      image: '/projects-community.svg',
+      title: { ca: 'Zones verdes comunitàries', es: 'Zonas verdes comunitarias' },
+      summary: {
+        ca: 'Pla de manteniment, poda estacional i recuperació de parterres de comunitat.',
+        es: 'Plan de mantenimiento, poda estacional y recuperación de parterres de comunidad.',
+      },
+      meta: { ca: 'Tarragona · Comunitat', es: 'Tarragona · Comunidad' },
+    },
+  ],
+};
+
+export const processSection = {
+  label: { ca: 'Com treballem', es: 'Cómo trabajamos' },
+  title: {
+    ca: 'El nostre procés, senzill i transparent',
+    es: 'Nuestro proceso, sencillo y transparente',
+  },
+  steps: [
+    {
+      number: '01',
+      title: { ca: 'Consulta gratuïta', es: 'Consulta gratuita' },
+      description: {
+        ca: "Contacta'ns per formulari web o correu electrònic. T'assessorem sense cap compromís.",
+        es: 'Contáctanos por formulario web o correo electrónico. Te asesoramos sin ningún compromiso.',
+      },
+    },
+    {
+      number: '02',
+      title: { ca: 'Visita i pressupost', es: 'Visita y presupuesto' },
+      description: {
+        ca: "Visitem l'espai i t'enviem un pressupost detallat i sense sorpreses en menys de 48h.",
+        es: 'Visitamos el espacio y te enviamos un presupuesto detallado y sin sorpresas en menos de 48h.',
+      },
+    },
+    {
+      number: '03',
+      title: { ca: 'Execució', es: 'Ejecución' },
+      description: {
+        ca: "El nostre equip treballa amb professionalitat, respectant terminis i mantenint l'ordre.",
+        es: 'Nuestro equipo trabaja con profesionalidad, respetando plazos y manteniendo el orden.',
+      },
+    },
+    {
+      number: '04',
+      title: { ca: 'Seguiment', es: 'Seguimiento' },
+      description: {
+        ca: "Un cop acabada la feina, t'oferim pla de manteniment i servei postvenda garantit.",
+        es: 'Una vez terminado el trabajo, te ofrecemos plan de mantenimiento y servicio posventa garantizado.',
+      },
+    },
+  ],
+};
+
+export const testimonials = {
+  label: { ca: 'Clients satisfets', es: 'Clientes satisfechos' },
+  title: {
+    ca: 'El que diuen de nosaltres',
+    es: 'Lo que dicen de nosotros',
+  },
+  items: [
+    {
+      text: {
+        ca: 'Van dissenyar el nostre jardí de zero i va quedar espectacular. Molt professionals i amables. Ens van assessorar en tot moment amb la selecció de plantes.',
+        es: 'Diseñaron nuestro jardín desde cero y quedó espectacular. Muy profesionales y amables. Nos asesoraron en todo momento con la selección de plantas.',
+      },
+      author: 'Marta G.',
+      location: 'Sant Cugat del Vallès',
+      badge: { ca: 'Projecte residencial', es: 'Proyecto residencial' },
+    },
+    {
+      text: {
+        ca: 'Excel·lents en el manteniment periòdic. Fa 3 anys que treballen amb nosaltres i el jardí mai havia estat tan bé. Molt recomanables.',
+        es: 'Excelentes en el mantenimiento periódico. Hace 3 años que trabajan con nosotros y el jardín nunca había estado tan bien. Muy recomendables.',
+      },
+      author: 'Josep M.',
+      location: 'Girona',
+      badge: { ca: 'Manteniment continuat', es: 'Mantenimiento continuado' },
+    },
+    {
+      text: {
+        ca: 'Van instal·lar el tancament de la nostra finca en dos dies i amb una qualitat impressionant. Pressupost molt competitiu i sense sorpreses.',
+        es: 'Instalaron el cerramiento de nuestra finca en dos días y con una calidad impresionante. Presupuesto muy competitivo y sin sorpresas.',
+      },
+      author: 'Anna P.',
+      location: 'Tarragona',
+      badge: { ca: 'Tancament de finca', es: 'Cerramiento de finca' },
+    },
+  ],
+};
+
+export const contact = {
+  label: { ca: 'Contacte', es: 'Contacto' },
+  title: {
+    ca: 'Comença avui el jardí dels teus somnis',
+    es: 'Empieza hoy el jardín de tus sueños',
+  },
+  description: {
+    ca: "Deixa'ns el teu telèfon o correu i t'atenem en menys de 24 hores. Pressupost gratuït i sense compromís.",
+    es: 'Déjanos tu teléfono o correo y te atendemos en menos de 24 horas. Presupuesto gratuito y sin compromiso.',
+  },
+  notePrefix: {
+    ca: 'També ens pots contactar directament:',
+    es: 'También puedes contactarnos directamente:',
+  },
+};
+
+export const footer = {
+  brand: {
+    ca: 'Professionals en jardineria i tancaments a tota Catalunya des del 2009. Qualitat, confiança i respecte pel medi ambient.',
+    es: 'Profesionales en jardinería y cerramientos en toda Cataluña desde 2009. Calidad, confianza y respeto por el medio ambiente.',
+  },
+  servicesTitle: { ca: 'Serveis', es: 'Servicios' },
+  zonesTitle: { ca: 'Zones', es: 'Zonas' },
+  contactTitle: { ca: 'Contacte', es: 'Contacto' },
+  rights: {
+    ca: `© ${new Date().getFullYear()} CB FORESTAL · Tots els drets reservats`,
+    es: `© ${new Date().getFullYear()} CB FORESTAL · Todos los derechos reservados`,
+  },
+  legalLinks: [
+    {
+      to: '/privacidad',
+      label: { ca: 'Política de privacitat', es: 'Política de privacidad' },
+    },
+    {
+      to: '/aviso-legal',
+      label: { ca: 'Avís legal', es: 'Aviso legal' },
+    },
+    {
+      to: '/cookies',
+      label: { ca: 'Cookies', es: 'Cookies' },
+    },
+  ],
+};
+
+export const legalPages = {
+  privacy: {
+    label: { ca: 'Política de privacitat', es: 'Política de privacidad' },
+    title: {
+      ca: 'Com tractem les teves dades de contacte',
+      es: 'Cómo tratamos tus datos de contacto',
+    },
+    description: {
+      ca: 'Aquesta política explica com utilitzem la informació que ens envies quan demanes informació o pressupost a través del web o del correu electrònic.',
+      es: 'Esta política explica cómo utilizamos la información que nos envías cuando solicitas información o presupuesto a través de la web o del correo electrónico.',
+    },
+    sections: [
+      {
+        title: { ca: 'Responsable del tractament', es: 'Responsable del tratamiento' },
+        paragraphs: [
+          {
+            ca: `${company.name} és la responsable del tractament de les dades personals facilitades a través d'aquest lloc web i dels canals de contacte publicats.`,
+            es: `${company.name} es la responsable del tratamiento de los datos personales facilitados a través de este sitio web y de los canales de contacto publicados.`,
+          },
+          {
+            ca: `Per a qualsevol consulta relativa a privacitat ens pots escriure a ${company.email} o trucar al ${company.phone}.`,
+            es: `Para cualquier consulta relativa a privacidad puedes escribirnos a ${company.email} o llamar al ${company.phone}.`,
+          },
+        ],
+      },
+      {
+        title: { ca: 'Quines dades recollim', es: 'Qué datos recogemos' },
+        paragraphs: [
+          {
+            ca: 'Nom, telèfon, correu electrònic, servei sol·licitat i el contingut del missatge que ens enviïs voluntàriament.',
+            es: 'Nombre, teléfono, correo electrónico, servicio solicitado y el contenido del mensaje que nos envíes voluntariamente.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Finalitat i base jurídica', es: 'Finalidad y base jurídica' },
+        paragraphs: [
+          {
+            ca: 'Utilitzem aquestes dades per respondre consultes, preparar pressupostos, gestionar comunicacions comercials relacionades amb la teva sol·licitud i fer seguiment del servei si el contractes.',
+            es: 'Utilizamos estos datos para responder consultas, preparar presupuestos, gestionar comunicaciones comerciales relacionadas con tu solicitud y hacer seguimiento del servicio si lo contratas.',
+          },
+          {
+            ca: 'La base jurídica és l’aplicació de mesures precontractuals a petició de l’interessat i, quan correspongui, el consentiment prestat en contactar-nos.',
+            es: 'La base jurídica es la aplicación de medidas precontractuales a petición del interesado y, cuando corresponda, el consentimiento prestado al contactarnos.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Conservació de les dades', es: 'Conservación de los datos' },
+        paragraphs: [
+          {
+            ca: 'Conservarem les dades el temps necessari per atendre la teva petició i, si finalment hi ha contractació, durant els terminis exigits per les obligacions legals i administratives aplicables.',
+            es: 'Conservaremos los datos el tiempo necesario para atender tu petición y, si finalmente hay contratación, durante los plazos exigidos por las obligaciones legales y administrativas aplicables.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Drets de l’usuari', es: 'Derechos del usuario' },
+        paragraphs: [
+          {
+            ca: 'Pots exercir els drets d’accés, rectificació, supressió, oposició, limitació i portabilitat escrivint a l’adreça electrònica indicada en aquesta pàgina.',
+            es: 'Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a la dirección electrónica indicada en esta página.',
+          },
+          {
+            ca: 'Si consideres que el tractament no s’ajusta a la normativa, pots presentar una reclamació davant l’autoritat de control competent.',
+            es: 'Si consideras que el tratamiento no se ajusta a la normativa, puedes presentar una reclamación ante la autoridad de control competente.',
+          },
+        ],
+      },
+    ],
+  },
+  legalNotice: {
+    label: { ca: 'Avís legal', es: 'Aviso legal' },
+    title: {
+      ca: 'Condicions d’ús del lloc web',
+      es: 'Condiciones de uso del sitio web',
+    },
+    description: {
+      ca: 'Aquest espai regula l’accés i ús del lloc web corporatiu de CB Forestal i la informació que s’hi publica.',
+      es: 'Este espacio regula el acceso y uso del sitio web corporativo de CB Forestal y la información que se publica en él.',
+    },
+    sections: [
+      {
+        title: { ca: 'Titular del lloc web', es: 'Titular del sitio web' },
+        paragraphs: [
+          {
+            ca: `${company.name} posa a disposició dels usuaris aquest lloc web com a canal d'informació sobre els seus serveis de jardineria i tancaments a Catalunya.`,
+            es: `${company.name} pone a disposición de los usuarios este sitio web como canal de información sobre sus servicios de jardinería y cerramientos en Cataluña.`,
+          },
+          {
+            ca: `Per a comunicacions directes pots utilitzar el correu ${company.email} o el telèfon ${company.phone}.`,
+            es: `Para comunicaciones directas puedes utilizar el correo ${company.email} o el teléfono ${company.phone}.`,
+          },
+        ],
+      },
+      {
+        title: { ca: 'Ús del lloc web', es: 'Uso del sitio web' },
+        paragraphs: [
+          {
+            ca: 'L’usuari es compromet a fer un ús adequat dels continguts, a no emprar-los per a activitats il·lícites i a no danyar els sistemes físics o lògics del lloc web.',
+            es: 'El usuario se compromete a hacer un uso adecuado de los contenidos, a no emplearlos para actividades ilícitas y a no dañar los sistemas físicos o lógicos del sitio web.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Propietat intel·lectual', es: 'Propiedad intelectual' },
+        paragraphs: [
+          {
+            ca: 'Els textos, dissenys, logotips, marques i altres continguts del web estan protegits per la normativa aplicable i no es poden reproduir sense autorització prèvia.',
+            es: 'Los textos, diseños, logotipos, marcas y demás contenidos de la web están protegidos por la normativa aplicable y no pueden reproducirse sin autorización previa.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Responsabilitat', es: 'Responsabilidad' },
+        paragraphs: [
+          {
+            ca: 'CB Forestal treballa perquè la informació publicada sigui correcta i actualitzada, però no garanteix l’absència absoluta d’errors ni la disponibilitat permanent del lloc web.',
+            es: 'CB Forestal trabaja para que la información publicada sea correcta y actualizada, pero no garantiza la ausencia absoluta de errores ni la disponibilidad permanente del sitio web.',
+          },
+        ],
+      },
+    ],
+  },
+  cookies: {
+    label: { ca: 'Política de cookies', es: 'Política de cookies' },
+    title: {
+      ca: 'Cookies i tecnologies similars',
+      es: 'Cookies y tecnologías similares',
+    },
+    description: {
+      ca: 'Aquest lloc web utilitza únicament les cookies necessàries per al funcionament bàsic i pot carregar recursos de tercers com tipografies o imatges.',
+      es: 'Este sitio web utiliza únicamente las cookies necesarias para el funcionamiento básico y puede cargar recursos de terceros como tipografías o imágenes.',
+    },
+    sections: [
+      {
+        title: { ca: 'Què és una cookie', es: 'Qué es una cookie' },
+        paragraphs: [
+          {
+            ca: 'Una cookie és un petit fitxer que s’emmagatzema al teu navegador i que permet recordar informació sobre la visita o millorar determinades funcions tècniques.',
+            es: 'Una cookie es un pequeño archivo que se almacena en tu navegador y que permite recordar información sobre la visita o mejorar determinadas funciones técnicas.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Cookies utilitzades', es: 'Cookies utilizadas' },
+        paragraphs: [
+          {
+            ca: 'Actualment el lloc web només utilitza una dada local per recordar l’idioma seleccionat entre català i castellà. Aquesta preferència no s’utilitza amb finalitats publicitàries.',
+            es: 'Actualmente el sitio web solo utiliza un dato local para recordar el idioma seleccionado entre catalán y castellano. Esta preferencia no se utiliza con fines publicitarios.',
+          },
+          {
+            ca: 'També es poden carregar recursos externs de proveïdors com Google Fonts o serveis d’imatge, subjectes a les seves pròpies polítiques.',
+            es: 'También pueden cargarse recursos externos de proveedores como Google Fonts o servicios de imagen, sujetos a sus propias políticas.',
+          },
+        ],
+      },
+      {
+        title: { ca: 'Com gestionar-les', es: 'Cómo gestionarlas' },
+        paragraphs: [
+          {
+            ca: 'Pots configurar el teu navegador per bloquejar o eliminar cookies. Tingues en compte que això podria afectar algunes funcionalitats bàsiques del lloc web.',
+            es: 'Puedes configurar tu navegador para bloquear o eliminar cookies. Ten en cuenta que esto podría afectar a algunas funcionalidades básicas del sitio web.',
+          },
+        ],
+      },
+    ],
+  },
+};

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CB FORESTAL</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<style>
+body{margin:0;font-family:'DM Sans',sans-serif;background:#fafaf7;color:#0f1f16}
+nav{position:fixed;top:0;width:100%;background:#1a3a2a;padding:20px;display:flex;justify-content:space-between;z-index:1000}
+.nav-logo{font-family:'Playfair Display';font-size:24px;color:#b7e4c7}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 40px;background:#1a3a2a;color:white}
+.btn{background:#52b788;padding:12px 24px;color:#1a3a2a;text-decoration:none;margin-top:10px;display:inline-block}
+.lang button{margin-left:10px;cursor:pointer}
+section{padding:60px 40px}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-logo">CB <span style="color:#c9a84c">FORESTAL</span></div>
+<div class="lang">
+<button onclick="setLang('ca')">CAT</button>
+<button onclick="setLang('es')">ES</button>
+</div>
+</nav>
+
+<section class="hero">
+<h1>
+<span data-ca="Experts en tala i poda" data-es="Expertos en tala y poda"></span><br>
+<span data-ca="de pins i arbres" data-es="de pinos y árboles"></span>
+</h1>
+
+<p data-ca="Serveis professionals forestals a Catalunya"
+   data-es="Servicios profesionales forestales en Cataluña"></p>
+
+<a href="#contacto" class="btn"
+data-ca="Demanar pressupost"
+data-es="Solicitar presupuesto"></a>
+</section>
+
+<section>
+<h2 data-ca="Serveis" data-es="Servicios"></h2>
+
+<ul>
+<li data-ca="Tala de pins" data-es="Tala de pinos"></li>
+<li data-ca="Poda en altura" data-es="Poda en altura"></li>
+<li data-ca="Desbrossaments" data-es="Desbroces"></li>
+<li data-ca="Vallats de terrenys" data-es="Vallados de terrenos"></li>
+</ul>
+</section>
+
+<section id="contacto">
+<h2 data-ca="Contacte" data-es="Contacto"></h2>
+
+<p data-ca="Truca'ns o escriu-nos per WhatsApp"
+   data-es="Llámanos o escríbenos por WhatsApp"></p>
+
+<a href="tel:+34930304696" class="btn">📞 930304696</a><br><br>
+<a href="https://wa.me/34638624355" class="btn">💬 WhatsApp</a>
+</section>
+
+<script>
+function setLang(lang){
+document.querySelectorAll('[data-ca]').forEach(el=>{
+el.innerHTML = el.getAttribute('data-'+lang);
+});
+localStorage.setItem('lang',lang);
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+let lang=localStorage.getItem('lang')||'es';
+setLang(lang);
+});
+</script>
+
+</body>
+</html>
