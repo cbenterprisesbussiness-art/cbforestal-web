@@ -73,17 +73,6 @@ export default async function handler(req, res) {
       'Mensaje:',
       safeMessage,
     ].join('\n'),
-    html: `
-      <div style="font-family:Arial,sans-serif;line-height:1.6;color:#173628">
-        <h2>Nueva consulta web</h2>
-        <p><strong>Nombre:</strong> ${escapeHtml(safeName)}</p>
-        <p><strong>Contacto:</strong> ${escapeHtml(contactValue)}</p>
-        <p><strong>Servicio:</strong> ${escapeHtml(safeService)}</p>
-        <p><strong>Ruta:</strong> ${escapeHtml(safeSourcePath)}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>${escapeHtml(safeMessage).replace(/\n/g, '<br />')}</p>
-      </div>
-    `,
   };
 
   try {
@@ -105,13 +94,4 @@ export default async function handler(req, res) {
   } catch {
     return json(res, 500, { error: 'unexpected_server_error' });
   }
-}
-
-function escapeHtml(value) {
-  return value
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#39;');
 }
