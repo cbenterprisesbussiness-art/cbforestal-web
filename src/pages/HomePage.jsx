@@ -54,23 +54,40 @@ export default function HomePage() {
 
       <section className="section section-dark">
         <div className="container">
-          <SectionHeading label={servicesIntro.label} title={servicesIntro.title} />
-          <div className="cards-grid">
-            {services.map((service) => (
-              <article key={service.title.ca} className="service-card" data-reveal>
-                <span className="service-icon">{service.icon}</span>
-                <h3>{t(service.title)}</h3>
-                <p>{t(service.description)}</p>
-                <Link
-                  to={service.title.ca === 'Tancaments i Vallats' ? '/cerramientos' : '/servicios'}
-                  className="card-link"
-                >
-                  {service.title.ca === 'Tancaments i Vallats'
-                    ? t({ ca: 'Veure tancaments →', es: 'Ver cerramientos →' })
-                    : t({ ca: 'Saber-ne més →', es: 'Saber más →' })}
-                </Link>
+          <div className="services-intro-banner" data-reveal>
+            <p>{t(servicesIntro.quickListTitle)}</p>
+            <div className="services-icon-row">
+              {servicesIntro.quickItems.map((item) => (
+                <div key={item.label.ca} className="service-pill">
+                  <div className="service-pill-icon">{item.icon}</div>
+                  <span>{t(item.label)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="services-head-split">
+            <SectionHeading label={servicesIntro.label} title={servicesIntro.title} />
+            <p className="section-copy">{t(servicesIntro.description)}</p>
+          </div>
+
+          <div className="services-photo-grid">
+            {services.slice(0, 3).map((service) => (
+              <article key={service.title.ca} className="service-photo-card" data-reveal>
+                <img src={service.image} alt={t(service.title)} loading="lazy" />
+                <div className="service-photo-copy">
+                  <div className="service-photo-icon">{service.icon}</div>
+                  <h3>{t(service.title)}</h3>
+                  <p>{t(service.description)}</p>
+                </div>
               </article>
             ))}
+          </div>
+
+          <div className="services-cta-row">
+            <Link to="/servicios" className="btn-services-all">
+              {`${t({ ca: 'Veure tots els serveis', es: 'Ver todos los servicios' })} (${services.length}) →`}
+            </Link>
           </div>
         </div>
       </section>

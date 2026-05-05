@@ -211,61 +211,165 @@ export const about = {
 };
 
 export const servicesIntro = {
-  label: { ca: 'Serveis forestals', es: 'Servicios forestales' },
+  label: { ca: 'Els nostres serveis', es: 'Nuestros servicios' },
   title: {
-    ca: 'Tala, poda, desbrossament, manteniment i vallats',
-    es: 'Tala, poda, desbroce, mantenimiento y vallados',
+    ca: 'Solucions completes per al seu espai verd',
+    es: 'Soluciones completas para su espacio verde',
   },
+  description: {
+    ca: "Professionals amb maquinària homologada i equip assegurat per a qualsevol tipus de treball forestal, agrícola o d'espais verds.",
+    es: 'Profesionales con maquinaria homologada y equipo asegurado para cualquier tipo de trabajo forestal, agrícola o de espacios verdes.',
+  },
+  quickListTitle: {
+    ca: 'Tot el que necessites en un sol lloc',
+    es: 'Todo lo que necesitas en un solo lugar',
+  },
+  quickItems: [
+    { icon: '🌿', label: { ca: 'Jardineria', es: 'Jardinería' } },
+    { icon: '✂️', label: { ca: 'Poda i tala', es: 'Poda y tala' } },
+    { icon: '🌲', label: { ca: 'Desbrossament', es: 'Desbroce' } },
+    { icon: '💧', label: { ca: 'Sistemes de reg', es: 'Sistemas de riego' } },
+    { icon: '🏊', label: { ca: 'Piscines', es: 'Piscinas' } },
+    { icon: '🔩', label: { ca: 'Tancaments', es: 'Cerramientos' } },
+    { icon: '🛡️', label: { ca: 'Tractaments fitosanitaris', es: 'Tratamientos fitosanitarios' } },
+  ],
 };
 
 export const services = [
   {
-    icon: '🪵',
-    title: { ca: 'Tala de Pins i Arbres', es: 'Tala de Pinos y Árboles' },
+    icon: '🌳',
+    title: { ca: 'Disseny de Jardins', es: 'Diseño de Jardines' },
     description: {
-      ca: 'Retirada controlada d’arbres, pins i exemplars compromesos amb planificació segura, protecció de l’entorn i evacuació de restes.',
-      es: 'Retirada controlada de árboles, pinos y ejemplares comprometidos con planificación segura, protección del entorno y retirada de restos.',
+      ca: 'Creem jardins a mida des de zero, amb plantes autòctones i disseny paisatgístic personalitzat per a particulars i empreses.',
+      es: 'Creamos jardines a medida desde cero, con plantas autóctonas y diseño paisajístico personalizado para particulares y empresas.',
     },
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    tags: [
+      { ca: 'Disseny paisatgístic', es: 'Diseño paisajístico' },
+      { ca: 'Plantes autòctones', es: 'Plantas autóctonas' },
+      { ca: 'Jardins privats', es: 'Jardines privados' },
+      { ca: 'Zones verdes empreses', es: 'Zonas verdes empresas' },
+    ],
   },
   {
     icon: '✂️',
-    title: { ca: 'Poda en Altura', es: 'Poda en Altura' },
+    title: { ca: 'Poda i Tala en Altura', es: 'Poda y Tala en Altura' },
     description: {
-      ca: 'Poda tècnica, sanejament i reducció de capçades en arbres d’altura, amb criteri de seguretat i respecte per l’estructura de l’arbre.',
-      es: 'Poda técnica, saneamiento y reducción de copas en árboles de altura, con criterio de seguridad y respeto por la estructura del árbol.',
+      ca: "Especialistes en poda d'arbres d'altura i eliminació segura de pins i arbres amb equip homologat i assegurat a tota Catalunya.",
+      es: 'Especialistas en poda de árboles de altura y eliminación segura de pinos y árboles con equipo homologado y asegurado en toda Cataluña.',
     },
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    tags: [
+      { ca: 'Treballs en altura', es: 'Trabajos en altura' },
+      { ca: 'Equip homologat', es: 'Equipo homologado' },
+      { ca: 'Tala controlada', es: 'Tala controlada' },
+      { ca: 'Retirada de restes', es: 'Retirada de restos' },
+    ],
   },
   {
-    icon: '🌾',
+    icon: '🌲',
     title: { ca: 'Desbrossaments', es: 'Desbroces' },
     description: {
-      ca: 'Neteja de parcel·les, finques i franges de seguretat amb desbrossament mecànic i retirada de vegetació acumulada.',
-      es: 'Limpieza de parcelas, fincas y franjas de seguridad con desbroce mecánico y retirada de vegetación acumulada.',
+      ca: "Neteja i desbrossament de parcel·les, finques i boscos amb maquinària professional. Prevenció d'incendis forestals.",
+      es: 'Limpieza y desbroce de parcelas, fincas y bosques con maquinaria profesional. Prevención de incendios forestales.',
     },
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
+    tags: [
+      { ca: 'Prevenció incendis', es: 'Prevención incendios' },
+      { ca: 'Parcel·les', es: 'Parcelas' },
+      { ca: 'Boscos', es: 'Bosques' },
+      { ca: 'Maquinària pesada', es: 'Maquinaria pesada' },
+    ],
   },
   {
-    icon: '🌳',
-    title: { ca: 'Manteniment Verd', es: 'Mantenimiento Verde' },
+    icon: '💧',
+    title: { ca: 'Sistemes de Reg', es: 'Sistemas de Riego' },
     description: {
-      ca: 'Servei periòdic de poda, sega, repàs de vegetació i conservació general d’espais verds particulars o comunitaris.',
-      es: 'Servicio periódico de poda, siega, repaso de vegetación y conservación general de espacios verdes particulares o comunitarios.',
+      ca: "Instal·lació de reg per degoteig, aspersió i programadors intel·ligents per a jardins eficients i estalvi d'aigua.",
+      es: 'Instalación de riego por goteo, aspersión y programadores inteligentes para jardines eficientes y ahorro de agua.',
     },
+    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+    tags: [
+      { ca: 'Reg degoteig', es: 'Riego por goteo' },
+      { ca: 'Aspersió', es: 'Aspersión' },
+      { ca: 'Programadors intel·ligents', es: 'Programadores inteligentes' },
+      { ca: "Estalvi d'aigua", es: 'Ahorro de agua' },
+    ],
   },
   {
-    icon: '🌿',
-    title: { ca: 'Jardineria i Recuperació d’Espais', es: 'Jardinería y Recuperación de Espacios' },
+    icon: '🏠',
+    title: { ca: 'Manteniment Periòdic', es: 'Mantenimiento Periódico' },
     description: {
-      ca: 'Posada a punt de jardins, reordenació vegetal, plantacions i millora d’espais exteriors després de treballs forestals o de neteja.',
-      es: 'Puesta a punto de jardines, reordenación vegetal, plantaciones y mejora de espacios exteriores después de trabajos forestales o de limpieza.',
+      ca: "Plans mensuals o trimestrals de poda, sega, fertilitzat i control de plagues. Mantenim el seu jardí impecable tot l'any.",
+      es: 'Planes mensuales o trimestrales de poda, siega, fertilización y control de plagas. Mantenemos su jardín impecable todo el año.',
     },
+    image: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80',
+    tags: [
+      { ca: 'Pla mensual', es: 'Plan mensual' },
+      { ca: 'Pla trimestral', es: 'Plan trimestral' },
+      { ca: 'Control plagues', es: 'Control de plagas' },
+      { ca: 'Fertilitzat', es: 'Fertilización' },
+    ],
   },
   {
     icon: '🔩',
-    title: { ca: 'Vallats i Tancaments', es: 'Vallados y Cerramientos' },
+    title: { ca: 'Tancaments i Vallats', es: 'Cerramientos y Vallados' },
     description: {
-      ca: 'Instal·lació professional de vallats i tancaments per a finques, parcel·les, urbanitzacions i espais industrials.',
-      es: 'Instalación profesional de vallados y cerramientos para fincas, parcelas, urbanizaciones y espacios industriales.',
+      ca: 'Instal·lació professional de tancaments metàl·lics, fusta, PVC, alumini, ferro i pedra. Garantia 5 anys.',
+      es: 'Instalación profesional de cerramientos metálicos, madera, PVC, aluminio, hierro y piedra. Garantía 5 años.',
     },
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    tags: [
+      { ca: 'Metàl·lic', es: 'Metálico' },
+      { ca: 'Fusta', es: 'Madera' },
+      { ca: 'PVC i alumini', es: 'PVC y aluminio' },
+      { ca: '5 anys garantia', es: '5 años garantía' },
+    ],
+  },
+  {
+    icon: '🏊',
+    title: { ca: 'Manteniment de Piscines', es: 'Mantenimiento de Piscinas' },
+    description: {
+      ca: "Neteja, tractament de l'aigua, revisió d'instal·lacions i posada a punt de la seva piscina per a la temporada d'estiu.",
+      es: 'Limpieza, tratamiento del agua, revisión de instalaciones y puesta a punto de su piscina para la temporada de verano.',
+    },
+    image: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80',
+    tags: [
+      { ca: 'Tractament aigua', es: 'Tratamiento agua' },
+      { ca: 'Neteja fons', es: 'Limpieza fondo' },
+      { ca: 'Revisió bombes', es: 'Revisión bombas' },
+      { ca: 'Posada a punt', es: 'Puesta a punto' },
+    ],
+  },
+  {
+    icon: '🛡️',
+    title: { ca: 'Tractaments Fitosanitaris', es: 'Tratamientos Fitosanitarios' },
+    description: {
+      ca: 'Control i eliminació de plagues, malalties i fongs en arbres, jardins i cultius. Productes homologats i respectuosos.',
+      es: 'Control y eliminación de plagas, enfermedades y hongos en árboles, jardines y cultivos. Productos homologados y respetuosos.',
+    },
+    image: 'https://images.unsplash.com/photo-1599629954294-14df9ec8dfe2?w=600&q=80',
+    tags: [
+      { ca: 'Control plagues', es: 'Control plagas' },
+      { ca: 'Productes homologats', es: 'Productos homologados' },
+      { ca: 'Fongs i malalties', es: 'Hongos y enfermedades' },
+      { ca: 'Cultius', es: 'Cultivos' },
+    ],
+  },
+  {
+    icon: '🌾',
+    title: { ca: 'Neteja de Terrenys', es: 'Limpieza de Terrenos' },
+    description: {
+      ca: 'Desbrossament i neteja de parcel·les i solars per a particulars, comunitats i empreses. Servei ràpid i eficient.',
+      es: 'Desbroce y limpieza de parcelas y solares para particulares, comunidades y empresas. Servicio rápido y eficiente.',
+    },
+    image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&q=80',
+    tags: [
+      { ca: 'Particulars', es: 'Particulares' },
+      { ca: 'Comunitats', es: 'Comunidades' },
+      { ca: 'Empreses', es: 'Empresas' },
+      { ca: 'Servei urgent', es: 'Servicio urgente' },
+    ],
   },
 ];
 

@@ -12,25 +12,31 @@ export default function ServicesPage() {
       <PageHero
         eyebrow={servicesIntro.label}
         title={servicesIntro.title}
-        description={{
-          ca: 'Intervencions forestals, poda en altura, desbrossaments, manteniment i vallats per a finques, parcel·les i espais residencials o corporatius.',
-          es: 'Intervenciones forestales, poda en altura, desbroces, mantenimiento y vallados para fincas, parcelas y espacios residenciales o corporativos.',
-        }}
+        description={servicesIntro.description}
         primaryCta={{ to: '/contacto', label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
         secondaryCta={{ to: '/cerramientos', label: { ca: 'Veure tancaments', es: 'Ver cerramientos' } }}
         image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
         compact
       />
 
-      <section className="section section-dark">
+      <section className="section section-light">
         <div className="container">
           <SectionHeading label={servicesIntro.label} title={servicesIntro.title} />
-          <div className="cards-grid">
+          <p className="section-copy">{t(servicesIntro.description)}</p>
+          <div className="services-photo-grid services-photo-grid-full">
             {services.map((service) => (
-              <article key={service.title.ca} className="service-card">
-                <span className="service-icon">{service.icon}</span>
-                <h3>{t(service.title)}</h3>
-                <p>{t(service.description)}</p>
+              <article key={service.title.ca} className="service-photo-card" data-reveal>
+                <img src={service.image} alt={t(service.title)} loading="lazy" />
+                <div className="service-photo-copy">
+                  <div className="service-photo-icon">{service.icon}</div>
+                  <h3>{t(service.title)}</h3>
+                  <p>{t(service.description)}</p>
+                  <div className="service-tags">
+                    {service.tags.map((tag) => (
+                      <span key={tag.ca}>{t(tag)}</span>
+                    ))}
+                  </div>
+                </div>
               </article>
             ))}
           </div>
