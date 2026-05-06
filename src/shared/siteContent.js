@@ -22,6 +22,12 @@ export const company = {
 
 export const quoteRequestHash = 'formulario-presupuesto';
 export const quoteRequestPath = `/contacto#${quoteRequestHash}`;
+export const servicesSectionHash = 'listado-servicios';
+export const servicesSectionPath = `/servicios#${servicesSectionHash}`;
+export const zonesSectionHash = 'zonas-cobertura';
+export const zonesSectionPath = `/zonas#${zonesSectionHash}`;
+export const fencesSectionHash = 'detalles-cerramientos';
+export const fencesSectionPath = `/cerramientos#${fencesSectionHash}`;
 
 export function buildQuoteRequestPath(params = {}) {
   const searchParams = new URLSearchParams();

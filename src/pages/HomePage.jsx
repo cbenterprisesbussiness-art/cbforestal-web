@@ -7,10 +7,12 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import {
   about,
   fences,
+  fencesSectionPath,
   hero,
   processSection,
   quoteRequestPath,
   services,
+  servicesSectionPath,
   servicesIntro,
   zones,
   zonesIntro,
@@ -27,7 +29,7 @@ export default function HomePage() {
         title={hero.title}
         description={hero.description}
         primaryCta={{ to: quoteRequestPath, label: hero.primaryCta }}
-        secondaryCta={{ to: '/servicios', label: hero.secondaryCta }}
+        secondaryCta={{ to: servicesSectionPath, label: hero.secondaryCta }}
         image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800"
         trustSignals={hero.trustSignals}
       />
@@ -86,7 +88,7 @@ export default function HomePage() {
           </div>
 
           <div className="services-cta-row">
-            <Link to="/servicios" className="btn-services-all">
+            <Link to={servicesSectionPath} className="btn-services-all">
               {`${t({ ca: 'Veure tots els serveis', es: 'Ver todos los servicios' })} (${services.length}) →`}
             </Link>
           </div>

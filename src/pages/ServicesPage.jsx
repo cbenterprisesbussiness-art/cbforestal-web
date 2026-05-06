@@ -1,7 +1,7 @@
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { quoteRequestPath, services, servicesIntro } from '../shared/siteContent';
+import { fencesSectionPath, quoteRequestPath, services, servicesIntro, servicesSectionHash } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ServicesPage() {
@@ -14,12 +14,12 @@ export default function ServicesPage() {
         title={servicesIntro.title}
         description={servicesIntro.description}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
-        secondaryCta={{ to: '/cerramientos', label: { ca: 'Veure tancaments', es: 'Ver cerramientos' } }}
+        secondaryCta={{ to: fencesSectionPath, label: { ca: 'Veure tancaments', es: 'Ver cerramientos' } }}
         image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
         compact
       />
 
-      <section className="section section-light">
+      <section id={servicesSectionHash} className="section section-light">
         <div className="container">
           <SectionHeading label={servicesIntro.label} title={servicesIntro.title} />
           <p className="section-copy">{t(servicesIntro.description)}</p>

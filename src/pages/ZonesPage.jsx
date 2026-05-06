@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { quoteRequestPath, zones, zonesIntro } from '../shared/siteContent';
+import { quoteRequestPath, servicesSectionPath, zones, zonesIntro, zonesSectionHash } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ZonesPage() {
@@ -15,12 +15,12 @@ export default function ZonesPage() {
         title={zonesIntro.title}
         description={zonesIntro.description}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Contactar equip', es: 'Contactar equipo' } }}
-        secondaryCta={{ to: '/servicios', label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
+        secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
         image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
         compact
       />
 
-      <section className="section section-zones">
+      <section id={zonesSectionHash} className="section section-zones">
         <div className="container">
           <SectionHeading label={zonesIntro.label} title={zonesIntro.title} center />
           <p className="section-copy centered">{t(zonesIntro.description)}</p>

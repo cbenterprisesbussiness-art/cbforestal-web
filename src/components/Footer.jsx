@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { company, footer, services, zones } from '../shared/siteContent';
+import { company, fencesSectionPath, footer, services, servicesSectionPath, zones, zonesSectionPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
           <ul>
             {services.map((service) => (
               <li key={service.title.ca}>
-                <Link to={service.title.ca === 'Tancaments i Vallats' ? '/cerramientos' : '/servicios'}>
+                <Link to={service.title.ca === 'Tancaments i Vallats' ? fencesSectionPath : servicesSectionPath}>
                   {t(service.title)}
                 </Link>
               </li>
@@ -33,7 +33,7 @@ export default function Footer() {
           <ul>
             {zones.slice(0, 6).map((zone) => (
               <li key={zone.name}>
-                <Link to="/zonas">{zone.name}</Link>
+                <Link to={zonesSectionPath}>{zone.name}</Link>
               </li>
             ))}
           </ul>

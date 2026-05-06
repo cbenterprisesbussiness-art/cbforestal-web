@@ -1,7 +1,7 @@
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { about, processSection, quoteRequestPath } from '../shared/siteContent';
+import { about, processSection, quoteRequestPath, servicesSectionPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
         title={about.title}
         description={about.paragraphs[0]}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Parlar amb nosaltres', es: 'Hablar con nosotros' } }}
-        secondaryCta={{ to: '/servicios', label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
+        secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
         image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1800"
         compact
       />
