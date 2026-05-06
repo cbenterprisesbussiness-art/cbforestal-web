@@ -187,6 +187,7 @@ export const navigation = [
   { to: '/servicios', label: { ca: 'Serveis', es: 'Servicios' } },
   { to: '/cerramientos', label: { ca: 'Tancaments', es: 'Cerramientos' } },
   { to: '/zonas', label: { ca: 'Zones', es: 'Zonas' } },
+  { to: worksPath, label: { ca: 'Treballs', es: 'Trabajos' } },
   { to: '/nosotros', label: { ca: 'Nosaltres', es: 'Nosotros' } },
 ];
 
