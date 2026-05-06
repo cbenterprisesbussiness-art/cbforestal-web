@@ -1,4 +1,3 @@
-import CTASection from '../components/CTASection';
 import ContactForm from '../components/ContactForm';
 import PageHero from '../components/PageHero';
 import { company, contact, quoteRequestHash } from '../shared/siteContent';
@@ -47,8 +46,6 @@ export default function ContactPage() {
           </article>
         </div>
       </section>
-
-      <CTASection />
     </>
   );
 }
