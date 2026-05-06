@@ -268,7 +268,7 @@ export const services = [
       ca: 'Creem jardins a mida des de zero, amb plantes autòctones i disseny paisatgístic personalitzat per a particulars i empreses.',
       es: 'Creamos jardines a medida desde cero, con plantas autóctonas y diseño paisajístico personalizado para particulares y empresas.',
     },
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.jpg',
     tags: [
       { ca: 'Disseny paisatgístic', es: 'Diseño paisajístico' },
       { ca: 'Plantes autòctones', es: 'Plantas autóctonas' },
@@ -283,7 +283,7 @@ export const services = [
       ca: "Especialistes en poda d'arbres d'altura i eliminació segura de pins i arbres amb equip homologat i assegurat a tota Catalunya.",
       es: 'Especialistas en poda de árboles de altura y eliminación segura de pinos y árboles con equipo homologado y asegurado en toda Cataluña.',
     },
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: '/trabajos/servicios/poda-tala-camion-grua.jpg',
     tags: [
       { ca: 'Treballs en altura', es: 'Trabajos en altura' },
       { ca: 'Equip homologat', es: 'Equipo homologado' },
@@ -298,7 +298,7 @@ export const services = [
       ca: "Neteja i desbrossament de parcel·les, finques i boscos amb maquinària professional. Prevenció d'incendis forestals.",
       es: 'Limpieza y desbroce de parcelas, fincas y bosques con maquinaria profesional. Prevención de incendios forestales.',
     },
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
+    image: '/trabajos/servicios/desbroce-talud-limpio.jpg',
     tags: [
       { ca: 'Prevenció incendis', es: 'Prevención incendios' },
       { ca: 'Parcel·les', es: 'Parcelas' },
@@ -328,7 +328,7 @@ export const services = [
       ca: "Plans mensuals o trimestrals de poda, sega, fertilitzat i control de plagues. Mantenim el seu jardí impecable tot l'any.",
       es: 'Planes mensuales o trimestrales de poda, siega, fertilización y control de plagas. Mantenemos su jardín impecable todo el año.',
     },
-    image: 'https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=600&q=80',
+    image: '/trabajos/servicios/mantenimiento-parcela-despejada.jpg',
     tags: [
       { ca: 'Pla mensual', es: 'Plan mensual' },
       { ca: 'Pla trimestral', es: 'Plan trimestral' },
@@ -343,7 +343,7 @@ export const services = [
       ca: 'Instal·lació professional de tancaments metàl·lics, fusta, PVC, alumini, ferro i pedra. Garantia 5 anys.',
       es: 'Instalación profesional de cerramientos metálicos, madera, PVC, aluminio, hierro y piedra. Garantía 5 años.',
     },
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80',
+    image: '/trabajos/servicios/cerramiento-portillo-metalico.jpg',
     tags: [
       { ca: 'Metàl·lic', es: 'Metálico' },
       { ca: 'Fusta', es: 'Madera' },
@@ -358,7 +358,7 @@ export const services = [
       ca: "Neteja, tractament de l'aigua, revisió d'instal·lacions i posada a punt de la seva piscina per a la temporada d'estiu.",
       es: 'Limpieza, tratamiento del agua, revisión de instalaciones y puesta a punto de su piscina para la temporada de verano.',
     },
-    image: 'https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80',
+    image: '/trabajos/servicios/mantenimiento-piscina-vaciada.jpg',
     tags: [
       { ca: 'Tractament aigua', es: 'Tratamiento agua' },
       { ca: 'Neteja fons', es: 'Limpieza fondo' },
@@ -388,7 +388,7 @@ export const services = [
       ca: 'Desbrossament i neteja de parcel·les i solars per a particulars, comunitats i empreses. Servei ràpid i eficient.',
       es: 'Desbroce y limpieza de parcelas y solares para particulares, comunidades y empresas. Servicio rápido y eficiente.',
     },
-    image: 'https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&q=80',
+    image: '/trabajos/servicios/limpieza-terreno-con-tocones.jpg',
     tags: [
       { ca: 'Particulars', es: 'Particulares' },
       { ca: 'Comunitats', es: 'Comunidades' },
@@ -474,42 +474,100 @@ export const zones = [
 }));
 
 export const projects = {
-  label: { ca: 'Treballs recents', es: 'Trabajos recientes' },
+  label: { ca: 'Treballs reals', es: 'Trabajos reales' },
   title: {
-    ca: 'Projectes pensats per durar i facilitar el manteniment',
-    es: 'Proyectos pensados para durar y facilitar el mantenimiento',
+    ca: 'Exemples d’obra executada per l’equip',
+    es: 'Ejemplos de obra ejecutada por el equipo',
   },
   description: {
-    ca: 'Mostrem tres tipus de projecte habituals per ensenyar el tipus de resultat, escala i acabat amb què treballem.',
-    es: 'Mostramos tres tipos de proyecto habituales para enseñar el tipo de resultado, escala y acabado con el que trabajamos.',
+    ca: 'Una selecció de feines reals de tala, desbrossament, tancaments i manteniment perquè puguis veure acabat, entorn i tipus d’intervenció.',
+    es: 'Una selección de trabajos reales de tala, desbroce, cerramientos y mantenimiento para que puedas ver acabado, entorno y tipo de intervención.',
   },
   items: [
     {
-      image: '/projects-residential.svg',
-      title: { ca: 'Jardí residencial mediterrani', es: 'Jardín residencial mediterráneo' },
+      image: '/trabajos/galeria/poda-altura-arborista.jpg',
+      title: { ca: 'Poda en altura amb arborista', es: 'Poda en altura con arborista' },
       summary: {
-        ca: 'Redistribució de gespa, reg per sectors i plantació de baix consum hídric.',
-        es: 'Redistribución de césped, riego por sectores y plantación de bajo consumo hídrico.',
+        ca: 'Treball vertical en pi de gran alçada amb accés controlat i seguretat de maniobra.',
+        es: 'Trabajo vertical en pino de gran altura con acceso controlado y seguridad de maniobra.',
       },
-      meta: { ca: 'Barcelona · Particular', es: 'Barcelona · Particular' },
+      meta: { ca: 'Poda i tala · Treball en altura', es: 'Poda y tala · Trabajo en altura' },
     },
     {
-      image: '/projects-fencing.svg',
-      title: { ca: 'Tancament per finca rural', es: 'Cerramiento para finca rural' },
+      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.jpg',
+      title: { ca: 'Tancament de talús amb malla', es: 'Cerramiento de talud con malla' },
       summary: {
-        ca: 'Tanca metàl·lica reforçada amb accés ampli per manteniment i maquinària.',
-        es: 'Valla metálica reforzada con acceso amplio para mantenimiento y maquinaria.',
+        ca: 'Instal·lació de tancament metàl·lic adaptat al desnivell i al perímetre real del terreny.',
+        es: 'Instalación de cerramiento metálico adaptado al desnivel y al perímetro real del terreno.',
       },
-      meta: { ca: 'Girona · Finca rural', es: 'Girona · Finca rural' },
+      meta: { ca: 'Tancaments · Finca en pendent', es: 'Cerramientos · Finca en pendiente' },
     },
     {
-      image: '/projects-community.svg',
-      title: { ca: 'Zones verdes comunitàries', es: 'Zonas verdes comunitarias' },
+      image: '/trabajos/galeria/limpieza-pinar-urbano.jpg',
+      title: { ca: 'Desbrossament de pinar urbà', es: 'Desbroce de pinar urbano' },
       summary: {
-        ca: 'Pla de manteniment, poda estacional i recuperació de parterres de comunitat.',
-        es: 'Plan de mantenimiento, poda estacional y recuperación de parterres de comunidad.',
+        ca: 'Neteja i manteniment de parcel·la amb pendent per reduir vegetació acumulada i millorar accés.',
+        es: 'Limpieza y mantenimiento de parcela con pendiente para reducir vegetación acumulada y mejorar acceso.',
       },
-      meta: { ca: 'Tarragona · Comunitat', es: 'Tarragona · Comunidad' },
+      meta: { ca: 'Desbrossaments · Entorn residencial', es: 'Desbroces · Entorno residencial' },
+    },
+    {
+      image: '/trabajos/galeria/tala-controlada-piscina.jpg',
+      title: { ca: 'Tala controlada a zona residencial', es: 'Tala controlada en zona residencial' },
+      summary: {
+        ca: 'Desmuntatge progressiu amb zona de treball protegida i retirada de restes de gran volum.',
+        es: 'Desmontaje progresivo con zona de trabajo protegida y retirada de restos de gran volumen.',
+      },
+      meta: { ca: 'Tala · Camió grua i suport', es: 'Tala · Camión grúa y apoyo' },
+    },
+    {
+      image: '/trabajos/galeria/cerramiento-panel-porton.jpg',
+      title: { ca: 'Tanca perimetral amb portó', es: 'Valla perimetral con portón' },
+      summary: {
+        ca: 'Línia de tancament reforçada amb accés integrat per a vehicles i manteniment.',
+        es: 'Línea de cerramiento reforzada con acceso integrado para vehículos y mantenimiento.',
+      },
+      meta: { ca: 'Tancaments · Accés metàl·lic', es: 'Cerramientos · Acceso metálico' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
+      title: { ca: 'Manteniment de piscina', es: 'Mantenimiento de piscina' },
+      summary: {
+        ca: 'Treball de preparació i intervenció sobre vas buit per a posada a punt i revisió.',
+        es: 'Trabajo de preparación e intervención sobre vaso vacío para puesta a punto y revisión.',
+      },
+      meta: { ca: 'Piscines · Posada a punt', es: 'Piscinas · Puesta a punto' },
+    },
+  ],
+  videosTitle: { ca: 'Vídeos de treball', es: 'Vídeos de trabajo' },
+  videosDescription: {
+    ca: 'Alguns clips curts d’intervencions reals sobre el terreny.',
+    es: 'Algunos clips cortos de intervenciones reales sobre el terreno.',
+  },
+  videos: [
+    {
+      src: '/trabajos/videos/trabajo-altura-01.mp4',
+      title: { ca: 'Treball en altura', es: 'Trabajo en altura' },
+      summary: {
+        ca: 'Intervenció vertical amb equip especialitzat.',
+        es: 'Intervención vertical con equipo especializado.',
+      },
+    },
+    {
+      src: '/trabajos/videos/trabajo-forestal-01.mp4',
+      title: { ca: 'Treball forestal', es: 'Trabajo forestal' },
+      summary: {
+        ca: 'Procés real d’execució en camp.',
+        es: 'Proceso real de ejecución en campo.',
+      },
+    },
+    {
+      src: '/trabajos/videos/trabajo-parcela-01.mp4',
+      title: { ca: 'Treball de parcel·la', es: 'Trabajo de parcela' },
+      summary: {
+        ca: 'Mostra breu de feina en entorn residencial.',
+        es: 'Muestra breve de trabajo en entorno residencial.',
+      },
     },
   ],
 };

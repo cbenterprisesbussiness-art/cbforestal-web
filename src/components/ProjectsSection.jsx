@@ -26,6 +26,25 @@ export default function ProjectsSection() {
             </article>
           ))}
         </div>
+        {projects.videos?.length ? (
+          <>
+            <div className="projects-video-head">
+              <h3>{t(projects.videosTitle)}</h3>
+              <p>{t(projects.videosDescription)}</p>
+            </div>
+            <div className="projects-grid projects-video-grid">
+              {projects.videos.map((item) => (
+                <article key={item.src} className="project-card" data-reveal>
+                  <video src={item.src} controls muted playsInline preload="metadata" />
+                  <div className="project-copy">
+                    <h3>{t(item.title)}</h3>
+                    <p>{t(item.summary)}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : null}
       </div>
     </section>
   );
