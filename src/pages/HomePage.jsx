@@ -32,7 +32,7 @@ export default function HomePage() {
         description={hero.description}
         primaryCta={{ to: quoteRequestPath, label: hero.primaryCta }}
         secondaryCta={{ to: servicesSectionPath, label: hero.secondaryCta }}
-        image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800"
+        image="/trabajos/galeria/tala-controlada-piscina.jpg"
         trustSignals={hero.trustSignals}
       />
 
