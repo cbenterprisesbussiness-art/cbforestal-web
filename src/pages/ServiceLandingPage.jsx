@@ -1,3 +1,4 @@
+import FAQSection from '../components/FAQSection';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
@@ -32,6 +33,11 @@ export default function ServiceLandingPage({ content }) {
                 {t(paragraph)}
               </p>
             ))}
+            {content.areas ? (
+              <p className="service-area-note">
+                <strong>{t({ ca: 'Zones habituals:', es: 'Zonas habituales:' })}</strong> {t(content.areas)}
+              </p>
+            ) : null}
             <div className="vallados-types">
               {content.bullets.map((bullet) => (
                 <div key={bullet.ca} className="vallados-type">
@@ -42,6 +48,13 @@ export default function ServiceLandingPage({ content }) {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        label={{ ca: 'Preguntes freqüents', es: 'Preguntas frecuentes' }}
+        title={{ ca: `Dubtes habituals sobre ${t(content.eyebrow).toLowerCase()}`, es: `Dudas habituales sobre ${t(content.eyebrow).toLowerCase()}` }}
+        items={content.faqs}
+        schemaId={`faq-${t(content.eyebrow).toLowerCase().replace(/\s+/g, '-')}`}
+      />
 
       <CTASection />
     </>

@@ -727,6 +727,33 @@ export const serviceLandingPages = {
       { ca: 'Intervenció en parcel·les, jardins i comunitats', es: 'Intervención en parcelas, jardines y comunidades' },
       { ca: 'Retirada de restes vegetals i neteja final', es: 'Retirada de restos vegetales y limpieza final' },
     ],
+    areas: {
+      ca: 'Barcelona, Sant Cugat, Cerdanyola, Rubí, Sabadell, Terrassa i municipis propers.',
+      es: 'Barcelona, Sant Cugat, Cerdanyola, Rubí, Sabadell, Terrassa y municipios cercanos.',
+    },
+    faqs: [
+      {
+        question: { ca: "Quan convé fer una poda d'arbres?", es: '¿Cuándo conviene hacer una poda de árboles?' },
+        answer: {
+          ca: "Depèn de l'espècie i de l'objectiu de la intervenció. Valorem cada cas per executar la poda en el moment més segur i adequat.",
+          es: 'Depende de la especie y del objetivo de la intervención. Valoramos cada caso para ejecutar la poda en el momento más seguro y adecuado.',
+        },
+      },
+      {
+        question: { ca: 'Feu poda en arbres grans o en altura?', es: '¿Hacéis poda en árboles grandes o en altura?' },
+        answer: {
+          ca: 'Sí. Treballem amb equip preparat per a poda en altura i intervencions tècniques en espais residencials o amb accessos complicats.',
+          es: 'Sí. Trabajamos con equipo preparado para poda en altura e intervenciones técnicas en espacios residenciales o con accesos complicados.',
+        },
+      },
+      {
+        question: { ca: 'Retireu també les restes?', es: '¿Retiráis también los restos?' },
+        answer: {
+          ca: 'Sí, el servei es pot completar amb retirada de branques, fusta i neteja final de la zona de treball.',
+          es: 'Sí, el servicio puede completarse con retirada de ramas, madera y limpieza final de la zona de trabajo.',
+        },
+      },
+    ],
   },
   [talaBarcelonaPath]: {
     eyebrow: { ca: "Tala d'arbres", es: 'Tala de árboles' },
@@ -759,6 +786,33 @@ export const serviceLandingPages = {
       { ca: 'Retirada de troncs, branques i restes', es: 'Retirada de troncos, ramas y restos' },
       { ca: 'Servei ràpid a Barcelona i Catalunya', es: 'Servicio rápido en Barcelona y Cataluña' },
     ],
+    areas: {
+      ca: 'Barcelona, Maresme, Vallès, Baix Llobregat i altres zones de Catalunya.',
+      es: 'Barcelona, Maresme, Vallès, Baix Llobregat y otras zonas de Cataluña.',
+    },
+    faqs: [
+      {
+        question: { ca: 'Quan cal fer una tala i no una poda?', es: '¿Cuándo hay que hacer una tala y no una poda?' },
+        answer: {
+          ca: "Quan l'arbre està compromès, mal orientat, massa a prop d'estructures o representa un risc que no es resol amb poda.",
+          es: 'Cuando el árbol está comprometido, mal orientado, demasiado cerca de estructuras o representa un riesgo que no se resuelve con poda.',
+        },
+      },
+      {
+        question: { ca: 'Podeu talar arbres en espais petits?', es: '¿Podéis talar árboles en espacios pequeños?' },
+        answer: {
+          ca: 'Sí. Planifiquem la maniobra i, si cal, fem desmuntatge per trams per treballar amb seguretat en entorns complicats.',
+          es: 'Sí. Planificamos la maniobra y, si hace falta, realizamos desmontaje por tramos para trabajar con seguridad en entornos complicados.',
+        },
+      },
+      {
+        question: { ca: 'Incloeu retirada de fusta i restes?', es: '¿Incluís retirada de madera y restos?' },
+        answer: {
+          ca: 'Sí, podem incloure retirada de troncs, branques i neteja final segons el tipus de projecte.',
+          es: 'Sí, podemos incluir retirada de troncos, ramas y limpieza final según el tipo de proyecto.',
+        },
+      },
+    ],
   },
   [desbroceBarcelonaPath]: {
     eyebrow: { ca: 'Desbrossament', es: 'Desbroce' },
@@ -790,6 +844,33 @@ export const serviceLandingPages = {
       { ca: 'Neteja de talussos i zones amb pendent', es: 'Limpieza de taludes y zonas con pendiente' },
       { ca: 'Prevenció d’incendis i sanejament', es: 'Prevención de incendios y saneamiento' },
       { ca: 'Manteniment puntual o recurrent', es: 'Mantenimiento puntual o recurrente' },
+    ],
+    areas: {
+      ca: 'Barcelona, Vallès, Maresme i finques de l’entorn metropolità.',
+      es: 'Barcelona, Vallès, Maresme y fincas del entorno metropolitano.',
+    },
+    faqs: [
+      {
+        question: { ca: 'Feu desbrossament de talussos?', es: '¿Hacéis desbroce de taludes?' },
+        answer: {
+          ca: 'Sí. Treballem en zones amb pendent, accessos difícils i parcel·les que necessiten sanejament o manteniment periòdic.',
+          es: 'Sí. Trabajamos en zonas con pendiente, accesos difíciles y parcelas que necesitan saneamiento o mantenimiento periódico.',
+        },
+      },
+      {
+        question: { ca: 'Serveix per prevenció d’incendis?', es: '¿Sirve para prevención de incendios?' },
+        answer: {
+          ca: 'Sí, el desbrossament redueix vegetació acumulada i ajuda a mantenir la parcel·la en condicions més segures.',
+          es: 'Sí, el desbroce reduce vegetación acumulada y ayuda a mantener la parcela en condiciones más seguras.',
+        },
+      },
+      {
+        question: { ca: 'Feu manteniment recurrent?', es: '¿Hacéis mantenimiento recurrente?' },
+        answer: {
+          ca: 'Sí, podem treballar tant en actuacions puntuals com en manteniment regular de parcel·les i finques.',
+          es: 'Sí, podemos trabajar tanto en actuaciones puntuales como en mantenimiento regular de parcelas y fincas.',
+        },
+      },
     ],
   },
 };
