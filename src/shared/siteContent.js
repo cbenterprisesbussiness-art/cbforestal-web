@@ -228,6 +228,45 @@ export const hero = {
       ca: 'Cobertura a tota Catalunya',
       es: 'Cobertura en toda Cataluña',
     },
+    {
+      ca: 'Treballs reals i equip propi',
+      es: 'Trabajos reales y equipo propio',
+    },
+  ],
+};
+
+export const conversionSection = {
+  label: { ca: 'Per què triar-nos', es: 'Por qué elegirnos' },
+  title: {
+    ca: 'La diferència entre una visita i un pressupost que sí et resol el problema',
+    es: 'La diferencia entre una visita y un presupuesto que sí te resuelve el problema',
+  },
+  description: {
+    ca: 'No venem una web bonica: venem resposta ràpida, criteri tècnic i execució segura perquè sàpigues qui entra a la teva finca i què farà exactament.',
+    es: 'No vendemos una web bonita: vendemos respuesta rápida, criterio técnico y ejecución segura para que sepas quién entra en tu finca y qué va a hacer exactamente.',
+  },
+  items: [
+    {
+      title: { ca: 'Pressupost clar', es: 'Presupuesto claro' },
+      text: {
+        ca: 'T’expliquem l’actuació, l’abast i el tipus de feina abans de començar, sense improvisacions ni sorpreses de darrera hora.',
+        es: 'Te explicamos la actuación, el alcance y el tipo de trabajo antes de empezar, sin improvisaciones ni sorpresas de última hora.',
+      },
+    },
+    {
+      title: { ca: 'Seguretat i ordre', es: 'Seguridad y orden' },
+      text: {
+        ca: 'Treballs en alçada, tala, desbrossament o tancaments executats amb criteri i neteja final de la zona de treball.',
+        es: 'Trabajos en altura, tala, desbroce o cerramientos ejecutados con criterio y limpieza final de la zona de trabajo.',
+      },
+    },
+    {
+      title: { ca: 'Resposta ràpida', es: 'Respuesta rápida' },
+      text: {
+        ca: 'Si ens escrius per una poda, una tala o una parcel·la bruta, et contestem ràpid perquè puguis decidir sense perdre dies.',
+        es: 'Si nos escribes por una poda, una tala o una parcela sucia, te contestamos rápido para que puedas decidir sin perder días.',
+      },
+    },
   ],
 };
 

@@ -280,6 +280,42 @@ main {
   font-weight: 700;
 }
 
+.home-proof-strip {
+  position: relative;
+  z-index: 2;
+  margin-top: -2.2rem;
+  padding: 0 2rem;
+}
+
+.home-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-proof-card {
+  padding: 1rem 1.15rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(26, 58, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(12, 27, 18, 0.1);
+}
+
+.home-proof-card span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--green-mid);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-proof-card strong,
+.home-proof-card a {
+  color: var(--green-deep);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
 .btn-primary,
 .btn-outline {
   display: inline-flex;
@@ -1268,6 +1304,32 @@ main {
   color: var(--text-mid);
 }
 
+.conversion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.conversion-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(245, 240, 232, 0.7));
+}
+
+.conversion-card h3 {
+  margin: 0 0 0.6rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--green-deep);
+}
+
+.conversion-card p {
+  margin: 0;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1454,7 +1516,9 @@ main {
   .proceso-steps,
   .projects-grid,
   .works-gallery-grid,
-  .faq-grid {
+  .faq-grid,
+  .conversion-grid,
+  .home-proof-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1496,8 +1560,15 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .faq-grid {
+  .faq-grid,
+  .conversion-grid,
+  .home-proof-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-proof-strip {
+    margin-top: -1rem;
+    padding: 0 1rem;
   }
 
   .menu-toggle,

@@ -6,6 +6,8 @@ import ProjectsSection from '../components/ProjectsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import {
   about,
+  company,
+  conversionSection,
   fences,
   fencesSectionPath,
   hero,
@@ -34,6 +36,23 @@ export default function HomePage() {
         trustSignals={hero.trustSignals}
       />
 
+      <section className="home-proof-strip">
+        <div className="container home-proof-grid">
+          <article className="home-proof-card" data-reveal>
+            <span>{t({ ca: 'Truca directament', es: 'Llama directamente' })}</span>
+            <a href={company.phoneHref}>{company.phone}</a>
+          </article>
+          <article className="home-proof-card" data-reveal>
+            <span>{t({ ca: 'Resposta habitual', es: 'Respuesta habitual' })}</span>
+            <strong>{t({ ca: 'En menys de 24h', es: 'En menos de 24h' })}</strong>
+          </article>
+          <article className="home-proof-card" data-reveal>
+            <span>{t({ ca: 'Treballem a', es: 'Trabajamos en' })}</span>
+            <strong>{t({ ca: 'Barcelona i Catalunya', es: 'Barcelona y Cataluña' })}</strong>
+          </article>
+        </div>
+      </section>
+
       <section className="section section-cream">
         <div className="container split-grid">
           <div>
@@ -49,6 +68,21 @@ export default function HomePage() {
               <article key={stat.value + stat.label.ca} className="stat-box" data-reveal>
                 <div className="stat-num">{stat.value}</div>
                 <div className="stat-desc">{t(stat.label)}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-light">
+        <div className="container">
+          <SectionHeading label={conversionSection.label} title={conversionSection.title} center />
+          <p className="section-copy centered">{t(conversionSection.description)}</p>
+          <div className="conversion-grid">
+            {conversionSection.items.map((item) => (
+              <article key={item.title.ca} className="conversion-card" data-reveal>
+                <h3>{t(item.title)}</h3>
+                <p>{t(item.text)}</p>
               </article>
             ))}
           </div>
