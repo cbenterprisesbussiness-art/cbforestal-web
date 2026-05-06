@@ -8,6 +8,7 @@ import FencesPage from './pages/FencesPage';
 import ZonesPage from './pages/ZonesPage';
 import ContactPage from './pages/ContactPage';
 import LegalPage from './pages/LegalPage';
+import WorksPage from './pages/WorksPage';
 import { useLanguage } from './shared/LanguageContext';
 import { company, legalPages, pageMeta, services } from './shared/siteContent';
 
@@ -166,6 +167,7 @@ export default function App() {
           <Route path="/servicios" element={<ServicesPage />} />
           <Route path="/cerramientos" element={<FencesPage />} />
           <Route path="/zonas" element={<ZonesPage />} />
+          <Route path="/trabajos" element={<WorksPage />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/privacidad" element={<LegalPage content={legalPages.privacy} />} />
           <Route path="/aviso-legal" element={<LegalPage content={legalPages.legalNotice} />} />

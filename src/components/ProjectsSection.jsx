@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import SectionHeading from './SectionHeading';
-import { projects, quoteRequestPath } from '../shared/siteContent';
+import { projects, quoteRequestPath, worksPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ProjectsSection() {
@@ -25,6 +25,11 @@ export default function ProjectsSection() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="projects-actions">
+          <Link to={worksPath} className="btn-services-all">
+            {`${t(projects.galleryCta)} →`}
+          </Link>
         </div>
         {projects.videos?.length ? (
           <>

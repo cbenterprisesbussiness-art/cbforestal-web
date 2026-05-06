@@ -22,6 +22,7 @@ export const company = {
 
 export const quoteRequestHash = 'formulario-presupuesto';
 export const quoteRequestPath = `/contacto#${quoteRequestHash}`;
+export const worksPath = '/trabajos';
 export const servicesSectionHash = 'listado-servicios';
 export const servicesSectionPath = `/servicios#${servicesSectionHash}`;
 export const zonesSectionHash = 'zonas-cobertura';
@@ -104,6 +105,16 @@ export const pageMeta = {
     description: {
       ca: 'Contacta amb CB Forestal per demanar pressupost de jardineria, manteniment o tancaments a Catalunya.',
       es: 'Contacta con CB Forestal para pedir presupuesto de jardinería, mantenimiento o cerramientos en Cataluña.',
+    },
+  },
+  '/trabajos': {
+    title: {
+      ca: 'CB FORESTAL — Treballs reals',
+      es: 'CB FORESTAL — Trabajos reales',
+    },
+    description: {
+      ca: 'Galeria de treballs reals de tala, poda, desbrossament, manteniment i tancaments executats per CB Forestal.',
+      es: 'Galería de trabajos reales de tala, poda, desbroce, mantenimiento y cerramientos ejecutados por CB Forestal.',
     },
   },
   '/privacidad': {
@@ -568,6 +579,82 @@ export const projects = {
         ca: 'Mostra breu de feina en entorn residencial.',
         es: 'Muestra breve de trabajo en entorno residencial.',
       },
+    },
+  ],
+  galleryCta: {
+    ca: 'Veure galeria completa',
+    es: 'Ver galería completa',
+  },
+  gallery: [
+    {
+      image: '/trabajos/galeria/tala-controlada-trepador.jpg',
+      title: { ca: 'Tala controlada amb trepador', es: 'Tala controlada con trepador' },
+      meta: { ca: 'Tala · Entorn residencial', es: 'Tala · Entorno residencial' },
+    },
+    {
+      image: '/trabajos/galeria/tala-controlada-camion-grua.jpg',
+      title: { ca: 'Suport amb camió grua', es: 'Apoyo con camión grúa' },
+      meta: { ca: 'Tala · Retirada de tronc', es: 'Tala · Retirada de tronco' },
+    },
+    {
+      image: '/trabajos/galeria/poda-altura-arborista.jpg',
+      title: { ca: 'Poda en altura', es: 'Poda en altura' },
+      meta: { ca: 'Arboricultura · Seguretat', es: 'Arboricultura · Seguridad' },
+    },
+    {
+      image: '/trabajos/galeria/poda-pino-gran-formato.jpg',
+      title: { ca: 'Intervenció en pi gran', es: 'Intervención en pino grande' },
+      meta: { ca: 'Poda · Treball tècnic', es: 'Poda · Trabajo técnico' },
+    },
+    {
+      image: '/trabajos/galeria/cerramiento-malla-talud-frontal.jpg',
+      title: { ca: 'Malla en talús', es: 'Malla en talud' },
+      meta: { ca: 'Tancaments · Façana', es: 'Cerramientos · Frente' },
+    },
+    {
+      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.jpg',
+      title: { ca: 'Tancament lateral', es: 'Cerramiento lateral' },
+      meta: { ca: 'Tancaments · Desnivell', es: 'Cerramientos · Desnivel' },
+    },
+    {
+      image: '/trabajos/galeria/cerramiento-postes-alineados.jpg',
+      title: { ca: 'Alineació de pals', es: 'Alineación de postes' },
+      meta: { ca: 'Tancaments · Execució', es: 'Cerramientos · Ejecución' },
+    },
+    {
+      image: '/trabajos/galeria/cerramiento-panel-porton.jpg',
+      title: { ca: 'Portó i tanca metàl·lica', es: 'Portón y valla metálica' },
+      meta: { ca: 'Tancaments · Accés', es: 'Cerramientos · Acceso' },
+    },
+    {
+      image: '/trabajos/galeria/cimentacion-cerramiento-armado.jpg',
+      title: { ca: 'Fonamentació armada', es: 'Cimentación armada' },
+      meta: { ca: 'Tancaments · Base', es: 'Cerramientos · Base' },
+    },
+    {
+      image: '/trabajos/galeria/muro-bloque-cerramiento-obra.jpg',
+      title: { ca: 'Mur de bloc en obra', es: 'Muro de bloque en obra' },
+      meta: { ca: 'Tancament d’obra', es: 'Cerramiento de obra' },
+    },
+    {
+      image: '/trabajos/galeria/desbroce-talud-antes.jpg',
+      title: { ca: 'Talús abans de sanejar', es: 'Talud antes de sanear' },
+      meta: { ca: 'Desbrossament · Abans', es: 'Desbroce · Antes' },
+    },
+    {
+      image: '/trabajos/galeria/limpieza-talud-urbano.jpg',
+      title: { ca: 'Talús urbà netejat', es: 'Talud urbano limpiado' },
+      meta: { ca: 'Desbrossament · Després', es: 'Desbroce · Después' },
+    },
+    {
+      image: '/trabajos/galeria/limpieza-pinar-urbano.jpg',
+      title: { ca: 'Neteja de pinar', es: 'Limpieza de pinar' },
+      meta: { ca: 'Manteniment · Parcel·la', es: 'Mantenimiento · Parcela' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
+      title: { ca: 'Piscina en posada a punt', es: 'Piscina en puesta a punto' },
+      meta: { ca: 'Piscines · Manteniment', es: 'Piscinas · Mantenimiento' },
     },
   ],
 };

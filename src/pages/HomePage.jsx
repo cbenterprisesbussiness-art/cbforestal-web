@@ -99,7 +99,7 @@ export default function HomePage() {
         <div className="container split-grid fences-grid">
           <div className="image-card">
             <img
-              src="/scene-fences.svg"
+              src="/trabajos/galeria/cerramiento-malla-talud-frontal.jpg"
               alt={t(fences.label)}
               loading="lazy"
             />

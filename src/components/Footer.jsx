@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { company, fencesSectionPath, footer, services, servicesSectionPath, zones, zonesSectionPath } from '../shared/siteContent';
+import { company, fencesSectionPath, footer, services, servicesSectionPath, worksPath, zones, zonesSectionPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function Footer() {
@@ -13,6 +13,9 @@ export default function Footer() {
             CB <span>FORESTAL</span>
           </Link>
           <p>{t(footer.brand)}</p>
+          <Link className="footer-gallery-link" to={worksPath}>
+            {t({ ca: 'Veure treballs reals', es: 'Ver trabajos reales' })}
+          </Link>
         </div>
 
         <div className="footer-col">
