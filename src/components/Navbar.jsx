@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
-import { navigation } from '../shared/siteContent';
+import { navigation, quoteRequestPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function Navbar() {
@@ -54,7 +54,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <NavLink
-            to="/contacto"
+            to={quoteRequestPath}
             className={({ isActive }) => `nav-link nav-cta${isActive ? ' active' : ''}`}
           >
             {t({ ca: 'Pressupost', es: 'Presupuesto' })}

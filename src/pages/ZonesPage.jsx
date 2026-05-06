@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { zones, zonesIntro } from '../shared/siteContent';
+import { quoteRequestPath, zones, zonesIntro } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ZonesPage() {
@@ -14,7 +14,7 @@ export default function ZonesPage() {
         eyebrow={zonesIntro.label}
         title={zonesIntro.title}
         description={zonesIntro.description}
-        primaryCta={{ to: '/contacto', label: { ca: 'Contactar equip', es: 'Contactar equipo' } }}
+        primaryCta={{ to: quoteRequestPath, label: { ca: 'Contactar equip', es: 'Contactar equipo' } }}
         secondaryCta={{ to: '/servicios', label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
         image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
         compact

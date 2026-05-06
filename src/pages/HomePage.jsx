@@ -9,6 +9,7 @@ import {
   fences,
   hero,
   processSection,
+  quoteRequestPath,
   services,
   servicesIntro,
   zones,
@@ -25,7 +26,7 @@ export default function HomePage() {
         eyebrow={hero.tag}
         title={hero.title}
         description={hero.description}
-        primaryCta={{ to: '/contacto', label: hero.primaryCta }}
+        primaryCta={{ to: quoteRequestPath, label: hero.primaryCta }}
         secondaryCta={{ to: '/servicios', label: hero.secondaryCta }}
         image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800"
         trustSignals={hero.trustSignals}
@@ -116,7 +117,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <Link to="/cerramientos" className="btn-primary">
+            <Link to={quoteRequestPath} className="btn-primary">
               {t({ ca: 'Demanar pressupost de tancament', es: 'Solicitar presupuesto de cerramiento' })}
             </Link>
           </div>

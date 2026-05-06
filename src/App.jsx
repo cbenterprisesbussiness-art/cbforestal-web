@@ -20,6 +20,23 @@ function RouteEffects() {
   }, [location.pathname]);
 
   useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const elementId = location.hash.slice(1);
+    const scrollToElement = () => {
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    window.requestAnimationFrame(scrollToElement);
+  }, [location.hash, location.pathname]);
+
+  useEffect(() => {
     const meta = pageMeta[location.pathname] || pageMeta['/'];
     document.documentElement.lang = lang;
     document.title = meta.title[lang];

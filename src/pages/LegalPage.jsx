@@ -1,5 +1,6 @@
 import PageHero from '../components/PageHero';
 import CTASection from '../components/CTASection';
+import { quoteRequestPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function LegalPage({ content }) {
@@ -11,7 +12,7 @@ export default function LegalPage({ content }) {
         eyebrow={content.label}
         title={content.title}
         description={content.description}
-        primaryCta={{ to: '/contacto', label: { ca: 'Contactar ara', es: 'Contactar ahora' } }}
+        primaryCta={{ to: quoteRequestPath, label: { ca: 'Contactar ara', es: 'Contactar ahora' } }}
         secondaryCta={{ to: '/', label: { ca: "Tornar a l'inici", es: 'Volver al inicio' } }}
         image="/scene-legal.svg"
         compact

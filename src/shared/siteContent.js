@@ -20,6 +20,25 @@ export const company = {
   ],
 };
 
+export const quoteRequestHash = 'formulario-presupuesto';
+export const quoteRequestPath = `/contacto#${quoteRequestHash}`;
+
+export function buildQuoteRequestPath(params = {}) {
+  const searchParams = new URLSearchParams();
+
+  Object.entries(params).forEach(([key, value]) => {
+    if (value) {
+      searchParams.set(key, value);
+    }
+  });
+
+  const queryString = searchParams.toString();
+
+  return queryString
+    ? `/contacto?${queryString}#${quoteRequestHash}`
+    : quoteRequestPath;
+}
+
 export const pageMeta = {
   '/': {
     title: {
@@ -445,7 +464,7 @@ export const zones = [
 ].map(([name, desc]) => ({
   name,
   desc,
-  contactHref: `/contacto?zona=${encodeURIComponent(name)}`,
+  contactHref: buildQuoteRequestPath({ zona: name }),
 }));
 
 export const projects = {

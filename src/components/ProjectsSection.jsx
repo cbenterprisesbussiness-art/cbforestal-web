@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import SectionHeading from './SectionHeading';
-import { projects } from '../shared/siteContent';
+import { projects, quoteRequestPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ProjectsSection() {
@@ -19,7 +19,7 @@ export default function ProjectsSection() {
                 <div className="project-meta">{t(item.meta)}</div>
                 <h3>{t(item.title)}</h3>
                 <p>{t(item.summary)}</p>
-                <Link to="/contacto" className="card-link">
+                <Link to={quoteRequestPath} className="card-link">
                   {t({ ca: 'Parlar d’un projecte similar →', es: 'Hablar de un proyecto similar →' })}
                 </Link>
               </div>

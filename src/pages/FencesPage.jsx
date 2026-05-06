@@ -1,7 +1,7 @@
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { fences } from '../shared/siteContent';
+import { fences, quoteRequestPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function FencesPage() {
@@ -13,7 +13,7 @@ export default function FencesPage() {
         eyebrow={fences.label}
         title={fences.title}
         description={fences.paragraphs[0]}
-        primaryCta={{ to: '/contacto', label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
+        primaryCta={{ to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
         secondaryCta={{ to: '/zonas', label: { ca: 'Veure zones', es: 'Ver zonas' } }}
         image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800"
         compact

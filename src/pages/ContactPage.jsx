@@ -1,7 +1,7 @@
 import CTASection from '../components/CTASection';
 import ContactForm from '../components/ContactForm';
 import PageHero from '../components/PageHero';
-import { company, contact } from '../shared/siteContent';
+import { company, contact, quoteRequestHash } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ContactPage() {
@@ -21,7 +21,7 @@ export default function ContactPage() {
 
       <section className="section section-light">
         <div className="container contact-grid">
-          <article className="contact-card">
+          <article id={quoteRequestHash} className="contact-card">
             <span className="section-label">{t(contact.label)}</span>
             <h2 className="section-title">{t({ ca: 'Parlem del teu projecte', es: 'Hablemos de tu proyecto' })}</h2>
             <p className="lead-paragraph">{t(contact.description)}</p>
