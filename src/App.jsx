@@ -9,8 +9,18 @@ import ZonesPage from './pages/ZonesPage';
 import ContactPage from './pages/ContactPage';
 import LegalPage from './pages/LegalPage';
 import WorksPage from './pages/WorksPage';
+import ServiceLandingPage from './pages/ServiceLandingPage';
 import { useLanguage } from './shared/LanguageContext';
-import { company, legalPages, pageMeta, services } from './shared/siteContent';
+import {
+  company,
+  desbroceBarcelonaPath,
+  legalPages,
+  pageMeta,
+  podaBarcelonaPath,
+  serviceLandingPages,
+  services,
+  talaBarcelonaPath,
+} from './shared/siteContent';
 
 function RouteEffects() {
   const location = useLocation();
@@ -168,6 +178,9 @@ export default function App() {
           <Route path="/cerramientos" element={<FencesPage />} />
           <Route path="/zonas" element={<ZonesPage />} />
           <Route path="/trabajos" element={<WorksPage />} />
+          <Route path={podaBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[podaBarcelonaPath]} />} />
+          <Route path={talaBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[talaBarcelonaPath]} />} />
+          <Route path={desbroceBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[desbroceBarcelonaPath]} />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/privacidad" element={<LegalPage content={legalPages.privacy} />} />
           <Route path="/aviso-legal" element={<LegalPage content={legalPages.legalNotice} />} />

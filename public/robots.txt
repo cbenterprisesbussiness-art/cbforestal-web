@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cbforestal.cat/sitemap.xml
+Sitemap: https://www.cbforestal.es/sitemap.xml

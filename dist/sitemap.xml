@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cbforestal.cat/</loc>
+    <loc>https://www.cbforestal.es/</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/nosotros</loc>
+    <loc>https://www.cbforestal.es/nosotros</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/servicios</loc>
+    <loc>https://www.cbforestal.es/servicios</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/cerramientos</loc>
+    <loc>https://www.cbforestal.es/cerramientos</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/zonas</loc>
+    <loc>https://www.cbforestal.es/zonas</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/contacto</loc>
+    <loc>https://www.cbforestal.es/contacto</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/privacidad</loc>
+    <loc>https://www.cbforestal.es/trabajos</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/aviso-legal</loc>
+    <loc>https://www.cbforestal.es/poda-arboles-barcelona</loc>
   </url>
   <url>
-    <loc>https://cbforestal.cat/cookies</loc>
+    <loc>https://www.cbforestal.es/tala-arboles-barcelona</loc>
+  </url>
+  <url>
+    <loc>https://www.cbforestal.es/desbroce-parcelas-barcelona</loc>
+  </url>
+  <url>
+    <loc>https://www.cbforestal.es/privacidad</loc>
+  </url>
+  <url>
+    <loc>https://www.cbforestal.es/aviso-legal</loc>
+  </url>
+  <url>
+    <loc>https://www.cbforestal.es/cookies</loc>
   </url>
 </urlset>

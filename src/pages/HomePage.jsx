@@ -82,6 +82,11 @@ export default function HomePage() {
                   <div className="service-photo-icon">{service.icon}</div>
                   <h3>{t(service.title)}</h3>
                   <p>{t(service.description)}</p>
+                  {service.href ? (
+                    <Link to={service.href} className="card-link">
+                      {t({ ca: 'Més informació →', es: 'Más información →' })}
+                    </Link>
+                  ) : null}
                 </div>
               </article>
             ))}

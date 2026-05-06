@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
@@ -36,6 +37,11 @@ export default function ServicesPage() {
                       <span key={tag.ca}>{t(tag)}</span>
                     ))}
                   </div>
+                  {service.href ? (
+                    <Link to={service.href} className="card-link">
+                      {t({ ca: 'Veure pàgina del servei →', es: 'Ver página del servicio →' })}
+                    </Link>
+                  ) : null}
                 </div>
               </article>
             ))}

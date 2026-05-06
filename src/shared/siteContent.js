@@ -4,7 +4,7 @@ export const company = {
   phoneHref: 'tel:+34936942174',
   email: 'info@cbforestal.es',
   emailHref: 'mailto:info@cbforestal.es',
-  website: 'https://cbforestal.cat',
+  website: 'https://www.cbforestal.es',
   hasPublicPhone: true,
   hasWhatsapp: false,
   socialLinks: [],
@@ -23,6 +23,9 @@ export const company = {
 export const quoteRequestHash = 'formulario-presupuesto';
 export const quoteRequestPath = `/contacto#${quoteRequestHash}`;
 export const worksPath = '/trabajos';
+export const podaBarcelonaPath = '/poda-arboles-barcelona';
+export const talaBarcelonaPath = '/tala-arboles-barcelona';
+export const desbroceBarcelonaPath = '/desbroce-parcelas-barcelona';
 export const servicesSectionHash = 'listado-servicios';
 export const servicesSectionPath = `/servicios#${servicesSectionHash}`;
 export const zonesSectionHash = 'zonas-cobertura';
@@ -49,12 +52,12 @@ export function buildQuoteRequestPath(params = {}) {
 export const pageMeta = {
   '/': {
     title: {
-      ca: 'CB FORESTAL — Jardineria i Tancaments a Catalunya',
-      es: 'CB FORESTAL — Jardinería y Cerramientos en Cataluña',
+      ca: 'Serveis forestals a Barcelona i Catalunya | CB Forestal',
+      es: 'Servicios forestales en Barcelona y Cataluña | CB Forestal',
     },
     description: {
-      ca: 'CB Forestal ofereix jardineria professional, manteniment, sistemes de reg i tancaments a tota Catalunya.',
-      es: 'CB Forestal ofrece jardinería profesional, mantenimiento, sistemas de riego y cerramientos en toda Cataluña.',
+      ca: 'CB Forestal ofereix tala, poda, desbrossament, manteniment de parcel·les i tancaments a Barcelona i Catalunya. Pressupost ràpid i treball professional.',
+      es: 'CB Forestal ofrece tala, poda, desbroce, mantenimiento de parcelas y cerramientos en Barcelona y Cataluña. Presupuesto rápido y trabajo profesional.',
     },
   },
   '/nosotros': {
@@ -69,12 +72,12 @@ export const pageMeta = {
   },
   '/servicios': {
     title: {
-      ca: 'CB FORESTAL — Serveis',
-      es: 'CB FORESTAL — Servicios',
+      ca: 'Serveis forestals, desbrossament i tancaments | CB Forestal',
+      es: 'Servicios forestales, desbroce y cerramientos | CB Forestal',
     },
     description: {
-      ca: 'Serveis de disseny de jardins, manteniment, reg, arboricultura i jardineria vertical per a particulars i empreses.',
-      es: 'Servicios de diseño de jardines, mantenimiento, riego, arboricultura y jardinería vertical para particulares y empresas.',
+      ca: 'Serveis de tala, poda, desbrossament, manteniment, piscines i tancaments per a particulars, comunitats i empreses a Barcelona i Catalunya.',
+      es: 'Servicios de tala, poda, desbroce, mantenimiento, piscinas y cerramientos para particulares, comunidades y empresas en Barcelona y Cataluña.',
     },
   },
   '/cerramientos': {
@@ -99,12 +102,12 @@ export const pageMeta = {
   },
   '/contacto': {
     title: {
-      ca: 'CB FORESTAL — Contacte',
-      es: 'CB FORESTAL — Contacto',
+      ca: 'Pressupost de tala, poda i desbrossament | CB Forestal',
+      es: 'Presupuesto de tala, poda y desbroce | CB Forestal',
     },
     description: {
-      ca: 'Contacta amb CB Forestal per demanar pressupost de jardineria, manteniment o tancaments a Catalunya.',
-      es: 'Contacta con CB Forestal para pedir presupuesto de jardinería, mantenimiento o cerramientos en Cataluña.',
+      ca: 'Contacta amb CB Forestal per demanar pressupost de tala, poda, desbrossament, manteniment o tancaments a Barcelona i Catalunya.',
+      es: 'Contacta con CB Forestal para pedir presupuesto de tala, poda, desbroce, mantenimiento o cerramientos en Barcelona y Cataluña.',
     },
   },
   '/trabajos': {
@@ -115,6 +118,36 @@ export const pageMeta = {
     description: {
       ca: 'Galeria de treballs reals de tala, poda, desbrossament, manteniment i tancaments executats per CB Forestal.',
       es: 'Galería de trabajos reales de tala, poda, desbroce, mantenimiento y cerramientos ejecutados por CB Forestal.',
+    },
+  },
+  '/poda-arboles-barcelona': {
+    title: {
+      ca: "Poda d'arbres a Barcelona | CB Forestal",
+      es: 'Poda de árboles en Barcelona | CB Forestal',
+    },
+    description: {
+      ca: "Servei professional de poda d'arbres en altura a Barcelona i rodalia. Seguretat, equip tècnic i pressupost ràpid.",
+      es: 'Servicio profesional de poda de árboles en altura en Barcelona y alrededores. Seguridad, equipo técnico y presupuesto rápido.',
+    },
+  },
+  '/tala-arboles-barcelona': {
+    title: {
+      ca: "Tala d'arbres a Barcelona | CB Forestal",
+      es: 'Tala de árboles en Barcelona | CB Forestal',
+    },
+    description: {
+      ca: "Tala controlada de pins i arbres a Barcelona i Catalunya. Retirada de restes, treball segur i resposta ràpida.",
+      es: 'Tala controlada de pinos y árboles en Barcelona y Cataluña. Retirada de restos, trabajo seguro y respuesta rápida.',
+    },
+  },
+  '/desbroce-parcelas-barcelona': {
+    title: {
+      ca: 'Desbrossament de parcel·les a Barcelona | CB Forestal',
+      es: 'Desbroce de parcelas en Barcelona | CB Forestal',
+    },
+    description: {
+      ca: 'Desbrossament de parcel·les, talussos i finques a Barcelona i rodalia. Prevenció d’incendis i neteja professional.',
+      es: 'Desbroce de parcelas, taludes y fincas en Barcelona y alrededores. Prevención de incendios y limpieza profesional.',
     },
   },
   '/privacidad': {
@@ -159,8 +192,8 @@ export const navigation = [
 
 export const hero = {
   tag: {
-    ca: 'Serveis forestals i jardineria · Catalunya',
-    es: 'Servicios forestales y jardinería · Cataluña',
+    ca: 'Serveis forestals · Barcelona i Catalunya',
+    es: 'Servicios forestales · Barcelona y Cataluña',
   },
   title: {
     ca: 'Experts en tala, poda i treballs forestals',
@@ -171,8 +204,8 @@ export const hero = {
     es: 'tala, poda',
   },
   description: {
-    ca: 'Tala controlada de pins i arbres, poda en altura, desbrossaments, manteniment i tancaments per a particulars, finques i empreses a tota Catalunya.',
-    es: 'Tala controlada de pinos y árboles, poda en altura, desbroces, mantenimiento y cerramientos para particulares, fincas y empresas en toda Cataluña.',
+    ca: 'Tala controlada de pins i arbres, poda en altura, desbrossaments, manteniment de parcel·les i tancaments per a particulars, finques i empreses a Barcelona i Catalunya.',
+    es: 'Tala controlada de pinos y árboles, poda en altura, desbroces, mantenimiento de parcelas y cerramientos para particulares, fincas y empresas en Barcelona y Cataluña.',
   },
   primaryCta: {
     ca: 'Sol·licitar pressupost',
@@ -295,6 +328,7 @@ export const services = [
       es: 'Especialistas en poda de árboles de altura y eliminación segura de pinos y árboles con equipo homologado y asegurado en toda Cataluña.',
     },
     image: '/trabajos/servicios/poda-tala-camion-grua.jpg',
+    href: '/poda-arboles-barcelona',
     tags: [
       { ca: 'Treballs en altura', es: 'Trabajos en altura' },
       { ca: 'Equip homologat', es: 'Equipo homologado' },
@@ -310,6 +344,7 @@ export const services = [
       es: 'Limpieza y desbroce de parcelas, fincas y bosques con maquinaria profesional. Prevención de incendios forestales.',
     },
     image: '/trabajos/servicios/desbroce-talud-limpio.jpg',
+    href: '/desbroce-parcelas-barcelona',
     tags: [
       { ca: 'Prevenció incendis', es: 'Prevención incendios' },
       { ca: 'Parcel·les', es: 'Parcelas' },
@@ -400,6 +435,7 @@ export const services = [
       es: 'Desbroce y limpieza de parcelas y solares para particulares, comunidades y empresas. Servicio rápido y eficiente.',
     },
     image: '/trabajos/servicios/limpieza-terreno-con-tocones.jpg',
+    href: '/tala-arboles-barcelona',
     tags: [
       { ca: 'Particulars', es: 'Particulares' },
       { ca: 'Comunitats', es: 'Comunidades' },
@@ -657,6 +693,105 @@ export const projects = {
       meta: { ca: 'Piscines · Manteniment', es: 'Piscinas · Mantenimiento' },
     },
   ],
+};
+
+export const serviceLandingPages = {
+  [podaBarcelonaPath]: {
+    eyebrow: { ca: "Poda d'arbres", es: 'Poda de árboles' },
+    title: {
+      ca: "Poda d'arbres en altura a Barcelona i rodalia",
+      es: 'Poda de árboles en altura en Barcelona y alrededores',
+    },
+    description: {
+      ca: "Fem poda tècnica i controlada de pins i arbres en jardins, parcel·les, comunitats i entorns residencials amb equip preparat per treballar en altura.",
+      es: 'Realizamos poda técnica y controlada de pinos y árboles en jardines, parcelas, comunidades y entornos residenciales con equipo preparado para trabajar en altura.',
+    },
+    image: '/trabajos/galeria/poda-altura-arborista.jpg',
+    intro: {
+      ca: "Si necessites una empresa de poda d'arbres a Barcelona, treballem amb criteri tècnic, seguretat i ordre a l'obra. Actuem tant en poda de manteniment com en reduccions, sanejament i actuacions en altura.",
+      es: 'Si necesitas una empresa de poda de árboles en Barcelona, trabajamos con criterio técnico, seguridad y orden en obra. Actuamos tanto en poda de mantenimiento como en reducciones, saneamiento y trabajos en altura.',
+    },
+    paragraphs: [
+      {
+        ca: "La poda d'arbres no consisteix només a tallar branques. Cal valorar l'espècie, l'estat estructural, la proximitat a habitatges o línies i la manera més segura d'executar cada tall.",
+        es: 'La poda de árboles no consiste solo en cortar ramas. Hay que valorar la especie, el estado estructural, la proximidad a viviendas o líneas y la forma más segura de ejecutar cada corte.',
+      },
+      {
+        ca: 'Treballem a Barcelona i municipis propers per a particulars, comunitats i finques que necessiten mantenir arbres grans en condicions segures i controlades.',
+        es: 'Trabajamos en Barcelona y municipios cercanos para particulares, comunidades y fincas que necesitan mantener árboles grandes en condiciones seguras y controladas.',
+      },
+    ],
+    bullets: [
+      { ca: 'Poda en altura amb tècniques d’arboricultura', es: 'Poda en altura con técnicas de arboricultura' },
+      { ca: 'Sanejament i retirada de branques perilloses', es: 'Saneamiento y retirada de ramas peligrosas' },
+      { ca: 'Intervenció en parcel·les, jardins i comunitats', es: 'Intervención en parcelas, jardines y comunidades' },
+      { ca: 'Retirada de restes vegetals i neteja final', es: 'Retirada de restos vegetales y limpieza final' },
+    ],
+  },
+  [talaBarcelonaPath]: {
+    eyebrow: { ca: "Tala d'arbres", es: 'Tala de árboles' },
+    title: {
+      ca: "Tala controlada d'arbres i pins a Barcelona",
+      es: 'Tala controlada de árboles y pinos en Barcelona',
+    },
+    description: {
+      ca: "Executem tala controlada en entorns residencials, parcel·les i finques amb planificació de maniobra, seguretat i retirada de troncs i restes.",
+      es: 'Ejecutamos tala controlada en entornos residenciales, parcelas y fincas con planificación de maniobra, seguridad y retirada de troncos y restos.',
+    },
+    image: '/trabajos/galeria/tala-controlada-piscina.jpg',
+    intro: {
+      ca: "Quan un arbre s'ha de retirar, el més important és fer-ho sense risc per a persones, habitatges o tancaments. A CB Forestal fem tala controlada a Barcelona amb suport tècnic i equip adequat.",
+      es: 'Cuando un árbol debe retirarse, lo más importante es hacerlo sin riesgo para personas, viviendas o cerramientos. En CB Forestal hacemos tala controlada en Barcelona con apoyo técnico y equipo adecuado.',
+    },
+    paragraphs: [
+      {
+        ca: 'Actuem en pins, arbres grans i exemplars situats en zones complicades, valorant accessos, desnivells i possibles interferències abans de començar.',
+        es: 'Actuamos en pinos, árboles grandes y ejemplares situados en zonas complicadas, valorando accesos, desniveles y posibles interferencias antes de empezar.',
+      },
+      {
+        ca: 'El servei inclou, segons el cas, desmuntatge per trams, suport amb camió grua, retirada de fusta i neteja de la zona de treball.',
+        es: 'El servicio incluye, según el caso, desmontaje por tramos, apoyo con camión grúa, retirada de madera y limpieza de la zona de trabajo.',
+      },
+    ],
+    bullets: [
+      { ca: 'Tala controlada en entorn residencial', es: 'Tala controlada en entorno residencial' },
+      { ca: 'Desmuntatge per trams i maniobra segura', es: 'Desmontaje por tramos y maniobra segura' },
+      { ca: 'Retirada de troncs, branques i restes', es: 'Retirada de troncos, ramas y restos' },
+      { ca: 'Servei ràpid a Barcelona i Catalunya', es: 'Servicio rápido en Barcelona y Cataluña' },
+    ],
+  },
+  [desbroceBarcelonaPath]: {
+    eyebrow: { ca: 'Desbrossament', es: 'Desbroce' },
+    title: {
+      ca: 'Desbrossament de parcel·les i talussos a Barcelona',
+      es: 'Desbroce de parcelas y taludes en Barcelona',
+    },
+    description: {
+      ca: 'Netegem parcel·les, finques i zones amb pendent per reduir vegetació acumulada, millorar accessos i prevenir risc d’incendi.',
+      es: 'Limpiamos parcelas, fincas y zonas con pendiente para reducir vegetación acumulada, mejorar accesos y prevenir riesgo de incendio.',
+    },
+    image: '/trabajos/servicios/desbroce-talud-limpio.jpg',
+    intro: {
+      ca: 'El desbrossament és una feina clau per mantenir una parcel·la segura i preparada. Treballem a Barcelona i rodalia en solars, talussos, finques i zones forestals.',
+      es: 'El desbroce es un trabajo clave para mantener una parcela segura y preparada. Trabajamos en Barcelona y alrededores en solares, taludes, fincas y zonas forestales.',
+    },
+    paragraphs: [
+      {
+        ca: 'Actuem tant en neteges puntuals com en manteniment periòdic, especialment en zones on la vegetació creix ràpid o hi ha acumulació de restes seques.',
+        es: 'Actuamos tanto en limpiezas puntuales como en mantenimiento periódico, especialmente en zonas donde la vegetación crece rápido o hay acumulación de restos secos.',
+      },
+      {
+        ca: 'És un servei especialment útil abans d’estiu, en parcel·les abandonades o en terrenys que necessiten una posada a punt per vendre, construir o mantenir.',
+        es: 'Es un servicio especialmente útil antes del verano, en parcelas abandonadas o en terrenos que necesitan una puesta a punto para vender, construir o mantener.',
+      },
+    ],
+    bullets: [
+      { ca: 'Desbrossament de parcel·les i solars', es: 'Desbroce de parcelas y solares' },
+      { ca: 'Neteja de talussos i zones amb pendent', es: 'Limpieza de taludes y zonas con pendiente' },
+      { ca: 'Prevenció d’incendis i sanejament', es: 'Prevención de incendios y saneamiento' },
+      { ca: 'Manteniment puntual o recurrent', es: 'Mantenimiento puntual o recurrente' },
+    ],
+  },
 };
 
 export const processSection = {
