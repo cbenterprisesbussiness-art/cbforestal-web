@@ -38,7 +38,7 @@ export default function ProjectsSection() {
               <p>{t(projects.videosDescription)}</p>
             </div>
             <div className="projects-grid projects-video-grid">
-              {projects.videos.map((item) => (
+              {projects.videos.slice(0, 3).map((item) => (
                 <article key={item.src} className="project-card" data-reveal>
                   <video src={item.src} controls muted playsInline preload="metadata" />
                   <div className="project-copy">

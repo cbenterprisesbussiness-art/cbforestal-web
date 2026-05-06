@@ -366,7 +366,7 @@ export const services = [
       ca: "Especialistes en poda d'arbres d'altura i eliminació segura de pins i arbres amb equip homologat i assegurat a tota Catalunya.",
       es: 'Especialistas en poda de árboles de altura y eliminación segura de pinos y árboles con equipo homologado y asegurado en toda Cataluña.',
     },
-    image: '/trabajos/servicios/poda-tala-camion-grua.jpg',
+    image: '/trabajos/servicios/tala-pino-corte-controlado.jpg',
     href: '/poda-arboles-barcelona',
     tags: [
       { ca: 'Treballs en altura', es: 'Trabajos en altura' },
@@ -428,7 +428,7 @@ export const services = [
       ca: 'Instal·lació professional de tancaments metàl·lics, fusta, PVC, alumini, ferro i pedra. Garantia 5 anys.',
       es: 'Instalación profesional de cerramientos metálicos, madera, PVC, aluminio, hierro y piedra. Garantía 5 años.',
     },
-    image: '/trabajos/servicios/cerramiento-portillo-metalico.jpg',
+    image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
     tags: [
       { ca: 'Metàl·lic', es: 'Metálico' },
       { ca: 'Fusta', es: 'Madera' },
@@ -571,7 +571,7 @@ export const projects = {
   },
   items: [
     {
-      image: '/trabajos/galeria/poda-altura-arborista.jpg',
+      image: '/trabajos/galeria/poda-palmeras-en-altura.jpg',
       title: { ca: 'Poda en altura amb arborista', es: 'Poda en altura con arborista' },
       summary: {
         ca: 'Treball vertical en pi de gran alçada amb accés controlat i seguretat de maniobra.',
@@ -607,13 +607,13 @@ export const projects = {
       meta: { ca: 'Tala · Camió grua i suport', es: 'Tala · Camión grúa y apoyo' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-panel-porton.jpg',
+      image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
       title: { ca: 'Tanca perimetral amb portó', es: 'Valla perimetral con portón' },
       summary: {
-        ca: 'Línia de tancament reforçada amb accés integrat per a vehicles i manteniment.',
-        es: 'Línea de cerramiento reforzada con acceso integrado para vehículos y mantenimiento.',
+        ca: 'Tancament amb muret i portell integrat per resoldre accés, desnivell i seguretat en una sola intervenció.',
+        es: 'Cerramiento con murete y portillo integrado para resolver acceso, desnivel y seguridad en una sola intervención.',
       },
-      meta: { ca: 'Tancaments · Accés metàl·lic', es: 'Cerramientos · Acceso metálico' },
+      meta: { ca: 'Tancaments · Muret i accés', es: 'Cerramientos · Murete y acceso' },
     },
     {
       image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
@@ -627,32 +627,48 @@ export const projects = {
   ],
   videosTitle: { ca: 'Vídeos de treball', es: 'Vídeos de trabajo' },
   videosDescription: {
-    ca: 'Alguns clips curts d’intervencions reals sobre el terreny.',
-    es: 'Algunos clips cortos de intervenciones reales sobre el terreno.',
+    ca: 'Clips curts de poda, tala i treball en altura gravats en obra real.',
+    es: 'Clips cortos de poda, tala y trabajo en altura grabados en obra real.',
   },
   videos: [
     {
-      src: '/trabajos/videos/trabajo-altura-01.mp4',
-      title: { ca: 'Treball en altura', es: 'Trabajo en altura' },
+      src: '/trabajos/videos-nuevos/poda-palmeras-destacado.mp4',
+      title: { ca: 'Poda de palmeres', es: 'Poda de palmeras' },
       summary: {
-        ca: 'Intervenció vertical amb equip especialitzat.',
-        es: 'Intervención vertical con equipo especializado.',
+        ca: 'Retall en altura amb maniobra neta i controlada sobre palmeres.',
+        es: 'Recorte en altura con maniobra limpia y controlada sobre palmeras.',
       },
     },
     {
-      src: '/trabajos/videos/trabajo-forestal-01.mp4',
-      title: { ca: 'Treball forestal', es: 'Trabajo forestal' },
+      src: '/trabajos/videos-nuevos/tala-controlada-destacado.mp4',
+      title: { ca: 'Tala controlada', es: 'Tala controlada' },
       summary: {
-        ca: 'Procés real d’execució en camp.',
-        es: 'Proceso real de ejecución en campo.',
+        ca: 'Desmuntatge progressiu en entorn residencial amb espai de maniobra reduït.',
+        es: 'Desmontaje progresivo en entorno residencial con espacio de maniobra reducido.',
       },
     },
     {
-      src: '/trabajos/videos/trabajo-parcela-01.mp4',
-      title: { ca: 'Treball de parcel·la', es: 'Trabajo de parcela' },
+      src: '/trabajos/videos-nuevos/poda-altura-destacado.mp4',
+      title: { ca: 'Poda tècnica en altura', es: 'Poda técnica en altura' },
       summary: {
-        ca: 'Mostra breu de feina en entorn residencial.',
-        es: 'Muestra breve de trabajo en entorno residencial.',
+        ca: 'Treball vertical sobre arbre gran amb equip i tècnica d’arborista.',
+        es: 'Trabajo vertical sobre árbol grande con equipo y técnica de arborista.',
+      },
+    },
+    {
+      src: '/trabajos/videos-nuevos/tala-pino-corte-corto.mp4',
+      title: { ca: 'Tall de pi controlat', es: 'Corte controlado de pino' },
+      summary: {
+        ca: 'Seqüència curta de tall i descàrrega controlada de fusta.',
+        es: 'Secuencia corta de corte y descarga controlada de madera.',
+      },
+    },
+    {
+      src: '/trabajos/videos-nuevos/poda-olivo-corto.mp4',
+      title: { ca: 'Poda d’olivera', es: 'Poda de olivo' },
+      summary: {
+        ca: 'Intervenció ràpida de manteniment amb acabat net.',
+        es: 'Intervención rápida de mantenimiento con acabado limpio.',
       },
     },
   ],
@@ -677,9 +693,9 @@ export const projects = {
       meta: { ca: 'Arboricultura · Seguretat', es: 'Arboricultura · Seguridad' },
     },
     {
-      image: '/trabajos/galeria/poda-pino-gran-formato.jpg',
-      title: { ca: 'Intervenció en pi gran', es: 'Intervención en pino grande' },
-      meta: { ca: 'Poda · Treball tècnic', es: 'Poda · Trabajo técnico' },
+      image: '/trabajos/galeria/poda-palmeras-en-altura.jpg',
+      title: { ca: 'Poda de palmeres', es: 'Poda de palmeras' },
+      meta: { ca: 'Poda · Treball vertical', es: 'Poda · Trabajo vertical' },
     },
     {
       image: '/trabajos/galeria/cerramiento-malla-talud-frontal.jpg',
@@ -697,9 +713,9 @@ export const projects = {
       meta: { ca: 'Tancaments · Execució', es: 'Cerramientos · Ejecución' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-panel-porton.jpg',
-      title: { ca: 'Portó i tanca metàl·lica', es: 'Portón y valla metálica' },
-      meta: { ca: 'Tancaments · Accés', es: 'Cerramientos · Acceso' },
+      image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+      title: { ca: 'Portell amb muret', es: 'Portillo con murete' },
+      meta: { ca: 'Tancaments · Accés resolt', es: 'Cerramientos · Acceso resuelto' },
     },
     {
       image: '/trabajos/galeria/cimentacion-cerramiento-armado.jpg',
@@ -725,6 +741,16 @@ export const projects = {
       image: '/trabajos/galeria/limpieza-pinar-urbano.jpg',
       title: { ca: 'Neteja de pinar', es: 'Limpieza de pinar' },
       meta: { ca: 'Manteniment · Parcel·la', es: 'Mantenimiento · Parcela' },
+    },
+    {
+      image: '/trabajos/galeria/poda-olivo-tecnica.jpg',
+      title: { ca: 'Poda tècnica d’olivera', es: 'Poda técnica de olivo' },
+      meta: { ca: 'Poda · Manteniment', es: 'Poda · Mantenimiento' },
+    },
+    {
+      image: '/trabajos/galeria/tala-pino-altura-bosque.jpg',
+      title: { ca: 'Tala de pi en altura', es: 'Tala de pino en altura' },
+      meta: { ca: 'Tala · Entorn forestal', es: 'Tala · Entorno forestal' },
     },
     {
       image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
