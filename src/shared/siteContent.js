@@ -589,7 +589,7 @@ export const projects = {
       meta: { ca: 'Tancaments · Finca en pendent', es: 'Cerramientos · Finca en pendiente' },
     },
     {
-      image: '/trabajos/galeria/limpieza-pinar-urbano.jpg',
+      image: '/trabajos/galeria/limpieza-bosque-pendiente.jpg',
       title: { ca: 'Desbrossament de pinar urbà', es: 'Desbroce de pinar urbano' },
       summary: {
         ca: 'Neteja i manteniment de parcel·la amb pendent per reduir vegetació acumulada i millorar accés.',
