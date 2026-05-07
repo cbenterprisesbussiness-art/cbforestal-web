@@ -784,11 +784,23 @@ main {
   background: rgba(82, 183, 136, 0.15);
 }
 
+.zones-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  margin: 2rem 0 1.4rem;
+  background: rgba(197, 167, 91, 0.18);
+}
+
 .zone {
   background: rgba(26, 58, 42, 0.9);
   padding: 2rem 1.5rem;
   text-align: center;
   transition: background 0.25s, transform 0.25s;
+}
+
+.zone-focus {
+  background: linear-gradient(180deg, rgba(26, 58, 42, 0.96), rgba(20, 43, 31, 0.96));
 }
 
 .zone:hover {
@@ -1331,6 +1343,13 @@ main {
   line-height: 1.7;
 }
 
+.landing-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1513,6 +1532,7 @@ main {
   }
 
   .cards-grid,
+  .zones-focus-grid,
   .zones-grid,
   .proceso-steps,
   .projects-grid,
@@ -1683,6 +1703,7 @@ main {
   }
 
   .cards-grid,
+  .zones-focus-grid,
   .zones-grid,
   .intro-stats,
   .proceso-steps,

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { quoteRequestPath, servicesSectionPath, zones, zonesIntro, zonesSectionHash } from '../shared/siteContent';
+import { localFocusZones, quoteRequestPath, servicesSectionPath, zones, zonesIntro, zonesSectionHash } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ZonesPage() {
@@ -24,6 +24,14 @@ export default function ZonesPage() {
         <div className="container">
           <SectionHeading label={zonesIntro.label} title={zonesIntro.title} center />
           <p className="section-copy centered">{t(zonesIntro.description)}</p>
+          <div className="zones-focus-grid">
+            {localFocusZones.map((zone) => (
+              <Link key={zone.name} to={zone.href} className="zone zone-focus" data-reveal>
+                <div className="zone-name">{zone.name}</div>
+                <div className="zone-desc">{zone.desc}</div>
+              </Link>
+            ))}
+          </div>
           <div className="zones-grid">
             {zones.map((zone) => (
               <Link key={zone.name} to={zone.contactHref} className="zone" data-reveal>

@@ -12,14 +12,21 @@ import WorksPage from './pages/WorksPage';
 import ServiceLandingPage from './pages/ServiceLandingPage';
 import { useLanguage } from './shared/LanguageContext';
 import {
+  areaLandingPages,
+  baixLlobregatPath,
+  cerramientosRuralesPath,
   company,
   desbroceBarcelonaPath,
   legalPages,
   pageMeta,
   podaBarcelonaPath,
+  rubiPath,
+  sabadellPath,
   serviceLandingPages,
   services,
+  santCugatPath,
   talaBarcelonaPath,
+  terrassaPath,
 } from './shared/siteContent';
 
 function RouteEffects() {
@@ -181,6 +188,12 @@ export default function App() {
           <Route path={podaBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[podaBarcelonaPath]} />} />
           <Route path={talaBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[talaBarcelonaPath]} />} />
           <Route path={desbroceBarcelonaPath} element={<ServiceLandingPage content={serviceLandingPages[desbroceBarcelonaPath]} />} />
+          <Route path={cerramientosRuralesPath} element={<ServiceLandingPage content={serviceLandingPages[cerramientosRuralesPath]} />} />
+          <Route path={santCugatPath} element={<ServiceLandingPage content={areaLandingPages[santCugatPath]} />} />
+          <Route path={rubiPath} element={<ServiceLandingPage content={areaLandingPages[rubiPath]} />} />
+          <Route path={sabadellPath} element={<ServiceLandingPage content={areaLandingPages[sabadellPath]} />} />
+          <Route path={terrassaPath} element={<ServiceLandingPage content={areaLandingPages[terrassaPath]} />} />
+          <Route path={baixLlobregatPath} element={<ServiceLandingPage content={areaLandingPages[baixLlobregatPath]} />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/privacidad" element={<LegalPage content={legalPages.privacy} />} />
           <Route path="/aviso-legal" element={<LegalPage content={legalPages.legalNotice} />} />
