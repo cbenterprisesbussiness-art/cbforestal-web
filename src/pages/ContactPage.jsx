@@ -14,7 +14,7 @@ export default function ContactPage() {
         description={contact.description}
         primaryCta={{ to: '/', label: { ca: "Tornar a l'inici", es: 'Volver al inicio' } }}
         secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
-        image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
+        image="/trabajos/galeria/tala-controlada-piscina.jpg"
         compact
       />
 

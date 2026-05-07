@@ -16,7 +16,7 @@ export default function ZonesPage() {
         description={zonesIntro.description}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Contactar equip', es: 'Contactar equipo' } }}
         secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
-        image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1800"
+        image="/trabajos/galeria/limpieza-bosque-pendiente.jpg"
         compact
       />
 

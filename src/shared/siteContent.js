@@ -340,8 +340,8 @@ export const conversionSection = {
 export const about = {
   label: { ca: 'Qui som', es: 'Quiénes somos' },
   title: {
-    ca: 'Professionals forestals i de jardineria amb resposta ràpida',
-    es: 'Profesionales forestales y de jardinería con respuesta rápida',
+    ca: 'Professionals forestals i de manteniment exterior amb resposta ràpida',
+    es: 'Profesionales forestales y de mantenimiento exterior con respuesta rápida',
   },
   paragraphs: [
     {
@@ -357,8 +357,8 @@ export const about = {
     {
       value: '+15',
       label: {
-        ca: "Anys d'experiència en jardineria professional",
-        es: 'Años de experiencia en jardinería profesional',
+        ca: "Anys d'experiència en treball forestal i exterior",
+        es: 'Años de experiencia en trabajo forestal y exterior',
       },
     },
     {
@@ -388,12 +388,12 @@ export const about = {
 export const servicesIntro = {
   label: { ca: 'Els nostres serveis', es: 'Nuestros servicios' },
   title: {
-    ca: 'Solucions completes per al seu espai verd',
-    es: 'Soluciones completas para su espacio verde',
+    ca: 'Solucions completes per a finques, parcel·les i exteriors',
+    es: 'Soluciones completas para fincas, parcelas y exteriores',
   },
   description: {
-    ca: "Professionals amb maquinària homologada i equip assegurat per a qualsevol tipus de treball forestal, agrícola o d'espais verds.",
-    es: 'Profesionales con maquinaria homologada y equipo asegurado para cualquier tipo de trabajo forestal, agrícola o de espacios verdes.',
+    ca: "Professionals amb maquinària homologada i equip assegurat per a treball forestal, manteniment de terrenys i tancaments.",
+    es: 'Profesionales con maquinaria homologada y equipo asegurado para trabajo forestal, mantenimiento de terrenos y cerramientos.',
   },
   quickListTitle: {
     ca: 'Tot el que necessites en un sol lloc',
@@ -465,7 +465,7 @@ export const services = [
       ca: "Instal·lació de reg per degoteig, aspersió i programadors intel·ligents per a jardins eficients i estalvi d'aigua.",
       es: 'Instalación de riego por goteo, aspersión y programadores inteligentes para jardines eficientes y ahorro de agua.',
     },
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80',
+    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.jpg',
     tags: [
       { ca: 'Reg degoteig', es: 'Riego por goteo' },
       { ca: 'Aspersió', es: 'Aspersión' },
@@ -526,7 +526,7 @@ export const services = [
       ca: 'Control i eliminació de plagues, malalties i fongs en arbres, jardins i cultius. Productes homologats i respectuosos.',
       es: 'Control y eliminación de plagas, enfermedades y hongos en árboles, jardines y cultivos. Productos homologados y respetuosos.',
     },
-    image: 'https://images.unsplash.com/photo-1599629954294-14df9ec8dfe2?w=600&q=80',
+    image: '/trabajos/galeria/poda-olivo-tecnica.jpg',
     tags: [
       { ca: 'Control plagues', es: 'Control plagas' },
       { ca: 'Productes homologats', es: 'Productos homologados' },
@@ -542,7 +542,7 @@ export const services = [
       es: 'Desbroce y limpieza de parcelas y solares para particulares, comunidades y empresas. Servicio rápido y eficiente.',
     },
     image: '/trabajos/servicios/limpieza-terreno-con-tocones.jpg',
-    href: '/tala-arboles-barcelona',
+    href: desbroceBarcelonaPath,
     tags: [
       { ca: 'Particulars', es: 'Particulares' },
       { ca: 'Comunitats', es: 'Comunidades' },
@@ -1907,29 +1907,29 @@ export const testimonials = {
   items: [
     {
       text: {
-        ca: 'Van dissenyar el nostre jardí de zero i va quedar espectacular. Molt professionals i amables. Ens van assessorar en tot moment amb la selecció de plantes.',
-        es: 'Diseñaron nuestro jardín desde cero y quedó espectacular. Muy profesionales y amables. Nos asesoraron en todo momento con la selección de plantas.',
+        ca: 'Ens van resoldre una poda en altura complicada al jardí i van deixar tota la zona neta. Molt bona sensació de control i serietat durant la feina.',
+        es: 'Nos resolvieron una poda en altura complicada en el jardín y dejaron toda la zona limpia. Muy buena sensación de control y seriedad durante el trabajo.',
       },
       author: 'Marta G.',
       location: 'Sant Cugat del Vallès',
-      badge: { ca: 'Projecte residencial', es: 'Proyecto residencial' },
+      badge: { ca: 'Poda en habitatge', es: 'Poda en vivienda' },
     },
     {
       text: {
-        ca: 'Excel·lents en el manteniment periòdic. Fa 3 anys que treballen amb nosaltres i el jardí mai havia estat tan bé. Molt recomanables.',
-        es: 'Excelentes en el mantenimiento periódico. Hace 3 años que trabajan con nosotros y el jardín nunca había estado tan bien. Muy recomendables.',
+        ca: 'La parcel·la estava molt carregada i en una sola intervenció la van deixar transitable i preparada. Van ser ràpids amb el pressupost i molt solvents a l’obra.',
+        es: 'La parcela estaba muy cargada y en una sola intervención la dejaron transitable y preparada. Fueron rápidos con el presupuesto y muy solventes en obra.',
       },
-      author: 'Josep M.',
-      location: 'Girona',
-      badge: { ca: 'Manteniment continuat', es: 'Mantenimiento continuado' },
+      author: 'David R.',
+      location: 'Terrassa',
+      badge: { ca: 'Desbrossament de parcel·la', es: 'Desbroce de parcela' },
     },
     {
       text: {
-        ca: 'Van instal·lar el tancament de la nostra finca en dos dies i amb una qualitat impressionant. Pressupost molt competitiu i sense sorpreses.',
-        es: 'Instalaron el cerramiento de nuestra finca en dos días y con una calidad impresionante. Presupuesto muy competitivo y sin sorpresas.',
+        ca: 'Necessitàvem tancar la finca amb un accés ben resolt i ho van fer amb molt bon acabat. Es nota que estan acostumats a treballar sobre terreny real.',
+        es: 'Necesitábamos cerrar la finca con un acceso bien resuelto y lo hicieron con muy buen acabado. Se nota que están acostumbrados a trabajar sobre terreno real.',
       },
       author: 'Anna P.',
-      location: 'Tarragona',
+      location: 'Baix Llobregat',
       badge: { ca: 'Tancament de finca', es: 'Cerramiento de finca' },
     },
   ],
@@ -1938,12 +1938,12 @@ export const testimonials = {
 export const contact = {
   label: { ca: 'Contacte', es: 'Contacto' },
   title: {
-    ca: 'Comença avui el jardí dels teus somnis',
-    es: 'Empieza hoy el jardín de tus sueños',
+    ca: 'Explica’ns què necessites i et preparem pressupost',
+    es: 'Cuéntanos qué necesitas y te preparamos presupuesto',
   },
   description: {
-    ca: "Deixa'ns el teu telèfon o correu i t'atenem en menys de 24 hores. Pressupost gratuït i sense compromís.",
-    es: 'Déjanos tu teléfono o correo y te atendemos en menos de 24 horas. Presupuesto gratuito y sin compromiso.',
+    ca: "Deixa'ns el teu telèfon o correu i t'atenem en menys de 24 hores. Pressupost gratuït per a tala, poda, desbrossament, manteniment o tancaments.",
+    es: 'Déjanos tu teléfono o correo y te atendemos en menos de 24 horas. Presupuesto gratuito para tala, poda, desbroce, mantenimiento o cerramientos.',
   },
   notePrefix: {
     ca: 'També ens pots contactar directament:',
@@ -1953,8 +1953,8 @@ export const contact = {
 
 export const footer = {
   brand: {
-    ca: 'Professionals en jardineria i tancaments a tota Catalunya des del 2009. Qualitat, confiança i respecte pel medi ambient.',
-    es: 'Profesionales en jardinería y cerramientos en toda Cataluña desde 2009. Calidad, confianza y respeto por el medio ambiente.',
+    ca: 'Professionals en tala, poda, desbrossament, manteniment exterior i tancaments a Barcelona i Catalunya. Treballs reals, resposta clara i bona execució.',
+    es: 'Profesionales en tala, poda, desbroce, mantenimiento exterior y cerramientos en Barcelona y Cataluña. Trabajos reales, respuesta clara y buena ejecución.',
   },
   servicesTitle: { ca: 'Serveis', es: 'Servicios' },
   zonesTitle: { ca: 'Zones', es: 'Zonas' },
