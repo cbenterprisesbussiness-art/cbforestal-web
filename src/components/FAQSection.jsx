@@ -3,9 +3,13 @@ import { useLanguage } from '../shared/LanguageContext';
 
 export default function FAQSection({ label, title, items, schemaId }) {
   const { t } = useLanguage();
+  const safeSchemaId = schemaId
+    ?.normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9_-]/g, '-');
 
   useEffect(() => {
-    if (!items?.length || !schemaId) {
+    if (!items?.length || !safeSchemaId) {
       return undefined;
     }
 
@@ -22,11 +26,11 @@ export default function FAQSection({ label, title, items, schemaId }) {
       })),
     };
 
-    let script = document.head.querySelector(`#${schemaId}`);
+    let script = document.getElementById(safeSchemaId);
 
     if (!script) {
       script = document.createElement('script');
-      script.id = schemaId;
+      script.id = safeSchemaId;
       script.type = 'application/ld+json';
       document.head.appendChild(script);
     }
@@ -38,7 +42,7 @@ export default function FAQSection({ label, title, items, schemaId }) {
         script.parentNode.removeChild(script);
       }
     };
-  }, [items, schemaId, t]);
+  }, [items, safeSchemaId, t]);
 
   if (!items?.length) {
     return null;
