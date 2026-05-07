@@ -18,7 +18,7 @@ export default function ContactPage() {
         compact
       />
 
-      <section className="section section-light">
+      <section className="section section-contact-main">
         <div className="container contact-grid">
           <article id={quoteRequestHash} className="contact-card">
             <span className="section-label">{t(contact.label)}</span>

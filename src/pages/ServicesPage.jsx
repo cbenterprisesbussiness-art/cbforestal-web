@@ -42,6 +42,11 @@ export default function ServicesPage() {
                       {t({ ca: 'Veure pàgina del servei →', es: 'Ver página del servicio →' })}
                     </Link>
                   ) : null}
+                  {service.title.es === 'Mantenimiento de Piscinas' ? (
+                    <Link to="/trabajos" className="card-link">
+                      {t({ ca: 'Veure treballs realitzats →', es: 'Ver trabajos realizados →' })}
+                    </Link>
+                  ) : null}
                 </div>
               </article>
             ))}
