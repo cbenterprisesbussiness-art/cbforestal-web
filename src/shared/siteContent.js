@@ -511,7 +511,7 @@ export const services = [
       ca: "Neteja, tractament de l'aigua, revisió d'instal·lacions i posada a punt de la seva piscina per a la temporada d'estiu.",
       es: 'Limpieza, tratamiento del agua, revisión de instalaciones y puesta a punto de su piscina para la temporada de verano.',
     },
-    image: '/trabajos/servicios/mantenimiento-piscina-vaciada.jpg',
+    image: '/trabajos/servicios/piscina-vaso-vacio-obra.jpg',
     tags: [
       { ca: 'Tractament aigua', es: 'Tratamiento agua' },
       { ca: 'Neteja fons', es: 'Limpieza fondo' },
@@ -712,19 +712,19 @@ export const projects = {
       meta: { ca: 'Tancaments · Muret i accés', es: 'Cerramientos · Murete y acceso' },
     },
     {
-      image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
+      image: '/trabajos/servicios/piscina-vaso-vacio-obra.jpg',
       title: { ca: 'Manteniment de piscina', es: 'Mantenimiento de piscina' },
       summary: {
-        ca: 'Treball de preparació i intervenció sobre vas buit per a posada a punt i revisió.',
-        es: 'Trabajo de preparación e intervención sobre vaso vacío para puesta a punto y revisión.',
+        ca: 'Posada a punt de piscina amb revisió de vas, equips i acabat tècnic de la instal·lació.',
+        es: 'Puesta a punto de piscina con revisión de vaso, equipos y acabado técnico de la instalación.',
       },
-      meta: { ca: 'Piscines · Posada a punt', es: 'Piscinas · Puesta a punto' },
+      meta: { ca: 'Piscines · Revisió tècnica', es: 'Piscinas · Revisión técnica' },
     },
   ],
   videosTitle: { ca: 'Vídeos de treball', es: 'Vídeos de trabajo' },
   videosDescription: {
-    ca: 'Clips curts de poda, tala i treball en altura gravats en obra real.',
-    es: 'Clips cortos de poda, tala y trabajo en altura grabados en obra real.',
+    ca: 'Clips curts de poda, tala, treball en altura i intervencions tècniques gravats en obra real.',
+    es: 'Clips cortos de poda, tala, trabajo en altura e intervenciones técnicas grabados en obra real.',
   },
   videos: [
     {
@@ -765,6 +765,14 @@ export const projects = {
       summary: {
         ca: 'Intervenció ràpida de manteniment amb acabat net.',
         es: 'Intervención rápida de mantenimiento con acabado limpio.',
+      },
+    },
+    {
+      src: '/trabajos/videos-nuevos/piscina-obra-general.mp4',
+      title: { ca: 'Piscina en obra', es: 'Piscina en obra' },
+      summary: {
+        ca: 'Vista curta d’una piscina en fase de preparació i revisió d’obra.',
+        es: 'Vista corta de una piscina en fase de preparación y revisión de obra.',
       },
     },
   ],
@@ -849,9 +857,14 @@ export const projects = {
       meta: { ca: 'Tala · Entorn forestal', es: 'Tala · Entorno forestal' },
     },
     {
-      image: '/trabajos/galeria/piscina-vaciada-anclajes.jpg',
-      title: { ca: 'Piscina en posada a punt', es: 'Piscina en puesta a punto' },
-      meta: { ca: 'Piscines · Manteniment', es: 'Piscinas · Mantenimiento' },
+      image: '/trabajos/galeria/piscina-sala-tecnica-detalle.jpg',
+      title: { ca: 'Sala tècnica de piscina', es: 'Sala técnica de piscina' },
+      meta: { ca: 'Piscines · Instal·lació', es: 'Piscinas · Instalación' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-instalacion-exterior.jpg',
+      title: { ca: 'Instal·lació exterior de piscina', es: 'Instalación exterior de piscina' },
+      meta: { ca: 'Piscines · Equip tècnic', es: 'Piscinas · Equipo técnico' },
     },
   ],
 };
