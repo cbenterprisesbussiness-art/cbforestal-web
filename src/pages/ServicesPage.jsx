@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { fencesSectionPath, quoteRequestPath, services, servicesIntro, servicesSectionHash } from '../shared/siteContent';
+import { fencesSectionPath, quoteRequestPath, services, servicesIntro, servicesSectionHash, worksPoolsPath } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
 
 export default function ServicesPage() {
@@ -43,7 +43,7 @@ export default function ServicesPage() {
                     </Link>
                   ) : null}
                   {service.title.es === 'Mantenimiento de Piscinas' ? (
-                    <Link to="/trabajos" className="card-link">
+                    <Link to={worksPoolsPath} className="card-link">
                       {t({ ca: 'Veure treballs realitzats →', es: 'Ver trabajos realizados →' })}
                     </Link>
                   ) : null}
