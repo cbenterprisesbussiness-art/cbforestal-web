@@ -39,7 +39,6 @@ function initMetaPixel() {
   /* eslint-enable */
 
   window.fbq('init', META_PIXEL_ID);
-  window.fbq('track', 'PageView');
 }
 
 function initGA4() {
@@ -53,7 +52,7 @@ function initGA4() {
     window.dataLayer.push(arguments);
   };
   window.gtag('js', new Date());
-  window.gtag('config', GA4_ID, { send_page_view: true });
+  window.gtag('config', GA4_ID, { send_page_view: false });
 }
 
 export function initTracking() {

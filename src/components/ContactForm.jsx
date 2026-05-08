@@ -14,7 +14,7 @@ const emptyForm = {
 };
 
 export default function ContactForm({ compact = false }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const location = useLocation();
   const [form, setForm] = useState(emptyForm);
   const [error, setError] = useState('');
@@ -161,6 +161,7 @@ export default function ContactForm({ compact = false }) {
           contact: form.contact.trim(),
           service: form.service,
           message: form.message.trim(),
+          lang,
           consent: form.consent,
           company: form.company,
           sourcePath: location.pathname,
