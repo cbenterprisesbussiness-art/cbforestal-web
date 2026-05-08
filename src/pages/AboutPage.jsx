@@ -15,7 +15,7 @@ export default function AboutPage() {
         description={about.paragraphs[0]}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Parlar amb nosaltres', es: 'Hablar con nosotros' } }}
         secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
-        image="/trabajos/galeria/tala-controlada-camion-grua.jpg"
+        image="/trabajos/galeria/tala-controlada-camion-grua.webp"
         compact
       />
 

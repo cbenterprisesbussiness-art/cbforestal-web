@@ -8,6 +8,13 @@ export const company = {
   hasPublicPhone: true,
   hasWhatsapp: false,
   socialLinks: [],
+  urgency24h: true,
+  priceRange: '€€',
+  openingHours: '24/7',
+  addressLocality: 'Barcelona',
+  addressRegion: 'Catalunya',
+  addressCountry: 'ES',
+  geo: { latitude: 41.3851, longitude: 2.1734 },
   serviceAreas: [
     'Barcelona',
     'Girona',
@@ -18,6 +25,19 @@ export const company = {
     'Pirineus',
     "Terres de l'Ebre",
   ],
+};
+
+export const freeQuotePromise = {
+  ca: 'Visita i pressupost GRATIS sense compromís',
+  es: 'Visita y presupuesto GRATIS sin compromiso',
+};
+
+export const urgency24hCopy = {
+  short: { ca: 'Urgències 24h', es: 'Urgencias 24h' },
+  long: {
+    ca: 'Atenem urgències 24h: arbre caigut, branca trencada, risc imminent',
+    es: 'Atendemos urgencias 24h: árbol caído, rama rota, riesgo inminente',
+  },
 };
 
 export const quoteRequestHash = 'formulario-presupuesto';
@@ -34,6 +54,9 @@ export const rubiPath = '/servicios-forestales-rubi';
 export const sabadellPath = '/servicios-forestales-sabadell';
 export const terrassaPath = '/servicios-forestales-terrassa';
 export const baixLlobregatPath = '/servicios-forestales-baix-llobregat';
+export const castelldefelsPath = '/servicios-forestales-castelldefels';
+export const sitgesPath = '/servicios-forestales-sitges';
+export const granollersPath = '/servicios-forestales-granollers';
 export const servicesSectionHash = 'listado-servicios';
 export const servicesSectionPath = `/servicios#${servicesSectionHash}`;
 export const zonesSectionHash = 'zonas-cobertura';
@@ -218,6 +241,36 @@ export const pageMeta = {
       es: 'Tala, poda, desbroce, mantenimiento de terrenos y cerramientos en Baix Llobregat, incluyendo Martorell, Abrera, Corbera o Vallirana.',
     },
   },
+  '/servicios-forestales-castelldefels': {
+    title: {
+      ca: 'Serveis forestals a Castelldefels | CB Forestal',
+      es: 'Servicios forestales en Castelldefels | CB Forestal',
+    },
+    description: {
+      ca: 'Poda, tala, desbrossament i tancaments a Castelldefels i el Garraf. Visita gratuïta i atenció d\'urgències 24h.',
+      es: 'Poda, tala, desbroce y cerramientos en Castelldefels y el Garraf. Visita gratuita y atención de urgencias 24h.',
+    },
+  },
+  '/servicios-forestales-sitges': {
+    title: {
+      ca: 'Serveis forestals a Sitges | CB Forestal',
+      es: 'Servicios forestales en Sitges | CB Forestal',
+    },
+    description: {
+      ca: 'Treballs forestals, poda i tala a Sitges, Vilanova i Garraf. Resposta àgil per a finques, comunitats i urgències.',
+      es: 'Trabajos forestales, poda y tala en Sitges, Vilanova y el Garraf. Respuesta ágil para fincas, comunidades y urgencias.',
+    },
+  },
+  '/servicios-forestales-granollers': {
+    title: {
+      ca: 'Serveis forestals a Granollers | CB Forestal',
+      es: 'Servicios forestales en Granollers | CB Forestal',
+    },
+    description: {
+      ca: 'Tala, poda, desbrossament i tancaments a Granollers i Vallès Oriental. Visita gratuïta i resposta àgil.',
+      es: 'Tala, poda, desbroce y cerramientos en Granollers y Vallès Oriental. Visita gratuita y respuesta ágil.',
+    },
+  },
   '/privacidad': {
     title: {
       ca: 'CB FORESTAL — Política de privacitat',
@@ -284,22 +337,146 @@ export const hero = {
     ca: 'Veure serveis',
     es: 'Ver servicios',
   },
+  urgencyBadge: urgency24hCopy.short,
   trustSignals: [
+    freeQuotePromise,
     {
       ca: "+15 anys d'experiència",
       es: '+15 años de experiencia',
     },
     {
-      ca: 'Pressupost orientatiu en 48h',
-      es: 'Presupuesto orientativo en 48h',
+      ca: 'Resposta àgil i visita ràpida',
+      es: 'Respuesta ágil y visita rápida',
     },
     {
       ca: 'Cobertura a tota Catalunya',
       es: 'Cobertura en toda Cataluña',
     },
     {
-      ca: 'Treballs reals i equip propi',
-      es: 'Trabajos reales y equipo propio',
+      ca: 'Equip assegurat i amb experiència',
+      es: 'Equipo asegurado y con experiencia',
+    },
+  ],
+};
+
+export const trustCredentials = {
+  label: { ca: 'Garanties i respatller', es: 'Garantías y respaldo' },
+  title: {
+    ca: 'Empresa registrada, equip assegurat i feina amb factura',
+    es: 'Empresa registrada, equipo asegurado y trabajo con factura',
+  },
+  description: {
+    ca: 'No improvisem. Treballem amb assegurança de responsabilitat civil, equip homologat per treball en alçada i facturació formal per particulars, comunitats i empreses.',
+    es: 'No improvisamos. Trabajamos con seguro de responsabilidad civil, equipo homologado para trabajo en altura y facturación formal para particulares, comunidades y empresas.',
+  },
+  items: [
+    {
+      icon: '🛡️',
+      title: { ca: 'Assegurança RC', es: 'Seguro RC' },
+      text: {
+        ca: 'Responsabilitat civil vigent que cobreix actuacions a la teva finca, comunitat o terreny.',
+        es: 'Responsabilidad civil vigente que cubre actuaciones en tu finca, comunidad o terreno.',
+      },
+    },
+    {
+      icon: '🪢',
+      title: { ca: 'Treball en alçada', es: 'Trabajo en altura' },
+      text: {
+        ca: 'Equip propi per a poda i tala en altura amb assegurança específica i material homologat.',
+        es: 'Equipo propio para poda y tala en altura con seguro específico y material homologado.',
+      },
+    },
+    {
+      icon: '🧾',
+      title: { ca: 'Factura legal', es: 'Factura legal' },
+      text: {
+        ca: 'Empresa registrada amb alta vigent: facturem amb IVA per a particulars, comunitats i empreses.',
+        es: 'Empresa registrada con alta vigente: facturamos con IVA para particulares, comunidades y empresas.',
+      },
+    },
+  ],
+};
+
+export const homeFaqs = [
+  {
+    question: { ca: 'Quant costa talar un pi o un arbre gran?', es: '¿Cuánto cuesta talar un pino o un árbol grande?' },
+    answer: {
+      ca: 'Depèn de l\'alçada, l\'accés, la proximitat a habitatges i si cal camió grua. Fem visita i pressupost gratis sense compromís per donar-te un preu real, no orientatiu.',
+      es: 'Depende de la altura, el acceso, la proximidad a viviendas y si hace falta camión grúa. Hacemos visita y presupuesto gratis sin compromiso para darte un precio real, no orientativo.',
+    },
+  },
+  {
+    question: { ca: 'Necessito un permís per podar o talar?', es: '¿Necesito un permiso para podar o talar?' },
+    answer: {
+      ca: 'Per a arbres en finca privada normalment no, però en sòl protegit, en zones d\'especial valor ambiental o en arbres catalogats sí. T\'orientem en cada cas durant la visita.',
+      es: 'Para árboles en finca privada normalmente no, pero en suelo protegido, zonas de especial valor ambiental o árboles catalogados sí. Te orientamos en cada caso durante la visita.',
+    },
+  },
+  {
+    question: { ca: 'Retireu els troncs i les branques?', es: '¿Retiráis los troncos y las ramas?' },
+    answer: {
+      ca: 'Sí. Disposem de camió grua i mitjans propis per retirar troncs, branques i restes vegetals i deixar la zona neta abans de marxar.',
+      es: 'Sí. Disponemos de camión grúa y medios propios para retirar troncos, ramas y restos vegetales y dejar la zona limpia antes de marcharnos.',
+    },
+  },
+  {
+    question: { ca: 'En quant de temps veniu a fer el pressupost?', es: '¿En cuánto tiempo venís a hacer el presupuesto?' },
+    answer: {
+      ca: 'En condicions normals, en 24-72h tenim visita programada. En urgències (arbre caigut, branca trencada, risc imminent) atenem el mateix dia, fins i tot 24h.',
+      es: 'En condiciones normales, en 24-72h tenemos visita programada. En urgencias (árbol caído, rama rota, riesgo inminente) atendemos el mismo día, incluso 24h.',
+    },
+  },
+  {
+    question: { ca: 'Treballeu per a comunitats de veïns i empreses?', es: '¿Trabajáis para comunidades de vecinos y empresas?' },
+    answer: {
+      ca: 'Sí. Atenem comunitats, administradors de finques, ajuntaments, indústries i empreses amb factura legal, RC vigent i pla d\'actuació clar.',
+      es: 'Sí. Atendemos comunidades, administradores de fincas, ayuntamientos, industrias y empresas con factura legal, RC vigente y plan de actuación claro.',
+    },
+  },
+  {
+    question: { ca: 'Esteu assegurats?', es: '¿Estáis asegurados?' },
+    answer: {
+      ca: 'Sí. Treballem amb assegurança de responsabilitat civil i, en treballs en alçada, amb equip i pòlissa específica per a poda i tala tècnica.',
+      es: 'Sí. Trabajamos con seguro de responsabilidad civil y, en trabajos en altura, con equipo y póliza específica para poda y tala técnica.',
+    },
+  },
+];
+
+export const caseStudy = {
+  label: { ca: 'Cas pràctic', es: 'Caso práctico' },
+  title: {
+    ca: 'Així resolem un projecte complet de finca',
+    es: 'Así resolvemos un proyecto completo de finca',
+  },
+  description: {
+    ca: 'Exemple representatiu del tipus de feina que executem quan ens encarreguen un projecte combinat: tala controlada, neteja de parcel·la, retirada de restes i tancament perimetral.',
+    es: 'Ejemplo representativo del tipo de trabajo que ejecutamos cuando nos encargan un proyecto combinado: tala controlada, limpieza de parcela, retirada de restos y cerramiento perimetral.',
+  },
+  meta: {
+    ca: 'Finca residencial · Vallès · 4 dies de feina · Equip de 3 operaris',
+    es: 'Finca residencial · Vallès · 4 días de trabajo · Equipo de 3 operarios',
+  },
+  blocks: [
+    {
+      label: { ca: 'Punt de partida', es: 'Punto de partida' },
+      text: {
+        ca: 'Parcel·la amb diversos pins descontrolats propers a habitatge i piscina, vegetació acumulada i tancament perimetral antic.',
+        es: 'Parcela con varios pinos descontrolados próximos a vivienda y piscina, vegetación acumulada y cerramiento perimetral antiguo.',
+      },
+    },
+    {
+      label: { ca: 'Intervenció', es: 'Intervención' },
+      text: {
+        ca: 'Tala controlada per trams amb suport de camió grua, desbrossament del talús, retirada complerta de troncs i restes i instal·lació de tancament nou amb portell.',
+        es: 'Tala controlada por tramos con apoyo de camión grúa, desbroce del talud, retirada completa de troncos y restos e instalación de cerramiento nuevo con portillo.',
+      },
+    },
+    {
+      label: { ca: 'Resultat', es: 'Resultado' },
+      text: {
+        ca: 'Finca neta, segura, amb perímetre tancat i accés resolt. Reducció real del risc d\'incendi i de la pressió vegetal sobre la casa.',
+        es: 'Finca limpia, segura, con perímetro cerrado y acceso resuelto. Reducción real del riesgo de incendio y de la presión vegetal sobre la casa.',
+      },
     },
   ],
 };
@@ -420,7 +597,7 @@ export const services = [
       ca: 'Creem jardins a mida des de zero, amb plantes autòctones i disseny paisatgístic personalitzat per a particulars i empreses.',
       es: 'Creamos jardines a medida desde cero, con plantas autóctonas y diseño paisajístico personalizado para particulares y empresas.',
     },
-    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.jpg',
+    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.webp',
     tags: [
       { ca: 'Disseny paisatgístic', es: 'Diseño paisajístico' },
       { ca: 'Plantes autòctones', es: 'Plantas autóctonas' },
@@ -435,7 +612,7 @@ export const services = [
       ca: "Especialistes en poda d'arbres d'altura i eliminació segura de pins i arbres amb equip homologat i assegurat a tota Catalunya.",
       es: 'Especialistas en poda de árboles de altura y eliminación segura de pinos y árboles con equipo homologado y asegurado en toda Cataluña.',
     },
-    image: '/trabajos/servicios/tala-pino-corte-controlado.jpg',
+    image: '/trabajos/servicios/tala-pino-corte-controlado.webp',
     href: '/poda-arboles-barcelona',
     tags: [
       { ca: 'Treballs en altura', es: 'Trabajos en altura' },
@@ -451,7 +628,7 @@ export const services = [
       ca: "Neteja i desbrossament de parcel·les, finques i boscos amb maquinària professional. Prevenció d'incendis forestals.",
       es: 'Limpieza y desbroce de parcelas, fincas y bosques con maquinaria profesional. Prevención de incendios forestales.',
     },
-    image: '/trabajos/servicios/desbroce-talud-limpio.jpg',
+    image: '/trabajos/servicios/desbroce-talud-limpio.webp',
     href: '/desbroce-parcelas-barcelona',
     tags: [
       { ca: 'Prevenció incendis', es: 'Prevención incendios' },
@@ -467,7 +644,7 @@ export const services = [
       ca: "Instal·lació de reg per degoteig, aspersió i programadors intel·ligents per a jardins eficients i estalvi d'aigua.",
       es: 'Instalación de riego por goteo, aspersión y programadores inteligentes para jardines eficientes y ahorro de agua.',
     },
-    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.jpg',
+    image: '/trabajos/servicios/diseno-jardines-grava-decorativa.webp',
     tags: [
       { ca: 'Reg degoteig', es: 'Riego por goteo' },
       { ca: 'Aspersió', es: 'Aspersión' },
@@ -482,7 +659,7 @@ export const services = [
       ca: "Plans mensuals o trimestrals de poda, sega, fertilitzat i control de plagues. Mantenim el seu jardí impecable tot l'any.",
       es: 'Planes mensuales o trimestrales de poda, siega, fertilización y control de plagas. Mantenemos su jardín impecable todo el año.',
     },
-    image: '/trabajos/servicios/mantenimiento-parcela-despejada.jpg',
+    image: '/trabajos/servicios/mantenimiento-parcela-despejada.webp',
     tags: [
       { ca: 'Pla mensual', es: 'Plan mensual' },
       { ca: 'Pla trimestral', es: 'Plan trimestral' },
@@ -497,7 +674,7 @@ export const services = [
       ca: 'Instal·lació professional de tancaments metàl·lics, fusta, PVC, alumini, ferro i pedra. Garantia 5 anys.',
       es: 'Instalación profesional de cerramientos metálicos, madera, PVC, aluminio, hierro y piedra. Garantía 5 años.',
     },
-    image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+    image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
     href: cerramientosRuralesPath,
     tags: [
       { ca: 'Metàl·lic', es: 'Metálico' },
@@ -513,7 +690,7 @@ export const services = [
       ca: "Neteja, tractament de l'aigua, revisió d'instal·lacions i posada a punt de la seva piscina per a la temporada d'estiu.",
       es: 'Limpieza, tratamiento del agua, revisión de instalaciones y puesta a punto de su piscina para la temporada de verano.',
     },
-    image: '/trabajos/servicios/piscina-vaso-vacio-obra.jpg',
+    image: '/trabajos/servicios/piscina-vaso-vacio-obra.webp',
     tags: [
       { ca: 'Tractament aigua', es: 'Tratamiento agua' },
       { ca: 'Neteja fons', es: 'Limpieza fondo' },
@@ -528,7 +705,7 @@ export const services = [
       ca: 'Control i eliminació de plagues, malalties i fongs en arbres, jardins i cultius. Productes homologats i respectuosos.',
       es: 'Control y eliminación de plagas, enfermedades y hongos en árboles, jardines y cultivos. Productos homologados y respetuosos.',
     },
-    image: '/trabajos/galeria/poda-olivo-tecnica.jpg',
+    image: '/trabajos/galeria/poda-olivo-tecnica.webp',
     tags: [
       { ca: 'Control plagues', es: 'Control plagas' },
       { ca: 'Productes homologats', es: 'Productos homologados' },
@@ -543,7 +720,7 @@ export const services = [
       ca: 'Desbrossament i neteja de parcel·les i solars per a particulars, comunitats i empreses. Servei ràpid i eficient.',
       es: 'Desbroce y limpieza de parcelas y solares para particulares, comunidades y empresas. Servicio rápido y eficiente.',
     },
-    image: '/trabajos/servicios/limpieza-terreno-con-tocones.jpg',
+    image: '/trabajos/servicios/limpieza-terreno-con-tocones.webp',
     href: desbroceBarcelonaPath,
     tags: [
       { ca: 'Particulars', es: 'Particulares' },
@@ -655,6 +832,21 @@ export const localFocusZones = [
     desc: 'Martorell · Abrera · Vallirana · Cervelló · Corbera · Sant Vicenç dels Horts',
     href: baixLlobregatPath,
   },
+  {
+    name: 'Castelldefels',
+    desc: 'Castelldefels · Gavà · Viladecans · Begues',
+    href: castelldefelsPath,
+  },
+  {
+    name: 'Sitges',
+    desc: 'Sitges · Vilanova · Sant Pere de Ribes · Garraf',
+    href: sitgesPath,
+  },
+  {
+    name: 'Granollers',
+    desc: 'Granollers · La Roca · Cardedeu · Vallès Oriental',
+    href: granollersPath,
+  },
 ];
 
 export const projects = {
@@ -669,7 +861,7 @@ export const projects = {
   },
   items: [
     {
-      image: '/trabajos/galeria/poda-palmeras-en-altura.jpg',
+      image: '/trabajos/galeria/poda-palmeras-en-altura.webp',
       title: { ca: 'Poda en altura amb arborista', es: 'Poda en altura con arborista' },
       summary: {
         ca: 'Treball vertical en pi de gran alçada amb accés controlat i seguretat de maniobra.',
@@ -678,7 +870,7 @@ export const projects = {
       meta: { ca: 'Poda i tala · Treball en altura', es: 'Poda y tala · Trabajo en altura' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.jpg',
+      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.webp',
       title: { ca: 'Tancament de talús amb malla', es: 'Cerramiento de talud con malla' },
       summary: {
         ca: 'Instal·lació de tancament metàl·lic adaptat al desnivell i al perímetre real del terreny.',
@@ -687,7 +879,7 @@ export const projects = {
       meta: { ca: 'Tancaments · Finca en pendent', es: 'Cerramientos · Finca en pendiente' },
     },
     {
-      image: '/trabajos/galeria/limpieza-bosque-pendiente.jpg',
+      image: '/trabajos/galeria/limpieza-bosque-pendiente.webp',
       title: { ca: 'Desbrossament de pinar urbà', es: 'Desbroce de pinar urbano' },
       summary: {
         ca: 'Neteja i manteniment de parcel·la amb pendent per reduir vegetació acumulada i millorar accés.',
@@ -696,7 +888,7 @@ export const projects = {
       meta: { ca: 'Desbrossaments · Entorn residencial', es: 'Desbroces · Entorno residencial' },
     },
     {
-      image: '/trabajos/galeria/tala-controlada-piscina.jpg',
+      image: '/trabajos/galeria/tala-controlada-piscina.webp',
       title: { ca: 'Tala controlada a zona residencial', es: 'Tala controlada en zona residencial' },
       summary: {
         ca: 'Desmuntatge progressiu amb zona de treball protegida i retirada de restes de gran volum.',
@@ -705,7 +897,7 @@ export const projects = {
       meta: { ca: 'Tala · Camió grua i suport', es: 'Tala · Camión grúa y apoyo' },
     },
     {
-      image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+      image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
       title: { ca: 'Tanca perimetral amb portó', es: 'Valla perimetral con portón' },
       summary: {
         ca: 'Tancament amb muret i portell integrat per resoldre accés, desnivell i seguretat en una sola intervenció.',
@@ -714,7 +906,7 @@ export const projects = {
       meta: { ca: 'Tancaments · Muret i accés', es: 'Cerramientos · Murete y acceso' },
     },
     {
-      image: '/trabajos/servicios/piscina-vaso-vacio-obra.jpg',
+      image: '/trabajos/servicios/piscina-vaso-vacio-obra.webp',
       title: { ca: 'Manteniment de piscina', es: 'Mantenimiento de piscina' },
       summary: {
         ca: 'Posada a punt de piscina amb revisió de vas, equips i acabat tècnic de la instal·lació.',
@@ -784,89 +976,144 @@ export const projects = {
   },
   gallery: [
     {
-      image: '/trabajos/galeria/tala-controlada-trepador.jpg',
+      image: '/trabajos/galeria/tala-trepador-pino-grande.webp',
+      title: { ca: 'Trepador en pi de gran alçada', es: 'Trepador en pino de gran altura' },
+      meta: { ca: 'Tala · Treball vertical', es: 'Tala · Trabajo vertical' },
+    },
+    {
+      image: '/trabajos/galeria/tala-camion-grua-tronco.webp',
+      title: { ca: 'Retirada de tronc amb camió grua', es: 'Retirada de tronco con camión grúa' },
+      meta: { ca: 'Tala · Mitjans propis', es: 'Tala · Medios propios' },
+    },
+    {
+      image: '/trabajos/galeria/tala-pino-desramado.webp',
+      title: { ca: 'Desmuntatge progressiu de pi', es: 'Desmontaje progresivo de pino' },
+      meta: { ca: 'Tala · Tram a tram', es: 'Tala · Tramo a tramo' },
+    },
+    {
+      image: '/trabajos/galeria/tala-controlada-trepador.webp',
       title: { ca: 'Tala controlada amb trepador', es: 'Tala controlada con trepador' },
       meta: { ca: 'Tala · Entorn residencial', es: 'Tala · Entorno residencial' },
     },
     {
-      image: '/trabajos/galeria/tala-controlada-camion-grua.jpg',
+      image: '/trabajos/galeria/tala-controlada-camion-grua.webp',
       title: { ca: 'Suport amb camió grua', es: 'Apoyo con camión grúa' },
       meta: { ca: 'Tala · Retirada de tronc', es: 'Tala · Retirada de tronco' },
     },
     {
-      image: '/trabajos/galeria/poda-altura-arborista.jpg',
+      image: '/trabajos/galeria/poda-altura-arborista.webp',
       title: { ca: 'Poda en altura', es: 'Poda en altura' },
       meta: { ca: 'Arboricultura · Seguretat', es: 'Arboricultura · Seguridad' },
     },
     {
-      image: '/trabajos/galeria/poda-palmeras-en-altura.jpg',
+      image: '/trabajos/galeria/poda-palmeras-en-altura.webp',
       title: { ca: 'Poda de palmeres', es: 'Poda de palmeras' },
       meta: { ca: 'Poda · Treball vertical', es: 'Poda · Trabajo vertical' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-malla-talud-frontal.jpg',
+      image: '/trabajos/galeria/cerramiento-malla-talud-frontal.webp',
       title: { ca: 'Malla en talús', es: 'Malla en talud' },
       meta: { ca: 'Tancaments · Façana', es: 'Cerramientos · Frente' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.jpg',
+      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.webp',
       title: { ca: 'Tancament lateral', es: 'Cerramiento lateral' },
       meta: { ca: 'Tancaments · Desnivell', es: 'Cerramientos · Desnivel' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-postes-alineados.jpg',
+      image: '/trabajos/galeria/cerramiento-postes-alineados.webp',
       title: { ca: 'Alineació de pals', es: 'Alineación de postes' },
       meta: { ca: 'Tancaments · Execució', es: 'Cerramientos · Ejecución' },
     },
     {
-      image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+      image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
       title: { ca: 'Portell amb muret', es: 'Portillo con murete' },
       meta: { ca: 'Tancaments · Accés resolt', es: 'Cerramientos · Acceso resuelto' },
     },
     {
-      image: '/trabajos/galeria/cimentacion-cerramiento-armado.jpg',
+      image: '/trabajos/galeria/cimentacion-cerramiento-armado.webp',
       title: { ca: 'Fonamentació armada', es: 'Cimentación armada' },
       meta: { ca: 'Tancaments · Base', es: 'Cerramientos · Base' },
     },
     {
-      image: '/trabajos/galeria/muro-bloque-cerramiento-obra.jpg',
+      image: '/trabajos/galeria/muro-bloque-cerramiento-obra.webp',
       title: { ca: 'Mur de bloc en obra', es: 'Muro de bloque en obra' },
       meta: { ca: 'Tancament d’obra', es: 'Cerramiento de obra' },
     },
     {
-      image: '/trabajos/galeria/desbroce-talud-antes.jpg',
+      image: '/trabajos/galeria/desbroce-talud-antes.webp',
       title: { ca: 'Talús abans de sanejar', es: 'Talud antes de sanear' },
       meta: { ca: 'Desbrossament · Abans', es: 'Desbroce · Antes' },
     },
     {
-      image: '/trabajos/galeria/limpieza-talud-urbano.jpg',
+      image: '/trabajos/galeria/limpieza-talud-urbano.webp',
       title: { ca: 'Talús urbà netejat', es: 'Talud urbano limpiado' },
       meta: { ca: 'Desbrossament · Després', es: 'Desbroce · Después' },
     },
     {
-      image: '/trabajos/galeria/limpieza-pinar-urbano.jpg',
+      image: '/trabajos/galeria/limpieza-pinar-urbano.webp',
       title: { ca: 'Neteja de pinar', es: 'Limpieza de pinar' },
       meta: { ca: 'Manteniment · Parcel·la', es: 'Mantenimiento · Parcela' },
     },
     {
-      image: '/trabajos/galeria/poda-olivo-tecnica.jpg',
+      image: '/trabajos/galeria/poda-olivo-tecnica.webp',
       title: { ca: 'Poda tècnica d’olivera', es: 'Poda técnica de olivo' },
       meta: { ca: 'Poda · Manteniment', es: 'Poda · Mantenimiento' },
     },
     {
-      image: '/trabajos/galeria/tala-pino-altura-bosque.jpg',
+      image: '/trabajos/galeria/tala-pino-altura-bosque.webp',
       title: { ca: 'Tala de pi en altura', es: 'Tala de pino en altura' },
       meta: { ca: 'Tala · Entorn forestal', es: 'Tala · Entorno forestal' },
     },
     {
-      image: '/trabajos/galeria/piscina-sala-tecnica-detalle.jpg',
+      image: '/trabajos/galeria/piscina-sala-tecnica-detalle.webp',
       title: { ca: 'Sala tècnica de piscina', es: 'Sala técnica de piscina' },
       meta: { ca: 'Piscines · Instal·lació', es: 'Piscinas · Instalación' },
     },
     {
-      image: '/trabajos/galeria/piscina-instalacion-exterior.jpg',
+      image: '/trabajos/galeria/piscina-instalacion-exterior.webp',
       title: { ca: 'Instal·lació exterior de piscina', es: 'Instalación exterior de piscina' },
       meta: { ca: 'Piscines · Equip tècnic', es: 'Piscinas · Equipo técnico' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-sala-tecnica-premium.webp',
+      title: { ca: 'Sala tècnica completa', es: 'Sala técnica completa' },
+      meta: { ca: 'Piscines · Instal·lació premium', es: 'Piscinas · Instalación premium' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-sala-tecnica-luminosa.webp',
+      title: { ca: 'Sala tècnica organitzada', es: 'Sala técnica organizada' },
+      meta: { ca: 'Piscines · Manteniment', es: 'Piscinas · Mantenimiento' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-bomba-instalacion-limpia.webp',
+      title: { ca: 'Bomba i circuit de PVC', es: 'Bomba y circuito de PVC' },
+      meta: { ca: 'Piscines · Detall instal·lació', es: 'Piscinas · Detalle instalación' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-valvulas-detalle.webp',
+      title: { ca: 'Vàlvules i circuit de filtratge', es: 'Válvulas y circuito de filtrado' },
+      meta: { ca: 'Piscines · Hidràulica', es: 'Piscinas · Hidráulica' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-calefaccion-instalacion.webp',
+      title: { ca: 'Bomba de calor i intercanviador', es: 'Bomba de calor e intercambiador' },
+      meta: { ca: 'Piscines · Climatització', es: 'Piscinas · Climatización' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-tuberia-pvc-tecnica.webp',
+      title: { ca: 'Conducció PVC en sala tècnica', es: 'Conducción PVC en sala técnica' },
+      meta: { ca: 'Piscines · Detall', es: 'Piscinas · Detalle' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-vaso-construccion-sala.webp',
+      title: { ca: 'Vas de piscina en obra', es: 'Vaso de piscina en obra' },
+      meta: { ca: 'Piscines · Construcció', es: 'Piscinas · Construcción' },
+    },
+    {
+      image: '/trabajos/galeria/piscina-vaso-piedra-natural.webp',
+      title: { ca: 'Piscina amb acabat de pedra', es: 'Piscina con acabado de piedra' },
+      meta: { ca: 'Piscines · Acabat premium', es: 'Piscinas · Acabado premium' },
     },
   ],
 };
@@ -882,7 +1129,7 @@ export const serviceLandingPages = {
       ca: "Fem poda tècnica i controlada de pins i arbres en jardins, parcel·les, comunitats i entorns residencials amb equip preparat per treballar en altura.",
       es: 'Realizamos poda técnica y controlada de pinos y árboles en jardines, parcelas, comunidades y entornos residenciales con equipo preparado para trabajar en altura.',
     },
-    image: '/trabajos/galeria/poda-altura-arborista.jpg',
+    image: '/trabajos/galeria/poda-altura-arborista.webp',
     intro: {
       ca: "Si necessites una empresa de poda d'arbres a Barcelona, treballem amb criteri tècnic, seguretat i ordre a l'obra. Actuem tant en poda de manteniment com en reduccions, sanejament i actuacions en altura.",
       es: 'Si necesitas una empresa de poda de árboles en Barcelona, trabajamos con criterio técnico, seguridad y orden en obra. Actuamos tanto en poda de mantenimiento como en reducciones, saneamiento y trabajos en altura.',
@@ -992,7 +1239,7 @@ export const serviceLandingPages = {
       ca: "Executem tala controlada en entorns residencials, parcel·les i finques amb planificació de maniobra, seguretat i retirada de troncs i restes.",
       es: 'Ejecutamos tala controlada en entornos residenciales, parcelas y fincas con planificación de maniobra, seguridad y retirada de troncos y restos.',
     },
-    image: '/trabajos/galeria/tala-controlada-piscina.jpg',
+    image: '/trabajos/galeria/tala-controlada-piscina.webp',
     intro: {
       ca: "Quan un arbre s'ha de retirar, el més important és fer-ho sense risc per a persones, habitatges o tancaments. A CB Forestal fem tala controlada a Barcelona amb suport tècnic i equip adequat.",
       es: 'Cuando un árbol debe retirarse, lo más importante es hacerlo sin riesgo para personas, viviendas o cerramientos. En CB Forestal hacemos tala controlada en Barcelona con apoyo técnico y equipo adecuado.',
@@ -1102,7 +1349,7 @@ export const serviceLandingPages = {
       ca: 'Netegem parcel·les, finques i zones amb pendent per reduir vegetació acumulada, millorar accessos i prevenir risc d’incendi.',
       es: 'Limpiamos parcelas, fincas y zonas con pendiente para reducir vegetación acumulada, mejorar accesos y prevenir riesgo de incendio.',
     },
-    image: '/trabajos/servicios/desbroce-talud-limpio.jpg',
+    image: '/trabajos/servicios/desbroce-talud-limpio.webp',
     intro: {
       ca: 'El desbrossament és una feina clau per mantenir una parcel·la segura i preparada. Treballem a Barcelona i rodalia en solars, talussos, finques i zones forestals.',
       es: 'El desbroce es un trabajo clave para mantener una parcela segura y preparada. Trabajamos en Barcelona y alrededores en solares, taludes, fincas y zonas forestales.',
@@ -1212,7 +1459,7 @@ export const serviceLandingPages = {
       ca: 'Instal·lem tancaments rurals, malla, pals, accessos i solucions perimetrals per protegir parcel·les, finques i terrenys amb acabat professional.',
       es: 'Instalamos cerramientos rurales, malla, postes, accesos y soluciones perimetrales para proteger parcelas, fincas y terrenos con acabado profesional.',
     },
-    image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+    image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
     intro: {
       ca: 'Si necessites tancar una finca, una parcel·la o un terreny a Barcelona o Catalunya, t’ajudem a resoldre’l amb una solució funcional, resistent i adaptada al desnivell, l’accés i l’ús real de l’espai.',
       es: 'Si necesitas cerrar una finca, una parcela o un terreno en Barcelona o Cataluña, te ayudamos a resolverlo con una solución funcional, resistente y adaptada al desnivel, el acceso y el uso real del espacio.',
@@ -1329,7 +1576,7 @@ export const areaLandingPages = {
       ca: 'Treballem a Sant Cugat amb poda, tala, desbrossament, manteniment de parcel·les i tancaments per a particulars i comunitats.',
       es: 'Trabajamos en Sant Cugat con poda, tala, desbroce, mantenimiento de parcelas y cerramientos para particulares y comunidades.',
     },
-    image: '/trabajos/galeria/poda-altura-arborista.jpg',
+    image: '/trabajos/galeria/poda-altura-arborista.webp',
     intro: {
       ca: 'Sant Cugat és una de les zones on millor encaixa el nostre servei: habitatges amb jardí, parcel·les, arbres grans, tanques i manteniment exterior que demana rapidesa i bona execució.',
       es: 'Sant Cugat es una de las zonas donde mejor encaja nuestro servicio: viviendas con jardín, parcelas, árboles grandes, vallas y mantenimiento exterior que pide rapidez y buena ejecución.',
@@ -1439,7 +1686,7 @@ export const areaLandingPages = {
       ca: 'Serveis forestals i tancaments a Rubí per a particulars, finques, parcel·les i entorns residencials.',
       es: 'Servicios forestales y cerramientos en Rubí para particulares, fincas, parcelas y entornos residenciales.',
     },
-    image: '/trabajos/galeria/tala-controlada-piscina.jpg',
+    image: '/trabajos/galeria/tala-controlada-piscina.webp',
     intro: {
       ca: 'A Rubí fem des de treballs tècnics de poda i tala fins a desbrossament, neteja de terrenys i tancaments perimetrals amb enfocament pràctic.',
       es: 'En Rubí hacemos desde trabajos técnicos de poda y tala hasta desbroce, limpieza de terrenos y cerramientos perimetrales con enfoque práctico.',
@@ -1549,7 +1796,7 @@ export const areaLandingPages = {
       ca: 'Treballem a Sabadell amb poda, tala, desbrossament, manteniment exterior i tancaments segons el tipus d’espai.',
       es: 'Trabajamos en Sabadell con poda, tala, desbroce, mantenimiento exterior y cerramientos según el tipo de espacio.',
     },
-    image: '/trabajos/galeria/poda-palmeras-en-altura.jpg',
+    image: '/trabajos/galeria/poda-palmeras-en-altura.webp',
     intro: {
       ca: 'Sabadell concentra tant entorns residencials com espais industrials i parcel·les que necessiten serveis exteriors ben executats i amb resposta clara.',
       es: 'Sabadell concentra tanto entornos residenciales como espacios industriales y parcelas que necesitan servicios exteriores bien ejecutados y con respuesta clara.',
@@ -1659,7 +1906,7 @@ export const areaLandingPages = {
       ca: 'Poda, tala, desbrossament, neteja de parcel·les i tancaments a Terrassa amb servei professional i proper.',
       es: 'Poda, tala, desbroce, limpieza de parcelas y cerramientos en Terrassa con servicio profesional y cercano.',
     },
-    image: '/trabajos/galeria/tala-pino-altura-bosque.jpg',
+    image: '/trabajos/galeria/tala-pino-altura-bosque.webp',
     intro: {
       ca: 'Terrassa és una zona molt natural per al nostre servei: hi ha parcel·les, habitatges, franges, entorns amb pendent i molts casos on cal intervenir amb criteri.',
       es: 'Terrassa es una zona muy natural para nuestro servicio: hay parcelas, viviendas, franjas, entornos con pendiente y muchos casos donde hay que intervenir con criterio.',
@@ -1769,7 +2016,7 @@ export const areaLandingPages = {
       ca: 'Cobertura forta a Martorell, Abrera, Vallirana, Cervelló, Corbera i Sant Vicenç dels Horts amb poda, tala, desbrossament i tancaments.',
       es: 'Cobertura fuerte en Martorell, Abrera, Vallirana, Cervelló, Corbera y Sant Vicenç dels Horts con poda, tala, desbroce y cerramientos.',
     },
-    image: '/trabajos/servicios/cerramiento-murete-portillon.jpg',
+    image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
     intro: {
       ca: 'El Baix Llobregat és una de les zones que més ens interessa treballar per proximitat real. Aquí fem tot tipus de serveis per a parcel·les, finques, habitatges i terrenys amb vegetació o necessitat de tancament.',
       es: 'Baix Llobregat es una de las zonas que más nos interesa trabajar por proximidad real. Aquí hacemos todo tipo de servicios para parcelas, fincas, viviendas y terrenos con vegetación o necesidad de cerramiento.',
@@ -1865,6 +2112,336 @@ export const areaLandingPages = {
         answer: {
           ca: 'No, cobrim diversos municipis i ens adaptem segons el tipus de feina i la distància.',
           es: 'No, cubrimos varios municipios y nos adaptamos según el tipo de trabajo y la distancia.',
+        },
+      },
+    ],
+  },
+  [castelldefelsPath]: {
+    eyebrow: { ca: 'Castelldefels i Garraf', es: 'Castelldefels y Garraf' },
+    title: {
+      ca: 'Serveis forestals a Castelldefels per a finques, urbanitzacions i comunitats',
+      es: 'Servicios forestales en Castelldefels para fincas, urbanizaciones y comunidades',
+    },
+    description: {
+      ca: 'Poda, tala, desbrossament, neteja de parcel·les i tancaments a Castelldefels i Garraf amb visita gratuïta i atenció d\'urgències 24h.',
+      es: 'Poda, tala, desbroce, limpieza de parcelas y cerramientos en Castelldefels y Garraf con visita gratuita y atención de urgencias 24h.',
+    },
+    image: '/trabajos/galeria/poda-altura-arborista.webp',
+    intro: {
+      ca: 'Castelldefels combina urbanitzacions amb pinedes pròximes, parcel·les amb pendent i franges perimetrals que necessiten manteniment recurrent. Treballem la zona amb resposta àgil i criteri tècnic.',
+      es: 'Castelldefels combina urbanizaciones con pinares próximos, parcelas con pendiente y franjas perimetrales que requieren mantenimiento recurrente. Trabajamos la zona con respuesta ágil y criterio técnico.',
+    },
+    paragraphs: [
+      {
+        ca: 'Atenem tant cases unifamiliars com comunitats i administradors de finques: poda en altura de pins, tala controlada, desbrossament d\'estiu i tancaments perimetrals.',
+        es: 'Atendemos tanto viviendas unifamiliares como comunidades y administradores de fincas: poda en altura de pinos, tala controlada, desbroce de verano y cerramientos perimetrales.',
+      },
+      {
+        ca: 'És una zona on la prevenció d\'incendis i la franja perimetral exigida per normativa marquen la temporada de feina.',
+        es: 'Es una zona donde la prevención de incendios y la franja perimetral exigida por normativa marcan la temporada de trabajo.',
+      },
+    ],
+    bullets: [
+      { ca: 'Poda i tala de pins en parcel·les residencials', es: 'Poda y tala de pinos en parcelas residenciales' },
+      { ca: 'Franges perimetrals i prevenció d\'incendis', es: 'Franjas perimetrales y prevención de incendios' },
+      { ca: 'Manteniment per a comunitats i administradors', es: 'Mantenimiento para comunidades y administradores' },
+      { ca: 'Atenció d\'urgències 24h en arbre caigut o branca trencada', es: 'Atención de urgencias 24h en árbol caído o rama rota' },
+    ],
+    scenarios: [
+      {
+        title: { ca: 'Pins en urbanització', es: 'Pinos en urbanización' },
+        text: {
+          ca: 'Exemplars grans propers a habitatges, piscines o vials que demanen tala controlada o reducció de capçada.',
+          es: 'Ejemplares grandes próximos a viviendas, piscinas o viales que requieren tala controlada o reducción de copa.',
+        },
+      },
+      {
+        title: { ca: 'Franja preventiva abans d\'estiu', es: 'Franja preventiva antes de verano' },
+        text: {
+          ca: 'Desbrossament i sanejament del perímetre per complir normativa i reduir risc real d\'incendi.',
+          es: 'Desbroce y saneamiento del perímetro para cumplir normativa y reducir riesgo real de incendio.',
+        },
+      },
+      {
+        title: { ca: 'Comunitats i administradors', es: 'Comunidades y administradores' },
+        text: {
+          ca: 'Plans de manteniment recurrent amb factura legal i interlocució directa.',
+          es: 'Planes de mantenimiento recurrente con factura legal e interlocución directa.',
+        },
+      },
+    ],
+    valueProps: [
+      {
+        title: { ca: 'Coneixem la zona', es: 'Conocemos la zona' },
+        text: {
+          ca: 'Treballem habitualment a Castelldefels, Gavà, Viladecans i Begues. Coneixem terrenys, accessos i tipus de pi.',
+          es: 'Trabajamos habitualmente en Castelldefels, Gavà, Viladecans y Begues. Conocemos terrenos, accesos y tipo de pino.',
+        },
+      },
+      {
+        title: { ca: 'Visita gratuïta', es: 'Visita gratuita' },
+        text: {
+          ca: 'Anem a veure la finca, valorem accessos i risc, i et donem pressupost real sense compromís.',
+          es: 'Vamos a ver la finca, valoramos accesos y riesgo, y te damos presupuesto real sin compromiso.',
+        },
+      },
+      {
+        title: { ca: 'Urgències 24h', es: 'Urgencias 24h' },
+        text: {
+          ca: 'Si hi ha arbre caigut o branca compromesa, atenem el mateix dia per evitar danys majors.',
+          es: 'Si hay árbol caído o rama comprometida, atendemos el mismo día para evitar daños mayores.',
+        },
+      },
+    ],
+    areas: {
+      ca: 'Castelldefels, Gavà, Viladecans, Begues i entorn del Garraf.',
+      es: 'Castelldefels, Gavà, Viladecans, Begues y entorno del Garraf.',
+    },
+    relatedLinks: [
+      { to: podaBarcelonaPath, label: { ca: 'Veure poda en altura', es: 'Ver poda en altura' } },
+      { to: desbroceBarcelonaPath, label: { ca: 'Veure desbrossament', es: 'Ver desbroce' } },
+      { to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } },
+    ],
+    faqs: [
+      {
+        question: { ca: 'Atendreu una urgència el cap de setmana?', es: '¿Atenderéis una urgencia el fin de semana?' },
+        answer: {
+          ca: 'Sí. Per arbre caigut, branca trencada o risc imminent atenem 24h, també caps de setmana i festius.',
+          es: 'Sí. Para árbol caído, rama rota o riesgo inminente atendemos 24h, también fines de semana y festivos.',
+        },
+      },
+      {
+        question: { ca: 'Treballeu amb administradors de finques?', es: '¿Trabajáis con administradores de fincas?' },
+        answer: {
+          ca: 'Sí, amb factura legal, RC vigent i plans de manteniment per a comunitats i urbanitzacions.',
+          es: 'Sí, con factura legal, RC vigente y planes de mantenimiento para comunidades y urbanizaciones.',
+        },
+      },
+      {
+        question: { ca: 'Feu la franja perimetral exigida per normativa?', es: '¿Hacéis la franja perimetral exigida por normativa?' },
+        answer: {
+          ca: 'Sí. Treballem la franja preventiva en parcel·les i urbanitzacions abans d\'estiu i en manteniment recurrent.',
+          es: 'Sí. Trabajamos la franja preventiva en parcelas y urbanizaciones antes de verano y en mantenimiento recurrente.',
+        },
+      },
+    ],
+  },
+  [sitgesPath]: {
+    eyebrow: { ca: 'Sitges i Garraf', es: 'Sitges y Garraf' },
+    title: {
+      ca: 'Treballs forestals a Sitges, Vilanova i comarca del Garraf',
+      es: 'Trabajos forestales en Sitges, Vilanova y comarca del Garraf',
+    },
+    description: {
+      ca: 'Poda, tala, desbrossament, manteniment de finques i tancaments a Sitges i el Garraf amb resposta àgil per a particulars, comunitats i urgències 24h.',
+      es: 'Poda, tala, desbroce, mantenimiento de fincas y cerramientos en Sitges y el Garraf con respuesta ágil para particulares, comunidades y urgencias 24h.',
+    },
+    image: '/trabajos/galeria/tala-pino-altura-bosque.webp',
+    intro: {
+      ca: 'A Sitges, Vilanova i Sant Pere de Ribes hi ha molta finca amb pi gros, talús i vegetació mediterrània que cal mantenir de forma recurrent.',
+      es: 'En Sitges, Vilanova y Sant Pere de Ribes hay mucha finca con pino grande, talud y vegetación mediterránea que requiere mantenimiento recurrente.',
+    },
+    paragraphs: [
+      {
+        ca: 'Treballem tant en cases amb jardí com en finques rústiques, urbanitzacions i comunitats que necessiten poda en altura, tala controlada o sanejament de talussos.',
+        es: 'Trabajamos tanto en viviendas con jardín como en fincas rústicas, urbanizaciones y comunidades que necesitan poda en altura, tala controlada o saneamiento de taludes.',
+      },
+      {
+        ca: 'És una zona on la combinació de vent, sequera i densitat vegetal fa especialment important una bona prevenció d\'incendi i un manteniment ben planificat.',
+        es: 'Es una zona donde la combinación de viento, sequía y densidad vegetal hace especialmente importante una buena prevención de incendio y un mantenimiento bien planificado.',
+      },
+    ],
+    bullets: [
+      { ca: 'Poda i tala de pins en parcel·les amb pendent', es: 'Poda y tala de pinos en parcelas con pendiente' },
+      { ca: 'Sanejament de talús i franja perimetral', es: 'Saneamiento de talud y franja perimetral' },
+      { ca: 'Manteniment recurrent per a finques i comunitats', es: 'Mantenimiento recurrente para fincas y comunidades' },
+      { ca: 'Atenció d\'urgències 24h', es: 'Atención de urgencias 24h' },
+    ],
+    scenarios: [
+      {
+        title: { ca: 'Finca amb pendent', es: 'Finca con pendiente' },
+        text: {
+          ca: 'Talús amb vegetació densa o pins en zona difícil que demanen tècnica i seguretat.',
+          es: 'Talud con vegetación densa o pinos en zona difícil que requieren técnica y seguridad.',
+        },
+      },
+      {
+        title: { ca: 'Casa amb jardí gran', es: 'Casa con jardín grande' },
+        text: {
+          ca: 'Poda d\'arbres grans, retirada de pins i sanejament estètic i preventiu.',
+          es: 'Poda de árboles grandes, retirada de pinos y saneamiento estético y preventivo.',
+        },
+      },
+      {
+        title: { ca: 'Comunitat o urbanització', es: 'Comunidad o urbanización' },
+        text: {
+          ca: 'Manteniment col·lectiu amb interlocució amb administrador i factura legal.',
+          es: 'Mantenimiento colectivo con interlocución con administrador y factura legal.',
+        },
+      },
+    ],
+    valueProps: [
+      {
+        title: { ca: 'Equip per a treballs en altura', es: 'Equipo para trabajos en altura' },
+        text: {
+          ca: 'Pins grans, palmeres altes o arbres en zones complicades: hi anem amb material homologat i pòlissa específica.',
+          es: 'Pinos grandes, palmeras altas o árboles en zonas complicadas: vamos con material homologado y póliza específica.',
+        },
+      },
+      {
+        title: { ca: 'Visita i pressupost gratis', es: 'Visita y presupuesto gratis' },
+        text: {
+          ca: 'Veiem la finca, valorem la feina i et donem un preu real, no orientatiu, sense compromís.',
+          es: 'Vemos la finca, valoramos el trabajo y te damos un precio real, no orientativo, sin compromiso.',
+        },
+      },
+      {
+        title: { ca: 'Resposta ràpida en urgències', es: 'Respuesta rápida en urgencias' },
+        text: {
+          ca: 'Si hi ha risc imminent (arbre caigut, branca trencada), entrem el mateix dia.',
+          es: 'Si hay riesgo inminente (árbol caído, rama rota), entramos el mismo día.',
+        },
+      },
+    ],
+    areas: {
+      ca: 'Sitges, Vilanova i la Geltrú, Sant Pere de Ribes, Cubelles i comarca del Garraf.',
+      es: 'Sitges, Vilanova i la Geltrú, Sant Pere de Ribes, Cubelles y comarca del Garraf.',
+    },
+    relatedLinks: [
+      { to: talaBarcelonaPath, label: { ca: 'Veure tala controlada', es: 'Ver tala controlada' } },
+      { to: cerramientosRuralesPath, label: { ca: 'Veure tancaments rurals', es: 'Ver cerramientos rurales' } },
+      { to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } },
+    ],
+    faqs: [
+      {
+        question: { ca: 'Treballeu en cases amb molt pendent?', es: '¿Trabajáis en casas con mucha pendiente?' },
+        answer: {
+          ca: 'Sí. És habitual al Garraf i comptem amb tècnica i equip preparat per actuar amb seguretat.',
+          es: 'Sí. Es habitual en el Garraf y contamos con técnica y equipo preparado para actuar con seguridad.',
+        },
+      },
+      {
+        question: { ca: 'Podeu fer manteniment de la franja perimetral?', es: '¿Podéis hacer mantenimiento de la franja perimetral?' },
+        answer: {
+          ca: 'Sí, de forma puntual o recurrent abans d\'estiu, segons el que demani la finca.',
+          es: 'Sí, de forma puntual o recurrente antes de verano, según lo que requiera la finca.',
+        },
+      },
+      {
+        question: { ca: 'Atendreu una urgència fora d\'horari laboral?', es: '¿Atenderéis una urgencia fuera de horario laboral?' },
+        answer: {
+          ca: 'Sí. En urgències 24h (arbre caigut, risc imminent) atenem també caps de setmana i festius.',
+          es: 'Sí. En urgencias 24h (árbol caído, riesgo inminente) atendemos también fines de semana y festivos.',
+        },
+      },
+    ],
+  },
+  [granollersPath]: {
+    eyebrow: { ca: 'Granollers i Vallès Oriental', es: 'Granollers y Vallès Oriental' },
+    title: {
+      ca: 'Serveis forestals a Granollers per a finques, naus i comunitats',
+      es: 'Servicios forestales en Granollers para fincas, naves y comunidades',
+    },
+    description: {
+      ca: 'Poda, tala, desbrossament i tancaments a Granollers i Vallès Oriental amb visita gratuïta i atenció d\'urgències 24h.',
+      es: 'Poda, tala, desbroce y cerramientos en Granollers y Vallès Oriental con visita gratuita y atención de urgencias 24h.',
+    },
+    image: '/trabajos/galeria/limpieza-bosque-pendiente.webp',
+    intro: {
+      ca: 'Granollers i el Vallès Oriental és una zona variada: cases amb jardí, finques rústiques, naus industrials i parcel·les que necessiten manteniment exterior amb criteri.',
+      es: 'Granollers y el Vallès Oriental es una zona variada: viviendas con jardín, fincas rústicas, naves industriales y parcelas que necesitan mantenimiento exterior con criterio.',
+    },
+    paragraphs: [
+      {
+        ca: 'Hi treballem habitualment en poda i tala d\'arbres, desbrossament de parcel·les i finques, manteniment exterior d\'empresa i tancaments perimetrals.',
+        es: 'Trabajamos habitualmente en poda y tala de árboles, desbroce de parcelas y fincas, mantenimiento exterior de empresa y cerramientos perimetrales.',
+      },
+      {
+        ca: 'És una zona on la combinació de servei forestal i tancament en una sola empresa simplifica molt la gestió per al client.',
+        es: 'Es una zona donde la combinación de servicio forestal y cerramiento en una sola empresa simplifica mucho la gestión para el cliente.',
+      },
+    ],
+    bullets: [
+      { ca: 'Poda i tala d\'arbres en jardins i finques', es: 'Poda y tala de árboles en jardines y fincas' },
+      { ca: 'Desbrossament i neteja de parcel·les', es: 'Desbroce y limpieza de parcelas' },
+      { ca: 'Manteniment exterior de naus i empreses', es: 'Mantenimiento exterior de naves y empresas' },
+      { ca: 'Tancaments perimetrals i accessos', es: 'Cerramientos perimetrales y accesos' },
+    ],
+    scenarios: [
+      {
+        title: { ca: 'Cases amb jardí gran', es: 'Viviendas con jardín grande' },
+        text: {
+          ca: 'Manteniment de pins, palmeres, oliveres i arbres grans amb necessitat de control o retirada.',
+          es: 'Mantenimiento de pinos, palmeras, olivos y árboles grandes con necesidad de control o retirada.',
+        },
+      },
+      {
+        title: { ca: 'Naus i empreses', es: 'Naves y empresas' },
+        text: {
+          ca: 'Exterior d\'empresa amb necessitat de neteja, sanejament o tancament perimetral amb factura legal.',
+          es: 'Exterior de empresa con necesidad de limpieza, saneamiento o cerramiento perimetral con factura legal.',
+        },
+      },
+      {
+        title: { ca: 'Parcel·les a recuperar', es: 'Parcelas a recuperar' },
+        text: {
+          ca: 'Terrenys carregats que cal sanejar abans de venda, obra o ús estacional.',
+          es: 'Terrenos cargados que hay que sanear antes de venta, obra o uso estacional.',
+        },
+      },
+    ],
+    valueProps: [
+      {
+        title: { ca: 'Un sol equip', es: 'Un solo equipo' },
+        text: {
+          ca: 'Forestal, neteja i tancament dins la mateixa empresa: menys coordinació, millor resultat.',
+          es: 'Forestal, limpieza y cerramiento dentro de la misma empresa: menos coordinación, mejor resultado.',
+        },
+      },
+      {
+        title: { ca: 'Visita gratis i sense compromís', es: 'Visita gratis y sin compromiso' },
+        text: {
+          ca: 'Anem, valorem i pressupostem amb criteri tècnic abans que prenguis cap decisió.',
+          es: 'Vamos, valoramos y presupuestamos con criterio técnico antes de que tomes ninguna decisión.',
+        },
+      },
+      {
+        title: { ca: 'Factura i RC', es: 'Factura y RC' },
+        text: {
+          ca: 'Empresa registrada, assegurança RC vigent i facturació formal per a particulars, comunitats i empreses.',
+          es: 'Empresa registrada, seguro RC vigente y facturación formal para particulares, comunidades y empresas.',
+        },
+      },
+    ],
+    areas: {
+      ca: 'Granollers, La Roca del Vallès, Cardedeu, Les Franqueses, Canovelles i Vallès Oriental.',
+      es: 'Granollers, La Roca del Vallès, Cardedeu, Les Franqueses, Canovelles y Vallès Oriental.',
+    },
+    relatedLinks: [
+      { to: desbroceBarcelonaPath, label: { ca: 'Veure desbrossament', es: 'Ver desbroce' } },
+      { to: cerramientosRuralesPath, label: { ca: 'Veure tancaments', es: 'Ver cerramientos' } },
+      { to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } },
+    ],
+    faqs: [
+      {
+        question: { ca: 'Treballeu per a empreses i naus?', es: '¿Trabajáis para empresas y naves?' },
+        answer: {
+          ca: 'Sí. Atenem manteniment exterior, sanejament i tancaments amb factura legal i RC vigent.',
+          es: 'Sí. Atendemos mantenimiento exterior, saneamiento y cerramientos con factura legal y RC vigente.',
+        },
+      },
+      {
+        question: { ca: 'Atendreu una urgència 24h al Vallès?', es: '¿Atenderéis una urgencia 24h en el Vallès?' },
+        answer: {
+          ca: 'Sí. Per arbre caigut o risc imminent entrem el mateix dia, també caps de setmana i festius.',
+          es: 'Sí. Para árbol caído o riesgo inminente entramos el mismo día, también fines de semana y festivos.',
+        },
+      },
+      {
+        question: { ca: 'Cobriu municipis més enllà de Granollers?', es: '¿Cubrís municipios más allá de Granollers?' },
+        answer: {
+          ca: 'Sí, treballem tot el Vallès Oriental: La Roca, Cardedeu, Les Franqueses, Canovelles i entorn.',
+          es: 'Sí, trabajamos todo el Vallès Oriental: La Roca, Cardedeu, Les Franqueses, Canovelles y entorno.',
         },
       },
     ],

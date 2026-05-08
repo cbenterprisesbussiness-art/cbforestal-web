@@ -15,7 +15,7 @@ export default function FencesPage() {
         description={fences.paragraphs[0]}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
         secondaryCta={{ to: zonesSectionPath, label: { ca: 'Veure zones', es: 'Ver zonas' } }}
-        image="/trabajos/galeria/cerramiento-panel-porton.jpg"
+        image="/trabajos/galeria/cerramiento-panel-porton.webp"
         compact
       />
 
@@ -23,7 +23,7 @@ export default function FencesPage() {
         <div className="container split-grid fences-grid">
           <div className="image-card">
             <img
-              src="/trabajos/servicios/cerramiento-portillo-metalico.jpg"
+              src="/trabajos/servicios/cerramiento-portillo-metalico.webp"
               alt={t(fences.label)}
               loading="lazy"
             />

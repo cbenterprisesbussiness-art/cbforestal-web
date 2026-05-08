@@ -16,7 +16,7 @@ export default function ServicesPage() {
         description={servicesIntro.description}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Demanar pressupost', es: 'Pedir presupuesto' } }}
         secondaryCta={{ to: fencesSectionPath, label: { ca: 'Veure tancaments', es: 'Ver cerramientos' } }}
-        image="/trabajos/galeria/poda-palmeras-en-altura.jpg"
+        image="/trabajos/galeria/poda-palmeras-en-altura.webp"
         compact
       />
 

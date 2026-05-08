@@ -16,7 +16,7 @@ export default function ZonesPage() {
         description={zonesIntro.description}
         primaryCta={{ to: quoteRequestPath, label: { ca: 'Contactar equip', es: 'Contactar equipo' } }}
         secondaryCta={{ to: servicesSectionPath, label: { ca: 'Veure serveis', es: 'Ver servicios' } }}
-        image="/trabajos/galeria/limpieza-bosque-pendiente.jpg"
+        image="/trabajos/galeria/limpieza-bosque-pendiente.webp"
         compact
       />
 

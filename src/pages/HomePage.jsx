@@ -4,18 +4,23 @@ import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
 import ProjectsSection from '../components/ProjectsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import FAQSection from '../components/FAQSection';
 import {
   about,
+  caseStudy,
   company,
   conversionSection,
   fences,
   fencesSectionPath,
   hero,
+  homeFaqs,
   processSection,
   quoteRequestPath,
   services,
   servicesSectionPath,
   servicesIntro,
+  trustCredentials,
+  urgency24hCopy,
   zones,
   zonesIntro,
 } from '../shared/siteContent';
@@ -32,23 +37,25 @@ export default function HomePage() {
         description={hero.description}
         primaryCta={{ to: quoteRequestPath, label: hero.primaryCta }}
         secondaryCta={{ to: servicesSectionPath, label: hero.secondaryCta }}
-        image="/trabajos/galeria/tala-controlada-piscina.jpg"
+        image="/trabajos/galeria/tala-controlada-piscina.webp"
+        video="/trabajos/videos-nuevos/hero-loop.mp4"
         trustSignals={hero.trustSignals}
+        urgencyBadge={hero.urgencyBadge}
       />
 
       <section className="home-proof-strip">
         <div className="container home-proof-grid">
-          <article className="home-proof-card" data-reveal>
-            <span>{t({ ca: 'Truca directament', es: 'Llama directamente' })}</span>
+          <article className="home-proof-card home-proof-urgency" data-reveal>
+            <span>{t(urgency24hCopy.short)}</span>
             <a href={company.phoneHref}>{company.phone}</a>
           </article>
           <article className="home-proof-card" data-reveal>
-            <span>{t({ ca: 'Resposta habitual', es: 'Respuesta habitual' })}</span>
-            <strong>{t({ ca: 'En menys de 24h', es: 'En menos de 24h' })}</strong>
+            <span>{t({ ca: 'Visita gratis', es: 'Visita gratis' })}</span>
+            <strong>{t({ ca: 'Sense compromís', es: 'Sin compromiso' })}</strong>
           </article>
           <article className="home-proof-card" data-reveal>
-            <span>{t({ ca: 'Treballem a', es: 'Trabajamos en' })}</span>
-            <strong>{t({ ca: 'Barcelona i Catalunya', es: 'Barcelona y Cataluña' })}</strong>
+            <span>{t({ ca: 'Cobertura', es: 'Cobertura' })}</span>
+            <strong>{t({ ca: 'Tota Catalunya', es: 'Toda Cataluña' })}</strong>
           </article>
         </div>
       </section>
@@ -138,7 +145,7 @@ export default function HomePage() {
         <div className="container split-grid fences-grid">
           <div className="image-card">
             <img
-              src="/trabajos/galeria/cerramiento-malla-talud-frontal.jpg"
+              src="/trabajos/galeria/cerramiento-malla-talud-frontal.webp"
               alt={t(fences.label)}
               loading="lazy"
             />
@@ -195,8 +202,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section section-light">
+        <div className="container">
+          <SectionHeading label={trustCredentials.label} title={trustCredentials.title} center />
+          <p className="section-copy centered">{t(trustCredentials.description)}</p>
+          <div className="conversion-grid">
+            {trustCredentials.items.map((item) => (
+              <article key={item.title.ca} className="conversion-card credentials-card" data-reveal>
+                <div className="credentials-icon" aria-hidden="true">{item.icon}</div>
+                <h3>{t(item.title)}</h3>
+                <p>{t(item.text)}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-cream">
+        <div className="container">
+          <SectionHeading label={caseStudy.label} title={caseStudy.title} />
+          <p className="section-copy">{t(caseStudy.description)}</p>
+          <div className="case-study-meta">{t(caseStudy.meta)}</div>
+          <div className="case-study-blocks">
+            {caseStudy.blocks.map((block) => (
+              <article key={block.label.ca} className="case-study-block" data-reveal>
+                <span className="case-study-label">{t(block.label)}</span>
+                <p>{t(block.text)}</p>
+              </article>
+            ))}
+          </div>
+          <div className="services-cta-row">
+            <Link to={quoteRequestPath} className="btn-primary">
+              {t({ ca: 'Vull plantejar un projecte similar', es: 'Quiero plantear un proyecto similar' })}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <ProjectsSection />
       <TestimonialsSection />
+      <FAQSection
+        label={{ ca: 'Preguntes freqüents', es: 'Preguntas frecuentes' }}
+        title={{ ca: 'Dubtes habituals abans de demanar pressupost', es: 'Dudas habituales antes de pedir presupuesto' }}
+        items={homeFaqs}
+        schemaId="faq-home"
+      />
       <CTASection />
     </>
   );

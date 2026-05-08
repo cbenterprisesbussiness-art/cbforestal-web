@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from './components/Layout';
+import { trackPageView } from './shared/tracking';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
@@ -14,9 +15,11 @@ import { useLanguage } from './shared/LanguageContext';
 import {
   areaLandingPages,
   baixLlobregatPath,
+  castelldefelsPath,
   cerramientosRuralesPath,
   company,
   desbroceBarcelonaPath,
+  granollersPath,
   legalPages,
   pageMeta,
   podaBarcelonaPath,
@@ -24,6 +27,7 @@ import {
   sabadellPath,
   serviceLandingPages,
   services,
+  sitgesPath,
   santCugatPath,
   talaBarcelonaPath,
   terrassaPath,
@@ -35,6 +39,7 @@ function RouteEffects() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    trackPageView(location.pathname);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -123,6 +128,23 @@ function RouteEffects() {
       `${window.location.origin}/og-cover.png`,
     );
     ensureLink('link[rel="canonical"]', { rel: 'canonical' }).setAttribute('href', canonicalUrl);
+
+    const ensureAlternate = (hreflang) => {
+      let element = document.head.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+
+      if (!element) {
+        element = document.createElement('link');
+        element.setAttribute('rel', 'alternate');
+        element.setAttribute('hreflang', hreflang);
+        document.head.appendChild(element);
+      }
+
+      return element;
+    };
+
+    ensureAlternate('es-ES').setAttribute('href', canonicalUrl);
+    ensureAlternate('ca-ES').setAttribute('href', canonicalUrl);
+    ensureAlternate('x-default').setAttribute('href', canonicalUrl);
   }, [lang, location.pathname]);
 
   useEffect(() => {
@@ -145,17 +167,66 @@ function RouteEffects() {
   }, [location.pathname]);
 
   useEffect(() => {
+    const origin = window.location.origin;
     const schema = {
       '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
+      '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+      '@id': `${company.website}/#business`,
       name: company.name,
       url: company.website,
       email: company.email,
-      image: `${window.location.origin}/og-cover.png`,
-      areaServed: company.serviceAreas,
+      telephone: company.phone,
+      image: `${origin}/og-cover.png`,
+      logo: `${origin}/og-cover.png`,
+      priceRange: company.priceRange,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: company.addressLocality,
+        addressRegion: company.addressRegion,
+        addressCountry: company.addressCountry,
+      },
+      geo: company.geo
+        ? {
+            '@type': 'GeoCoordinates',
+            latitude: company.geo.latitude,
+            longitude: company.geo.longitude,
+          }
+        : undefined,
+      areaServed: company.serviceAreas.map((area) => ({
+        '@type': 'AdministrativeArea',
+        name: area,
+      })),
       knowsAbout: services.map((service) => service.title[lang]),
       description: pageMeta['/'].description[lang],
       serviceType: services.map((service) => service.title[lang]),
+      openingHoursSpecification: company.openingHours === '24/7'
+        ? [
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+              opens: '00:00',
+              closes: '23:59',
+            },
+          ]
+        : undefined,
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: lang === 'ca' ? 'Serveis forestals i tancaments' : 'Servicios forestales y cerramientos',
+        itemListElement: services.map((service) => ({
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: service.title[lang],
+            description: service.description[lang],
+            areaServed: company.serviceAreas,
+            provider: {
+              '@type': 'LocalBusiness',
+              name: company.name,
+              '@id': `${company.website}/#business`,
+            },
+          },
+        })),
+      },
     };
 
     let script = document.head.querySelector('#local-business-schema');
@@ -194,6 +265,9 @@ export default function App() {
           <Route path={sabadellPath} element={<ServiceLandingPage content={areaLandingPages[sabadellPath]} />} />
           <Route path={terrassaPath} element={<ServiceLandingPage content={areaLandingPages[terrassaPath]} />} />
           <Route path={baixLlobregatPath} element={<ServiceLandingPage content={areaLandingPages[baixLlobregatPath]} />} />
+          <Route path={castelldefelsPath} element={<ServiceLandingPage content={areaLandingPages[castelldefelsPath]} />} />
+          <Route path={sitgesPath} element={<ServiceLandingPage content={areaLandingPages[sitgesPath]} />} />
+          <Route path={granollersPath} element={<ServiceLandingPage content={areaLandingPages[granollersPath]} />} />
           <Route path="/contacto" element={<ContactPage />} />
           <Route path="/privacidad" element={<LegalPage content={legalPages.privacy} />} />
           <Route path="/aviso-legal" element={<LegalPage content={legalPages.legalNotice} />} />

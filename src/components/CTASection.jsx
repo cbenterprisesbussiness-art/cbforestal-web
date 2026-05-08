@@ -1,6 +1,7 @@
 import ContactForm from './ContactForm';
-import { company, contact } from '../shared/siteContent';
+import { company, contact, freeQuotePromise, urgency24hCopy } from '../shared/siteContent';
 import { useLanguage } from '../shared/LanguageContext';
+import { trackContactClick } from '../shared/tracking';
 
 export default function CTASection() {
   const { t } = useLanguage();
@@ -12,24 +13,35 @@ export default function CTASection() {
           <span className="section-label">{t(contact.label)}</span>
           <h2>{t(contact.title)}</h2>
           <p>{t(contact.description)}</p>
+          <div className="cta-free-banner">
+            <strong>{t(freeQuotePromise)}</strong>
+          </div>
           <div className="cta-highlights">
             <div className="cta-highlight">
-              <strong>{t({ ca: 'Resposta ràpida', es: 'Respuesta rápida' })}</strong>
-              <span>{t({ ca: 'Normalment en menys de 24h.', es: 'Normalmente en menos de 24h.' })}</span>
+              <strong>{t(urgency24hCopy.short)}</strong>
+              <span>{t(urgency24hCopy.long)}</span>
             </div>
             <div className="cta-highlight">
-              <strong>{t({ ca: 'Pressupost sense compromís', es: 'Presupuesto sin compromiso' })}</strong>
-              <span>{t({ ca: 'Ens expliques el projecte i et responem amb criteri.', es: 'Nos explicas el proyecto y te respondemos con criterio.' })}</span>
+              <strong>{t({ ca: 'Visita i pressupost gratis', es: 'Visita y presupuesto gratis' })}</strong>
+              <span>{t({ ca: 'Anem a veure la finca, valorem la feina i et donem un preu real, no orientatiu.', es: 'Vamos a ver la finca, valoramos el trabajo y te damos un precio real, no orientativo.' })}</span>
             </div>
           </div>
           <div className="cta-contact-strip">
             {company.hasPublicPhone ? (
-              <a href={company.phoneHref} className="cta-contact-chip">
+              <a
+                href={company.phoneHref}
+                className="cta-contact-chip"
+                onClick={() => trackContactClick('phone-cta')}
+              >
                 <span>{t({ ca: 'Telèfon', es: 'Teléfono' })}</span>
                 <strong>{company.phone}</strong>
               </a>
             ) : null}
-            <a href={company.emailHref} className="cta-contact-chip">
+            <a
+              href={company.emailHref}
+              className="cta-contact-chip"
+              onClick={() => trackContactClick('email-cta')}
+            >
               <span>{t({ ca: 'Correu', es: 'Correo' })}</span>
               <strong>{company.email}</strong>
             </a>

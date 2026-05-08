@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../shared/LanguageContext';
+import { trackLead } from '../shared/tracking';
 
 const emptyForm = {
   name: '',
@@ -170,6 +171,8 @@ export default function ContactForm({ compact = false }) {
       if (!response.ok) {
         throw new Error('submit_failed');
       }
+
+      trackLead({ service: form.service, sourcePath: location.pathname });
 
       setForm(emptyForm);
       setSuccess(t(labels.success));

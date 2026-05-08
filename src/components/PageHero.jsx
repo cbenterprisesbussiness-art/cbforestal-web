@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../shared/LanguageContext';
+import { company } from '../shared/siteContent';
 
 export default function PageHero({
   eyebrow,
@@ -8,17 +9,41 @@ export default function PageHero({
   primaryCta,
   secondaryCta,
   image,
+  video,
   trustSignals,
+  urgencyBadge,
   compact = false,
 }) {
   const { t } = useLanguage();
 
   return (
     <section
-      className={`hero${compact ? ' hero-compact' : ''}`}
-      style={{ '--hero-image': `url(${image})` }}
+      className={`hero${compact ? ' hero-compact' : ''}${video ? ' hero-with-video' : ''}`}
+      style={{
+        '--hero-image': `url(${image})`,
+        '--hero-image-position': video ? 'center top' : 'center',
+      }}
     >
+      {video ? (
+        <video
+          className="hero-video"
+          src={video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={image}
+          aria-hidden="true"
+        />
+      ) : null}
       <div className="hero-content">
+        {urgencyBadge ? (
+          <a className="hero-urgency-badge" href={company.phoneHref}>
+            <span className="hero-urgency-dot" aria-hidden="true" />
+            {t(urgencyBadge)}
+          </a>
+        ) : null}
         {eyebrow ? <div className="hero-tag">{t(eyebrow)}</div> : null}
         <h1>{t(title)}</h1>
         {description ? <p>{t(description)}</p> : null}
