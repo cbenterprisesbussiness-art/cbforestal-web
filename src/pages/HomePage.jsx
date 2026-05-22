@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="container split-grid fences-grid">
           <div className="image-card">
             <img
-              src="/trabajos/galeria/cerramiento-malla-talud-frontal.webp"
+              src="/trabajos/galeria/cerramientos/cerramiento-lamas-blancas-fachada-frontal.webp"
               alt={t(fences.label)}
               loading="lazy"
             />

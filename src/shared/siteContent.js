@@ -674,7 +674,7 @@ export const services = [
       ca: 'Instal·lació professional de tancaments metàl·lics, fusta, PVC, alumini, ferro i pedra. Garantia 5 anys.',
       es: 'Instalación profesional de cerramientos metálicos, madera, PVC, aluminio, hierro y piedra. Garantía 5 años.',
     },
-    image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
+    image: '/trabajos/galeria/cerramientos/cerramiento-metalico-chapa-con-porton-y-puerta.webp',
     href: cerramientosRuralesPath,
     tags: [
       { ca: 'Metàl·lic', es: 'Metálico' },
@@ -779,6 +779,49 @@ export const fences = {
   ],
 };
 
+export const fencesGallery = [
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-lamas-blancas-fachada-frontal.webp',
+    title: { ca: 'Tanca de lames blanques en façana', es: 'Cerramiento de lamas blancas en fachada' },
+    meta: { ca: 'Tancaments · Lames', es: 'Cerramientos · Lamas' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-panel-rigido-sobre-muro-ladrillo.webp',
+    title: { ca: 'Panell rígid sobre mur d’obra', es: 'Panel rígido sobre muro de obra' },
+    meta: { ca: 'Tancaments · Panell rígid', es: 'Cerramientos · Panel rígido' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-malla-simple-torsion-talud-verde.webp',
+    title: { ca: 'Malla simple torsió en talús', es: 'Malla simple torsión en talud' },
+    meta: { ca: 'Tancaments · Desnivell', es: 'Cerramientos · Desnivel' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-ocultacion-pvc-blanca-piscina.webp',
+    title: { ca: 'Ocultació de PVC blanc en piscina', es: 'Ocultación de PVC blanco en piscina' },
+    meta: { ca: 'Tancaments · Privacitat', es: 'Cerramientos · Privacidad' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/porton-metalico-chapa-horizontal-antracita.webp',
+    title: { ca: 'Portó metàl·lic amb xapa horitzontal', es: 'Portón metálico con chapa horizontal' },
+    meta: { ca: 'Tancaments · Accés vehicle', es: 'Cerramientos · Acceso vehículo' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-metalico-chapa-con-porton-y-puerta.webp',
+    title: { ca: 'Tancament metàl·lic amb portó i porta', es: 'Cerramiento metálico con portón y puerta' },
+    meta: { ca: 'Tancaments · Accés complet', es: 'Cerramientos · Acceso completo' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-panel-rigido-verde-con-malla-ocultacion.webp',
+    title: { ca: 'Panell rígid amb ocultació verda', es: 'Panel rígido con ocultación verde' },
+    meta: { ca: 'Tancaments · Ocultació', es: 'Cerramientos · Ocultación' },
+  },
+  {
+    image: '/trabajos/galeria/cerramientos/cerramiento-ganadero-malla-nudo-finca.webp',
+    title: { ca: 'Tanca ramadera amb malla de nus', es: 'Vallado ganadero con malla de nudo' },
+    meta: { ca: 'Tancaments · Finca rústica', es: 'Cerramientos · Finca rústica' },
+  },
+];
+
 export const zonesIntro = {
   label: { ca: 'Cobertura territorial', es: 'Cobertura territorial' },
   title: {
@@ -870,13 +913,13 @@ export const projects = {
       meta: { ca: 'Poda i tala · Treball en altura', es: 'Poda y tala · Trabajo en altura' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-malla-talud-lateral.webp',
-      title: { ca: 'Tancament de talús amb malla', es: 'Cerramiento de talud con malla' },
+      image: '/trabajos/galeria/cerramientos/cerramiento-metalico-chapa-con-porton-y-puerta.webp',
+      title: { ca: 'Tancament metàl·lic amb portó i porta', es: 'Cerramiento metálico con portón y puerta' },
       summary: {
-        ca: 'Instal·lació de tancament metàl·lic adaptat al desnivell i al perímetre real del terreny.',
-        es: 'Instalación de cerramiento metálico adaptado al desnivel y al perímetro real del terreno.',
+        ca: 'Solució completa d’accés i tancament perimetral amb acabat sòlid, net i pensat per a ús residencial.',
+        es: 'Solución completa de acceso y cerramiento perimetral con acabado sólido, limpio y pensado para uso residencial.',
       },
-      meta: { ca: 'Tancaments · Finca en pendent', es: 'Cerramientos · Finca en pendiente' },
+      meta: { ca: 'Tancaments · Accés complet', es: 'Cerramientos · Acceso completo' },
     },
     {
       image: '/trabajos/galeria/limpieza-bosque-pendiente.webp',
@@ -897,13 +940,13 @@ export const projects = {
       meta: { ca: 'Tala · Camió grua i suport', es: 'Tala · Camión grúa y apoyo' },
     },
     {
-      image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
-      title: { ca: 'Tanca perimetral amb portó', es: 'Valla perimetral con portón' },
+      image: '/trabajos/galeria/cerramientos/cerramiento-lamas-blancas-fachada-frontal.webp',
+      title: { ca: 'Tanca de lames en façana', es: 'Cerramiento de lamas en fachada' },
       summary: {
-        ca: 'Tancament amb muret i portell integrat per resoldre accés, desnivell i seguretat en una sola intervenció.',
-        es: 'Cerramiento con murete y portillo integrado para resolver acceso, desnivel y seguridad en una sola intervención.',
+        ca: 'Acabat residencial d’alt nivell per guanyar privacitat, presència i un perímetre més net i actual.',
+        es: 'Acabado residencial de alto nivel para ganar privacidad, presencia y un perímetro más limpio y actual.',
       },
-      meta: { ca: 'Tancaments · Muret i accés', es: 'Cerramientos · Murete y acceso' },
+      meta: { ca: 'Tancaments · Façana premium', es: 'Cerramientos · Fachada premium' },
     },
     {
       image: '/trabajos/servicios/piscina-vaso-vacio-obra.webp',
@@ -1011,9 +1054,9 @@ export const projects = {
       meta: { ca: 'Poda · Treball vertical', es: 'Poda · Trabajo vertical' },
     },
     {
-      image: '/trabajos/galeria/cerramiento-malla-talud-frontal.webp',
-      title: { ca: 'Malla en talús', es: 'Malla en talud' },
-      meta: { ca: 'Tancaments · Façana', es: 'Cerramientos · Frente' },
+      image: '/trabajos/galeria/cerramientos/cerramiento-lamas-blancas-fachada-frontal.webp',
+      title: { ca: 'Tanca de lames en façana principal', es: 'Cerramiento de lamas en fachada principal' },
+      meta: { ca: 'Tancaments · Façana', es: 'Cerramientos · Fachada' },
     },
     {
       image: '/trabajos/galeria/cerramiento-malla-talud-lateral.webp',
@@ -1026,8 +1069,8 @@ export const projects = {
       meta: { ca: 'Tancaments · Execució', es: 'Cerramientos · Ejecución' },
     },
     {
-      image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
-      title: { ca: 'Portell amb muret', es: 'Portillo con murete' },
+      image: '/trabajos/galeria/cerramientos/cerramiento-metalico-chapa-con-porton-y-puerta.webp',
+      title: { ca: 'Portó i porta metàl·lica integrats', es: 'Portón y puerta metálica integrados' },
       meta: { ca: 'Tancaments · Accés resolt', es: 'Cerramientos · Acceso resuelto' },
     },
     {
@@ -1039,6 +1082,31 @@ export const projects = {
       image: '/trabajos/galeria/muro-bloque-cerramiento-obra.webp',
       title: { ca: 'Mur de bloc en obra', es: 'Muro de bloque en obra' },
       meta: { ca: 'Tancament d’obra', es: 'Cerramiento de obra' },
+    },
+    {
+      image: '/trabajos/galeria/cerramientos/cerramiento-lamas-blancas-fachada-frontal.webp',
+      title: { ca: 'Tanca de lames blanques', es: 'Cerramiento de lamas blancas' },
+      meta: { ca: 'Tancaments · Façana residencial', es: 'Cerramientos · Fachada residencial' },
+    },
+    {
+      image: '/trabajos/galeria/cerramientos/cerramiento-panel-rigido-sobre-muro-ladrillo.webp',
+      title: { ca: 'Panell rígid sobre mur de maó', es: 'Panel rígido sobre muro de ladrillo' },
+      meta: { ca: 'Tancaments · Mur existent', es: 'Cerramientos · Muro existente' },
+    },
+    {
+      image: '/trabajos/galeria/cerramientos/cerramiento-ocultacion-pvc-blanca-piscina.webp',
+      title: { ca: 'Tancament opac en zona de piscina', es: 'Cerramiento opaco en zona de piscina' },
+      meta: { ca: 'Tancaments · Privacitat', es: 'Cerramientos · Privacidad' },
+    },
+    {
+      image: '/trabajos/galeria/cerramientos/porton-metalico-chapa-horizontal-antracita.webp',
+      title: { ca: 'Portó metàl·lic antracita', es: 'Portón metálico antracita' },
+      meta: { ca: 'Tancaments · Portó', es: 'Cerramientos · Portón' },
+    },
+    {
+      image: '/trabajos/galeria/cerramientos/cerramiento-panel-rigido-verde-con-malla-ocultacion.webp',
+      title: { ca: 'Panell rígid amb ocultació', es: 'Panel rígido con ocultación' },
+      meta: { ca: 'Tancaments · Tanca verda', es: 'Cerramientos · Valla verde' },
     },
     {
       image: '/trabajos/galeria/desbroce-talud-antes.webp',
@@ -1459,7 +1527,7 @@ export const serviceLandingPages = {
       ca: 'Instal·lem tancaments rurals, malla, pals, accessos i solucions perimetrals per protegir parcel·les, finques i terrenys amb acabat professional.',
       es: 'Instalamos cerramientos rurales, malla, postes, accesos y soluciones perimetrales para proteger parcelas, fincas y terrenos con acabado profesional.',
     },
-    image: '/trabajos/servicios/cerramiento-murete-portillon.webp',
+    image: '/trabajos/galeria/cerramientos/cerramiento-malla-simple-torsion-talud-verde.webp',
     intro: {
       ca: 'Si necessites tancar una finca, una parcel·la o un terreny a Barcelona o Catalunya, t’ajudem a resoldre’l amb una solució funcional, resistent i adaptada al desnivell, l’accés i l’ús real de l’espai.',
       es: 'Si necesitas cerrar una finca, una parcela o un terreno en Barcelona o Cataluña, te ayudamos a resolverlo con una solución funcional, resistente y adaptada al desnivel, el acceso y el uso real del espacio.',
