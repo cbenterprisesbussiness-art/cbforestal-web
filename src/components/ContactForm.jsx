@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '../shared/LanguageContext';
 import { trackLead } from '../shared/tracking';
@@ -16,6 +16,7 @@ const emptyForm = {
 export default function ContactForm({ compact = false }) {
   const { t, lang } = useLanguage();
   const location = useLocation();
+  const formId = useId();
   const [form, setForm] = useState(emptyForm);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -197,21 +198,32 @@ export default function ContactForm({ compact = false }) {
     <form className={compact ? 'contact-form compact' : 'contact-form'} onSubmit={handleSubmit}>
       <div className="contact-form-grid">
         <label className="field">
-          <span>{t(labels.name)}</span>
-          <input name="name" type="text" value={form.name} onChange={handleChange} />
+          <span id={`${formId}-name-label`}>{t(labels.name)}</span>
+          <input
+            name="name"
+            type="text"
+            value={form.name}
+            onChange={handleChange}
+            autoComplete="name"
+            aria-labelledby={`${formId}-name-label`}
+          />
         </label>
         <label className="field">
-          <span>{t(labels.contact)}</span>
+          <span id={`${formId}-contact-label`}>{t(labels.contact)}</span>
           <input
             name="contact"
             type="text"
             value={form.contact}
             onChange={handleChange}
+            required
             placeholder={t({ ca: 'Ex. 600 000 000 o nom@correu.cat', es: 'Ej. 600 000 000 o nombre@correo.com' })}
+            aria-labelledby={`${formId}-contact-label`}
+            aria-describedby={`${formId}-feedback`}
+            aria-invalid={Boolean(error)}
           />
         </label>
         <label className="field field-full">
-          <span>{t(labels.service)}</span>
+          <span id={`${formId}-service-label`}>{t(labels.service)}</span>
           <select name="service" value={form.service} onChange={handleChange}>
             {labels.services.map((service) => (
               <option key={service.value || 'empty'} value={service.value}>
@@ -221,16 +233,20 @@ export default function ContactForm({ compact = false }) {
           </select>
         </label>
         <label className="field field-full">
-          <span>{t(labels.message)}</span>
+          <span id={`${formId}-message-label`}>{t(labels.message)}</span>
           <textarea
             name="message"
             rows={compact ? 3 : 5}
             value={form.message}
             onChange={handleChange}
+            required
             placeholder={t({
               ca: 'Explica breument què necessites i en quina zona és.',
               es: 'Explica brevemente qué necesitas y en qué zona está.',
             })}
+            aria-labelledby={`${formId}-message-label`}
+            aria-describedby={`${formId}-feedback`}
+            aria-invalid={Boolean(error)}
           />
         </label>
         <label className="field field-hidden" aria-hidden="true">
@@ -247,7 +263,15 @@ export default function ContactForm({ compact = false }) {
       </div>
 
       <label className="consent-row">
-        <input name="consent" type="checkbox" checked={form.consent} onChange={handleChange} />
+        <input
+          name="consent"
+          type="checkbox"
+          checked={form.consent}
+          onChange={handleChange}
+          required
+          aria-describedby={`${formId}-feedback`}
+          aria-invalid={Boolean(error)}
+        />
         <span>{t(labels.consent)}</span>
       </label>
 
@@ -261,7 +285,9 @@ export default function ContactForm({ compact = false }) {
         {t(labels.privacyPrefix)}{' '}
         <Link to="/privacidad">{t(labels.privacyLink)}</Link>.
       </p>
-      <p className={`form-hint${success ? ' is-success' : ''}`}>{success || error || t(labels.hint)}</p>
+      <p id={`${formId}-feedback`} className={`form-hint${success ? ' is-success' : ''}`} aria-live="polite">
+        {success || error || t(labels.hint)}
+      </p>
     </form>
   );
 }

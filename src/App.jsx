@@ -65,7 +65,7 @@ function RouteEffects() {
     document.title = meta.title[lang];
 
     const description = meta.description[lang];
-    const canonicalUrl = `${window.location.origin}${location.pathname}`;
+    const canonicalUrl = `${company.website}${location.pathname}`;
 
     const ensureMeta = (selector, attributes) => {
       let element = document.head.querySelector(selector);
@@ -109,7 +109,7 @@ function RouteEffects() {
     ensureMeta('meta[property="og:url"]', { property: 'og:url' }).setAttribute('content', canonicalUrl);
     ensureMeta('meta[property="og:image"]', { property: 'og:image' }).setAttribute(
       'content',
-      `${window.location.origin}/og-cover.png`,
+      `${company.website}/og-cover.png`,
     );
     ensureMeta('meta[name="twitter:card"]', { name: 'twitter:card' }).setAttribute(
       'content',
@@ -125,7 +125,7 @@ function RouteEffects() {
     );
     ensureMeta('meta[name="twitter:image"]', { name: 'twitter:image' }).setAttribute(
       'content',
-      `${window.location.origin}/og-cover.png`,
+      `${company.website}/og-cover.png`,
     );
     ensureLink('link[rel="canonical"]', { rel: 'canonical' }).setAttribute('href', canonicalUrl);
 
@@ -167,7 +167,6 @@ function RouteEffects() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const origin = window.location.origin;
     const schema = {
       '@context': 'https://schema.org',
       '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
@@ -176,8 +175,8 @@ function RouteEffects() {
       url: company.website,
       email: company.email,
       telephone: company.phone,
-      image: `${origin}/og-cover.png`,
-      logo: `${origin}/og-cover.png`,
+      image: `${company.website}/og-cover.png`,
+      logo: `${company.website}/og-cover.png`,
       priceRange: company.priceRange,
       address: {
         '@type': 'PostalAddress',

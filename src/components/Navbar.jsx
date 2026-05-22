@@ -42,7 +42,7 @@ export default function Navbar() {
         <nav
           id="main-navigation"
           className={`nav-links${menuOpen ? ' nav-links-open' : ''}`}
-          aria-label="Main navigation"
+          aria-label={t({ ca: 'Navegació principal', es: 'Navegación principal' })}
         >
           {navigation.map((item) => (
             <NavLink
